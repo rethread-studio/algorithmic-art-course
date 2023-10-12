@@ -1,4 +1,4 @@
-# Algorithmic art course at Université de Montréal (version française ci-dessous)
+# Algorithmic art course at Université de Montréal ([version française](https://github.com/bbaudry/algorithmic-art-course/blob/main/README.md#cours-dart-algorithmique-%C3%A0-luniversit%C3%A9-de-montr%C3%A9al))
 
 ## Course philosophy
 
