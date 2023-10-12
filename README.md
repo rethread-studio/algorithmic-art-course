@@ -20,6 +20,11 @@ Artists and designers dive into open source software and the diversity of techni
 - use and develop open source software for algorithmic art
 - perform algorithmic art for live coding
 
+## Prerequisites
+- know how to program in one language at least (Rust, Javascript, Java, Python)
+- enjoy writing and executing code
+- have a strong interest in graphics and visual arts
+
 # Cours d'art algorithmique à l'Université de Montréal 
 
 ## Philosophie du cours
@@ -41,3 +46,8 @@ Les artistes et les designers se plongent dans le logiciel open source et la div
 - utiliser divers environnements logiciels pour l'art algorithmique
 - utiliser et développer du logiciel open source pour l'art algorithmique
 - mettre en scène de l'art algorithmique pour live coding
+
+## Prérequis
+- savoir programmer dans au moins un langage (Rust, Javascript, Java, Python)
+- aimer écrire et exécuter du code
+- avoir un fort intérêt pour le graphisme et les arts visuels
