@@ -23,7 +23,7 @@ Artists and designers dive into open source software and the diversity of techni
 - perform algorithmic art for live coding
 
 ## Prerequisites
-- know how to program in one language at least (Rust, Javascript, Java, Python)
+- know how to program in one language at least (Rust, Javascript, Java, Python). The fundamentals of programming for arts are introduced by [Daniel Shiffman](https://thecodingtrain.com/). 
 - enjoy writing and executing code
 - have a strong interest in graphics and visual arts
 
@@ -44,7 +44,7 @@ Les artistes et les designers se plongent dans le logiciel open source et la div
   
 ## Compétences acquises
 
-- concevoir, développer et exécuter une œuvre d'art algorithmique
+- concevoir, développer et exécuter une œuvre d'art algorithmique. [Daniel Shiffman](https://thecodingtrain.com/) propose une introduction à la programmation pour l'art algorithmique. 
 - utiliser divers environnements logiciels pour l'art algorithmique
 - utiliser et développer du logiciel open source pour l'art algorithmique
 - mettre en scène de l'art algorithmique pour live coding
