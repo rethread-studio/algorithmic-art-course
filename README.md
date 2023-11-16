@@ -1,6 +1,6 @@
-# Algorithmic art course at Université de Montréal ([version française](https://github.com/bbaudry/algorithmic-art-course/blob/main/README.md#cours-dart-algorithmique-%C3%A0-luniversit%C3%A9-de-montr%C3%A9al))
+# Algorithmic art course ([version française](https://github.com/bbaudry/algorithmic-art-course/blob/main/README.md#cours-dart-algorithmique-%C3%A0-luniversit%C3%A9-de-montr%C3%A9al))
 
-Here we share and contribute to course IFT6251. 
+This repository is a curated source of materia and contribute to course IFT6251 at Université de Montréal  
 
 Contact: Benoit Baudry, <baudry@iro.umontreal.ca>
 
@@ -16,6 +16,7 @@ Artists and designers dive into open source software and the diversity of techni
 - Software environments for generative art
 - Software environments for live coding
 - Research in software for art
+- The material for the course if available in [this repository's issues](https://github.com/rethread-studio/algorithmic-art-course/issues)
   
 ## Intended learning outcomes
 
@@ -47,6 +48,8 @@ Les artistes et les designers se plongent dans le logiciel open source et la div
 - Environnements logiciels pour l'art génératif
 - Environnements logiciels pour le live coding
 - Recherche en logiciel pour l'art
+- La documentation pour le cours est disponible dans [issues de ce repo](https://github.com/rethread-studio/algorithmic-art-course/issues)
+
   
 ## Compétences acquises
 
