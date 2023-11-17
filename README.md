@@ -1,6 +1,6 @@
 # Algorithmic art course ([version française](https://github.com/bbaudry/algorithmic-art-course/blob/main/README.md#cours-dart-algorithmique-%C3%A0-luniversit%C3%A9-de-montr%C3%A9al))
 
-This repository is a curated source of materia and contribute to course IFT6251 at Université de Montréal  
+This repository is a curated source of material and contributions to course IFT6251 at Université de Montréal  
 
 Contact: Benoit Baudry, <baudry@iro.umontreal.ca>
 
@@ -33,7 +33,7 @@ Artists and designers dive into open source software and the diversity of techni
 
 # Cours d'art algorithmique à l'Université de Montréal 
 
-Ici nous partageons et contribuons au cours IFT6251. 
+Ce repo reassemble les resources et les contributions pour le cours IFT6251. 
 
 Contact: Benoit Baudry, <baudry@iro.umontreal.ca>
 
