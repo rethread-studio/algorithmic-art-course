@@ -1,6 +1,6 @@
 name: Contribution 
 description: Propose, discuss and make a contribution to the algorithmic art course
-title: "[ALgo-art contribution]: "
+title: "[Algorithmic art contribution]: "
 labels: ["contribution"]
 body:
   - type: markdown
