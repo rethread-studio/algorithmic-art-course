@@ -22,10 +22,10 @@ body:
       options:
         - randomized piece
         - data-driven piece
-        - technical presentation
-        - exhibition piece
-        - paper presentation
         - advanced piece
+        - exhibition piece
+        - technical presentation
+        - paper presentation
       default: 0
     validations:
       required: true
