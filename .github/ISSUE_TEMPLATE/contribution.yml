@@ -1,0 +1,52 @@
+name: Contribution 
+description: Propose and maker a contribution to the algorithmic art course
+title: "[ALgo-art contribution]: "
+labels: ["contribution"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a contribution you wish to make to the course, discuss it and perform it.
+  - type: input
+    id: contact
+    attributes:
+      label: Email address
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: tastk-type
+    attributes:
+      label: Task type
+      description: What type of task are you proposing?
+      options:
+        - randomized piece
+        - data-driven piece
+        - technical presentation
+        - exhibition piece
+        - paper presentation
+        - advanced piece
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the contribution you wish to propose
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: Feedback about proposal. Ends with 'GO FOR IT' if the proposal is validated
+    validations:
+      required: false
+  - type: textarea
+    id: the-dontribution
+    attributes:
+      label: link
+      description: Provide a link to the open source reposutory for your contribution
+    validations:
+      required: false
