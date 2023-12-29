@@ -29,24 +29,30 @@ body:
       default: 0
     validations:
       required: true
+  - type: dropdown
+    id: deadline
+    attributes:
+      label: Contribution's date
+      description: Which week do you present your contribution?
+      options:
+        - week 2
+        - week 4
+        - week 5
+        - week 6
+        - week 7
+        - week 8
+        - week 11
+        - week 12
+        - week 13
+        - week 14
+        - exhibition
+      default: 0
+    validations:
+      required: true
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Describe the contribution you wish to propose
+      description: Describe the contribution you wish to propose (which programming language, which library, which inspiration, etc.)
     validations:
       required: true
-  - type: textarea
-    id: feedback
-    attributes:
-      label: Feedback
-      description: Feedback about proposal. Ends with 'GO FOR IT' if the proposal is validated
-    validations:
-      required: false
-  - type: textarea
-    id: the-dontribution
-    attributes:
-      label: Link to the actual contribution
-      description: Provide a link to the open source reposutory for your contribution
-    validations:
-      required: false
