@@ -1,3 +1,5 @@
+The course on algorithmic art at Université de Montréal ([IFT6251](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-6251/https://admission.umontreal.ca/cours-et-horaires/cours/IFT-6251/)) is given in the winter 2024, Tuesday and Thursday 15.30 - 17.30; Z-337 Pav. Claire McNicoll.
+
 ## Week 1:  introduction
 - [Éloge de l’ordinateur dans les arts visuels](http://www.veramolnar.com/blog/wp-content/uploads/VM1984_eloge.pdf). Vera Molnar, 1984
 - [A Longer History of Generative Art](https://www.rightclicksave.com/article/a-longer-history-of-generative-art). Nick Lambert, 2022.
