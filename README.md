@@ -18,4 +18,5 @@ The course on algorithmic art at Université de Montréal ([IFT6251](https://adm
 ## Week 11 & 12: Physicalizing algorithmic art
 - [Can Digital and Physical Art Live Together?](https://www.rightclicksave.com/article/can-digital-and-physical-art-live-together)
 - [The Power of the Plotter](https://www.rightclicksave.com/article/the-power-of-the-plotter-generative-art-aleksandra-jovanic-julien-gachadoat-feral-file-graph-interview)
+- [Machines as Collaborators forArt and Rituals](https://dspace.mit.edu/bitstream/handle/1721.1/151089/3596928.pdf?sequence=1&isAllowed=y)
 ## Week 13: Algorithmic art exhibition
