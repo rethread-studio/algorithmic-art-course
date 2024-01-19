@@ -26,12 +26,15 @@ The course on algorithmic art at Université de Montréal ([IFT6251](https://adm
 - Prepare a presentation about a [research topic in algorithmic art](https://github.com/rethread-studio/algorithmic-art-course/issues)
 - [Vera Molnar. Weaving Variations](https://www.holo.mg/dossiers/vera-molnar-weaving-variations/#27169)
 - [Software art](http://cramer.pleintekst.nl/all/software_art_and_writing/software_art_and_writing.pdf)
-## Week 11 (Mar 19 & 21): [research in algorithmic art](https://github.com/rethread-studio/algorithmic-art-course/issues)
-- presentations about research in algorithmic art
-## Week 12 (Mar 26 & 28): Physicalizing algorithmic art
+## Week 11 (Mar 19 & 21): Physicalizing algorithmic art
 - [Can Digital and Physical Art Live Together?](https://www.rightclicksave.com/article/can-digital-and-physical-art-live-together)
 - [The Power of the Plotter](https://www.rightclicksave.com/article/the-power-of-the-plotter-generative-art-aleksandra-jovanic-julien-gachadoat-feral-file-graph-interview)
 - [Machines as Collaborators forArt and Rituals](https://dspace.mit.edu/bitstream/handle/1721.1/151089/3596928.pdf?)
-## Week 13 (Apr 2 & 4):
-- Presentations and discussions before vernissage
+## Week 12 (Mar 26 & 28): Exhibition
+- March 26: Presentations and discussions before vernissage
+- March 28: vernissage for the Algorithmic art course. Salle C-2081, Carrefour des arts et des sciences, Pavillon Lionel-Groulx. 
+  - 9.00 - 17.00: setup the vernissage
+  - 17.00 - 20.00: vernissage 
+## Week 13 (Apr 2 & 4):[research in algorithmic art](https://github.com/rethread-studio/algorithmic-art-course/issues)
+- presentations about research in algorithmic art
 ## Algorithmic art work vernissage (Apr 11)
