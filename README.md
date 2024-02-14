@@ -18,7 +18,7 @@ Contact: benoit.baudry@umontreal.ca
 - presentations art works with an algorithm
 ## Week 6 (Feb 13 & 15): [algorithms](https://github.com/rethread-studio/algorithmic-art-course/issues/11)
 - presentations art works with an algorithm
-- on Feb 15 the class is at "carrefour des arts et des sciences"
+- on Feb 15 the class is at "[carrefour des arts et des sciences](https://fas.umontreal.ca/salles/carrefour/)" (Pavillon Lionel-Groulx)
 ## Week 7 (Feb 20 & 22): [data art](https://github.com/rethread-studio/algorithmic-art-course/issues/5)
 - [Ryoji Ikeda: The aesthetics of data flow](./Palmer-Ikeda.pdf)
 - presentations of data artworks

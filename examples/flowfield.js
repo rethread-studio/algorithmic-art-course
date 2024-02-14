@@ -64,14 +64,14 @@ function centerCanvas() {
 }
 
 function draw() {
-    //movingfield()
+    movingfield()
     //showParticles()
     showCurves()
     //noLoop()
 }
 
 function movingfield(){
-    background(0, 0, 0)
+    //background(0, 0, 0)
     yoff = 0.0
     for (y = 0; y < nbrows; y++) {
         xoff = 0.0
@@ -86,7 +86,7 @@ function movingfield(){
             strokeWeight(1)
             translate(x * density, y * density)
             rotate(v.heading())
-            line(0, 0, density, 0)
+            //line(0, 0, density, 0)
             pop()
 
             // fill(h,100,100)
