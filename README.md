@@ -22,6 +22,7 @@ Contact: benoit.baudry@umontreal.ca
 ## Week 7 (Feb 20 & 22): [data art](https://github.com/rethread-studio/algorithmic-art-course/issues/5)
 - [Ryoji Ikeda: The aesthetics of data flow](./Palmer-Ikeda.pdf)
 - presentations of data artworks
+- on Feb 22 the class is at the [pavillon de la faculté d'aménagement](https://plancampus.umontreal.ca/montreal/#iw|342), in [room 0033](https://architecture.umontreal.ca/fileadmin/amenagement/ARC/Mon-espace-info/Infos-pratiques/Plans/Plans_PavillonAME-Identification-EspacesReservesCovid-old.pdf)
 ## Week 8 (Feb 27 & 29): [data art](https://github.com/rethread-studio/algorithmic-art-course/issues/5)
 - presentations of data artworks
 ## Week 9 (Mar 5 & 7): no class
