@@ -21,6 +21,7 @@ Contact: benoit.baudry@umontreal.ca
 - on Feb 15 the class is at "[carrefour des arts et des sciences](https://fas.umontreal.ca/salles/carrefour/)" (Pavillon Lionel-Groulx)
 ## Week 7 (Feb 20 & 22): [data art](https://github.com/rethread-studio/algorithmic-art-course/issues/5)
 - [Ryoji Ikeda: The aesthetics of data flow](./Palmer-Ikeda.pdf)
+- [A Concise Taxonomy for Describing Data as an Art Material](https://direct.mit.edu/leon/article-pdf/51/1/75/2008425/leon_a_01414.pdf)
 - presentations of data artworks
 - on Feb 22 the class is at the [pavillon de la faculté d'aménagement](https://plancampus.umontreal.ca/montreal/#iw|342), in [room 0033](https://architecture.umontreal.ca/fileadmin/amenagement/ARC/Mon-espace-info/Infos-pratiques/Plans/Plans_PavillonAME-Identification-EspacesReservesCovid-old.pdf)
 ## Week 8 (Feb 27 & 29): [data art](https://github.com/rethread-studio/algorithmic-art-course/issues/5)
