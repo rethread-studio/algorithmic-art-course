@@ -26,6 +26,7 @@ Contact: benoit.baudry@umontreal.ca
 - on Feb 22 the class is at the [pavillon de la faculté d'aménagement](https://plancampus.umontreal.ca/montreal/#iw|342), in [room 0033](https://architecture.umontreal.ca/fileadmin/amenagement/ARC/Mon-espace-info/Infos-pratiques/Plans/Plans_PavillonAME-Identification-EspacesReservesCovid-old.pdf)
 ## Week 8 (Feb 27 & 29): [data art](https://github.com/rethread-studio/algorithmic-art-course/issues/5)
 - presentations of data artworks
+- on Feb 29 we go to [campus MIL](https://plancampus.umontreal.ca/campus-mil/?tx_udemplancampus_pi1%5Bbuilding%5D=507&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=91e5eec42d9d80e07839bbda29a39f33), in room A-3541
 ## Week 9 (Mar 5 & 7): no class
 ## Week 10 (Mar 12 & 15): Benoit is absent
 - Prepare a presentation about a [research topic in algorithmic art](https://github.com/rethread-studio/algorithmic-art-course/issues)
