@@ -43,4 +43,3 @@ Contact: benoit.baudry@umontreal.ca
   - 17.00 - 20.00: vernissage 
 ## Week 13 (Apr 2 & 4):[research in algorithmic art](https://github.com/rethread-studio/algorithmic-art-course/issues)
 - presentations about research in algorithmic art
-## Algorithmic art work vernissage (Apr 11)
