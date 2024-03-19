@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.5.1"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //this is a template p5.js sketch that draws on a letter format canvas, fit for plotting on letter paper
+        //replace the placeholderforgenart() function by your own gen art code  
+        //use the save svg button when you're happy with the art
+
+        //letter: 8.5in x 11in
+        //96dpi is for plotting on the UUNA TEK iDraw
+        //which gives this width and height for a letter format paper
+        //w=96*8.5=816
+        //h=96*11=1056
+        var echelle = 1
+        var w = 816 * echelle
+        var h = 1056 * echelle
+        //I suggest to keep a bit of white space on the sides of page when plotting.
+        //so plot within the area leftmargin - rightmargin on the x-axis and topmargin - bottommargin on the y axis
+        var rightmargin = 0.9 * w
+        var leftmargin = 0.1 * w
+        var topmargin = 0.1 * h
+        var bottommargin = 0.9 * h
+        var actualwidth = rightmargin - leftmargin
+        var actualheight = bottommargin - topmargin
+
+        var cnv, imgbtn, font
+
+        function setup() {
+            getsvg()
+            centerCanvas();
+            colorMode(HSB, 360, 100, 100, 250);
+            strokeCap(SQUARE)
+            noFill()
+        }
+
+        function getsvg() {
+            cnv = createCanvas(w, h, SVG);
+            imgbtn = createButton("save svg");
+            placebtn();
+            imgbtn.mouseClicked(savesvg);
+        }
+
+        function centerCanvas() {
+            var x = (windowWidth - w) / 2;
+            var y = (windowHeight - h) / 2;
+            cnv.position(x, y);
+        }
+
+        function placebtn() {
+            var x = (windowWidth - w) / 2;
+            var y = (windowHeight - h) / 2;
+            imgbtn.position(x - 200, y + h / 2 + 42)
+        }
+
+        function savesvg() {
+            save("uunatek-udem-003.svg");
+        }
+
+        function preload() {
+            font = loadFont("./fonts/1CamBam_Stick_0.ttf");
+        }
+
+        function draw() {
+            background(0, 0, 100)
+            placeholderforgenart()
+            noLoop()
+        }
+
+        function placeholderforgenart() {
+            stroke(0, 0, 0)
+            quad(leftmargin, topmargin, rightmargin, topmargin, rightmargin, bottommargin, leftmargin, bottommargin)
+            textFont(font)
+            var fSize = 184
+            textSize(fSize)
+            var message = "art"
+            var xtxt = leftmargin + (actualwidth - textWidth(message)) / 2
+            var ytxt = topmargin + actualheight * 0.5
+            text(message, xtxt, ytxt)
+            message = "ici"
+            xtxt = leftmargin + (actualwidth - textWidth(message)) / 2
+            ytxt += fSize + 7
+            text(message, xtxt, ytxt)
+            fSize = 18
+            textSize(fSize)
+            message = "this is the bottom part of the area where to draw"
+            xtxt = leftmargin + (actualwidth - textWidth(message)) / 2
+            ytxt = bottommargin
+            text(message, xtxt, ytxt)
+        }
+
+
+    </script>
+</body>
+
+</html>
