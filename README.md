@@ -36,6 +36,8 @@ Contact: benoit.baudry@umontreal.ca
 - [Can Digital and Physical Art Live Together?](https://www.rightclicksave.com/article/can-digital-and-physical-art-live-together)
 - [The Power of the Plotter](https://www.rightclicksave.com/article/the-power-of-the-plotter-generative-art-aleksandra-jovanic-julien-gachadoat-feral-file-graph-interview)
 - [Machines as Collaborators forArt and Rituals](https://dspace.mit.edu/bitstream/handle/1721.1/151089/3596928.pdf?)
+- on March 19 we go in room C-8132 pavillon Lionel Groux (8th floor), Université de Montréal, 3150 rue jean-brillant
+- on March 21 we are in the regular room
 ## Week 12 (Mar 26 & 28): Exhibition
 - March 26: Presentations and discussions before vernissage
 - March 28: vernissage for the Algorithmic art course. Salle C-2081, Carrefour des arts et des sciences, Pavillon Lionel-Groulx. 
