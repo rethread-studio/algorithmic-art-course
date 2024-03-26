@@ -1,0 +1,59 @@
+[
+    {
+        "title": "test",
+        "artist": "Benoît",
+        "hardware":"some hardware description",
+        "software":"some software details",
+        "description":"anything you want to add \ncan be multiline"
+    },
+    {
+        "title": "Gertraud & the machines",
+        "artist": "Lena MK & William Diakité",
+        "hardware":"Boîte à musique avec peigne de lamelles métalliques Kalliope (début 1900), interfaces audio, ordinateurs, hauts-parleurs, projecteur",
+        "software":"p5.js, Max/Msp",
+        "description":"bla bla, I want to have asci art here"
+    },
+    {
+        "title": "varia",
+        "artist": "margelle et les étudiant·e·s du IFT6251",
+        "hardware":"un Arduino et deux imitations · six cent pixels de DEL flexible RVB ·des restes d’un lit et du marché du tel-quel IKEA",
+        "software":"python · Arduino IDE {C++} · FastLED",
+        "description":""
+    },
+    {
+        "title": "Clouds by Clouds",
+        "artist": "Maude",
+        "hardware":"some hardware description",
+        "software":"some software details",
+        "description":"anything you want to add \ncan be multiline"
+    },
+    {
+        "title": "test",
+        "artist": "Brice",
+        "hardware":"some hardware description",
+        "software":"some software details",
+        "description":"anything you want to add \ncan be multiline"
+    },
+    {
+        "title": "test",
+        "artist": "Ivan",
+        "hardware":"some hardware description",
+        "software":"some software details",
+        "description":"anything you want to add \ncan be multiline"
+    },
+    {
+        "title": "test",
+        "artist": "Rafaela",
+        "hardware":"some hardware description",
+        "software":"some software details",
+        "description":"anything you want to add \ncan be multiline"
+    },
+    {
+        "title": "test",
+        "artist": "Yvan",
+        "hardware":"some hardware description",
+        "software":"some software details",
+        "description":"anything you want to add \ncan be multiline"
+    }
+     
+]
