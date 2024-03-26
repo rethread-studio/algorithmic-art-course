@@ -1,0 +1,141 @@
+[
+    {
+        "title": "Ikeda Lines",
+        "artist": "Benoit",
+        "country": "France",
+        "hardware":"Uunatek H3",
+        "software":"p5.js, noise",
+        "description":"A penplotter performance",
+        "code": "https://github.com/bbaudry/swart-studio"
+    },
+    {
+        "title": "Meta cartel",
+        "artist": "IFT6152",
+        "country": "",
+        "hardware":"Uunatek H3",
+        "software":"p5.js",
+        "description":"",
+        "code": "https://github.com/rethread-studio/algorithmic-art-course/cartels/"
+    },
+    {
+        "title": "Gertraud & the machines",
+        "artist": "Lena MK & William Diakité",
+        "country": "Humains",
+        "hardware":"Boîte à musique avec peigne de lamelles métalliques Kalliope (début 1900), disques, 2 interfaces audio, 2 ordinateurs, hauts-parleurs, projecteur",
+        "software":"p5.js, Max/Msp",
+        "description":"",
+        "code":"https://github.com/lenaMK/art-algorithmique/tree/main/gertraud-and-the-machines"
+        },
+    {
+        "title": "varia",
+        "artist": "margelle et les étudiant·e·s du IFT6251",
+        "country": "Canada",
+        "hardware":"un Arduino et deux imitations · six cent pixels de DEL flexible RVB ·des restes d’un lit et du marché du tel-quel IKEA",
+        "software":"python · Arduino IDE {C++} · FastLED",
+        "description":"",
+        "code": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task4"
+    },
+    {
+        "title": "CloudsByCircles",
+        "artist": "Maud Boisnard",
+        "country": "France, Canada",
+        "hardware": "Projecteur, ChromeBook",
+        "software": "python, Turtle",
+        "description": "",
+        "code":""
+    },
+    {
+        "title": "",
+        "artist": "Brice",
+        "country": "",
+        "hardware":"",
+        "software":"",
+        "description":"",
+        "code":""
+    },
+    {
+        "title": "test",
+        "artist": "Ivan",
+        "country": "",
+        "hardware":"",
+        "software":"",
+        "description":"",
+        "code":""
+    },
+    {
+        "title": "Véus",
+        "artist": "Rafaela Pinter",
+        "country": "Brésil",
+        "hardware":"Uunatek H3",
+        "software":"p5.js, inkscape",
+        "description":"",
+        "code": ""
+    },
+    {
+        "title": "Bio-Entangle",
+        "artist": "Felix Navarro",
+        "country": "Mexican, Australian, Canadian",
+        "hardware":"MacBook Pro, Projecteur",
+        "software":"p5.js, 3DMol.js",
+        "description":"",
+        "code":""
+    },
+    {
+        "title": "test",
+        "artist": "Yvan",
+        "country": "Cameroon",
+        "hardware":"Projecteur",
+        "software":"",
+        "description":"",
+        "code": ""
+    },
+    {
+        "title": "bagel",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNATEK H3",
+        "software": "Python, Blender",
+        "description": "",
+        "code": "None"
+    },
+    {
+        "title": "bagel bagel bagel",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNATEK H3",
+        "software": "Python, Inkscape",
+        "description": "",
+        "code": "None"
+    },
+
+    {
+        "title": "bagel#",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNATEK H3",
+        "software": "Python, Inkscape",
+        "description": "",
+        "code": "None"
+    },
+
+    {
+        "title": "pretzelll",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNATEK H3",
+        "software": "Python, Inkscape",
+        "description": "",
+        "code": "None"
+    },
+
+    {
+        "title": "bagel et amis",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNATEK H3",
+        "software": "Python, pytorch, kdtree, Inkscape",
+        "description": "Google QuickDraw",
+        "code": "None"
+    }
+     
+]
