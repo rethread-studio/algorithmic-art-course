@@ -3,7 +3,7 @@
         "title": "ikeda[lines]",
         "artist": "al.my.re",
         "country": "France",
-        "hardware":"uunatek h3, projector",
+        "hardware":"uunatek h3, laptop, projector",
         "software":"p5.js, noise, juicy-gcode, gcode-cli, ubuntu",
         "description":"Autonomous performance for pen plotter and laptop. blocks of lines and curves distributed with a noise function ::: Scalable Vector Graphics ::: gcode ::: pen, paper, motors",
         "code": "https://github.com/bbaudry/swart-studio/tree/main/p5-experiments/plottable"
