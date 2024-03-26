@@ -1,12 +1,12 @@
 [
     {
-        "title": "Ikeda Lines",
-        "artist": "Benoit",
+        "title": "ikeda[lines]",
+        "artist": "al.my.re",
         "country": "France",
-        "hardware":"Uunatek H3",
-        "software":"p5.js, noise",
-        "description":"A penplotter performance",
-        "code": "https://github.com/bbaudry/swart-studio"
+        "hardware":"uunatek h3, projector",
+        "software":"p5.js, noise, juicy-gcode, gcode-cli, ubuntu",
+        "description":"Autonomous performance for pen plotter and laptop. blocks of lines and curves distributed with a noise function ::: Scalable Vector Graphics ::: gcode ::: pen, paper, motors",
+        "code": "https://github.com/bbaudry/swart-studio/tree/main/p5-experiments/plottable"
     },
     {
         "title": "Meta cartel",
