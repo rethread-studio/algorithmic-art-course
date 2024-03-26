@@ -78,9 +78,13 @@ function drawCartel(x, y, width, height) {
         text(`${data[currentCartel].artist}`, 0, artistHeight, width)
 
         textSize(textFontSize)
-        text(`${data[currentCartel].hardware}`, 0, hardwareHeight, width)
-        text(`${data[currentCartel].software}`, 0, softwareHeight, width)
+        text(`${data[currentCartel].country}`, 0, artistHeight+30, width)
+
+        text(`Matériel :${data[currentCartel].hardware}`, 0, hardwareHeight, width)
+        text(`Logiciel : ${data[currentCartel].software}`, 0, softwareHeight, width)
         text(`${data[currentCartel].description}`, 0, descriptionHeight, width)
+
+        text(`${data[currentCartel].code}`, 0, cartelHeightPx-cartelMarginsPx*2, width)
 
     }
 
