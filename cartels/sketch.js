@@ -83,7 +83,7 @@ function drawCartel(x, y, width, height) {
             text(`Logiciel : ${data[currentCartel].software}`, 0, softwareHeight, width)
             text(`${data[currentCartel].description}`, 0, descriptionHeight, width)
 
-            text(`${data[currentCartel].code}`, 0, cartelHeightPx-cartelMarginsPx*2, width)
+            text(`${data[currentCartel].code}`, 0, cartelHeightPx-cartelMarginsPx*3, width)
 
         }
 
