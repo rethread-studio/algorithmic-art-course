@@ -5,7 +5,7 @@
         "country": "France",
         "hardware":"uunatek h3, laptop, projector",
         "software":"p5.js, noise, linux, juicy-gcode, gcode-cli, gcode",
-        "description":"Autonomous performance for pen plotter and laptop. blocks of lines and curves distributed with a noise function ::: Scalable Vector Graphics ::: gcode ::: pen, paper, motors",
+        "description":"performance autonome pour pen plotter et laptop. cubes flottent dans le bruit ::: Scalable Vector Graphics ::: gcode ::: stylo, papier, moteurs",
         "code": "https://github.com/bbaudry/ swart-studio/tree/main/otomatik"
     },
     {
