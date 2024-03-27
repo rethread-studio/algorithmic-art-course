@@ -9,8 +9,8 @@
 var w = 11.69 
 var h = 16.53 
 let printerDPI = 96
-var rightmargin = 0.95 * (w*printerDPI)
-var leftmargin = 0.05 * (w*printerDPI)
+var rightmargin = 0.93 * (w*printerDPI)
+var leftmargin = 0.02 * (w*printerDPI)
 var topmargin = 0.01 * (h*printerDPI)
 var bottommargin = 0.95 * (h*printerDPI)
 var actualwidth = rightmargin - leftmargin

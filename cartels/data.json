@@ -1,33 +1,5 @@
 [
     {
-        "title": "otomatik",
-        "artist": "al.my.re",
-        "country": "France",
-        "hardware":"uunatek h3, laptop, projector",
-        "software":"p5.js, noise, linux, juicy-gcode, gcode-cli, gcode",
-        "description":"performance autonome pour pen plotter et laptop. cubes flottent dans le bruit ::: Scalable Vector Graphics ::: gcode ::: stylo, papier, moteurs",
-        "code": "https://github.com/bbaudry/ swart-studio/tree/main/otomatik"
-    },
-    {
-        "title": "Meta cartel",
-        "artist": "IFT6251 · cours d'art algorithmique 2024",
-        "country": "",
-        "hardware":"Uunatek H3",
-        "software":"p5.js, linux, juicy-gcode, gcode-cli, gcode",
-        "description":"Données et algorithme utilisés pour générer les cartels de l'exposition",
-        "code": "https://github.com/rethread-studio/ algorithmic-art-course/cartels/"
-    },
-    {
-        "title": "Gertraud & the machines",
-        "artist": "Lena MK & William Diakité",
-        "country": "Humains",
-        "hardware":"Boîte à musique avec peigne de lamelles métalliques Kalliope (début 1900), disques, 2 interfaces audio, 2 ordinateurs, hauts-parleurs, projecteur",
-        "software":"p5.js, Max/Msp, linux",
-        "description":"",
-        "code":"https://github.com/lenaMK/art-algorithmique/ tree/main/gertraud-and-the-machines",
-        "color": "#FAE800"
-    },
-    {
         "title": "varia",
         "artist": "margelle et les étudiant·e·s du IFT6251",
         "country": "Canada",
@@ -41,19 +13,10 @@
         "artist": "Maud Boisnard",
         "country": "France, Canada",
         "hardware": "Projecteur, ChromeBook",
-        "software": "python, Turtle, linux",
-        "description": "",
+        "software": "Python, Turtle, Linux",
+        "description": "#BlowTheBigBlackBox. Variations algorithmiques autour du CLOUD. Construire - DéConstruire - CoConstruire par le codage informatique de cercles.",
         "code":"https://github.com/MdBoisnard/projets-Cloud2024/",
         "color": "#5D8AA8"
-    },
-    {
-        "title": "",
-        "artist": "Brice",
-        "country": "",
-        "hardware":"",
-        "software":"",
-        "description":"",
-        "code":""
     },
     {
         "title": "Véus",
@@ -64,6 +27,53 @@
         "description": "lignes droites et courbes de Bézier",
         "code": "https://github.com/rafpinter/algorithmic-art/ tree/main/07-vernissage",
         "color": "#2596be"
+    },
+    {
+        "title": "bagel",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNA TEK penplotter",
+        "software": "Python, Blender",
+        "description": "paramétrage de la surface du bagel",
+        "code": "https://github.com/ivanpuhachov/alg-art-works"
+    },
+
+    {
+        "title": "bagel bagel bagel",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNA TEK penplotter",
+        "software": "Python, Inkscape",
+        "description": "noise",
+        "code": "https://github.com/ivanpuhachov/alg-art-works"
+    },
+
+    {
+        "title": "pretzelll",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNA TEK penplotter",
+        "software": "Python, Inkscape",
+        "description": "l'art des lignes",
+        "code": "https://github.com/ivanpuhachov/alg-art-works"
+    },
+    {
+        "title": "bagel et amis",
+        "artist": "Ivan Puhachov",
+        "county": "Ukraine",
+        "hardware": "UUNA TEK penplotter",
+        "software": "Python, pytorch, kdtree, Inkscape",
+        "description": "donnees de Google QuickDraw",
+        "code": "https://github.com/ivanpuhachov/alg-art-works"
+    },
+    {
+        "title": "",
+        "artist": "Brice",
+        "country": "",
+        "hardware":"",
+        "software":"",
+        "description":"",
+        "code":""
     },
     {
         "title": "Bio-Entangle",
@@ -130,6 +140,33 @@
         "software": "Python, pytorch, kdtree, Inkscape",
         "description": "Google QuickDraw",
         "code": "None"
-    }
-     
+    },
+    {
+        "title": "otomatik",
+        "artist": "al.my.re",
+        "country": "France",
+        "hardware":"uunatek h3, laptop, projector",
+        "software":"p5.js, noise, linux, juicy-gcode, gcode-cli, gcode",
+        "description":"performance autonome pour pen plotter et laptop. cubes flottent dans le bruit ::: Scalable Vector Graphics ::: gcode ::: stylo, papier, moteurs",
+        "code": "https://github.com/bbaudry/ swart-studio/tree/main/otomatik"
+    },
+    {
+        "title": "Meta cartel",
+        "artist": "IFT6251 · cours d'art algorithmique 2024",
+        "country": "des 4 continents",
+        "hardware":"Uunatek H3",
+        "software":"p5.js, linux, juicy-gcode, gcode-cli, gcode",
+        "description":"Données et algorithme utilisés pour générer les cartels de l'exposition",
+        "code": "https://github.com/rethread-studio/ algorithmic-art-course/cartels/"
+    },
+    {
+        "title": "Gertraud & the machines",
+        "artist": "Lena MK & William Diakité",
+        "country": "collectif transnational",
+        "hardware":"Boîte à musique avec peigne de lamelles métalliques Kalliope (début 1900), disques, 2 interfaces audio, 2 ordinateurs, hauts-parleurs, projecteur",
+        "software":"p5.js, Max/Msp, linux",
+        "description":"",
+        "code":"https://github.com/lenaMK/art-algorithmique/ tree/main/gertraud-and-the-machines",
+        "color": "#FAE800"
+    }     
 ]
