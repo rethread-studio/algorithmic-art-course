@@ -60,9 +60,10 @@
         "artist": "Rafaela Pinter",
         "country": "Brésil",
         "hardware":"Uunatek H3",
-        "software":"p5.js, inkscape",
-        "description":"",
-        "code": ""
+        "software":"p5.js, Inkscape",
+        "description": "lignes droites et courbes de Bézier",
+        "code": "https://github.com/rafpinter/algorithmic-art/ tree/main/07-vernissage",
+        "color": "#2596be"
     },
     {
         "title": "Bio-Entangle",
