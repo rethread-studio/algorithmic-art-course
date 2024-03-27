@@ -38,7 +38,7 @@ function setup() {
     colorMode(HSB, 360, 100, 100, 250);
 
     //paper size
-    createCanvas(paperWidth * printerDPI, paperHeight * printerDPI);
+    createCanvas(paperWidth * printerDPI, paperHeight * printerDPI, SVG).mousePressed(savesvg);;
 
     cartelWidthPx = cartelWidth * printerDPI
     cartelHeightPx = cartelHeight * printerDPI
@@ -54,6 +54,11 @@ function setup() {
     noLoop();
 
 }
+
+function savesvg() {
+    save("cartels.svg");
+}
+
 
 function drawCartel(x, y, width, height) {
     noStroke()
