@@ -69,6 +69,7 @@ function drawCartel(x, y, width, height) {
             console.log(data[currentCartel])
             //all text is black
             stroke(0, 0, 0, 250)
+            noFill()
 
             //using width limits the textbox width to the available size of the cartel. However, we need to check for textbox height, to make sure it doesn't overflow like hardware currently does for Lena's cartel
             textSize(titleFontSize)
