@@ -10,52 +10,45 @@
     },
     {
         "title": "Meta cartel",
-        "artist": "IFT6152",
+        "artist": "IFT6251 · cours d'art algorithmique 2024",
         "country": "",
         "hardware":"Uunatek H3",
-        "software":"p5.js",
-        "description":"",
-        "code": "https://github.com/rethread-studio/algorithmic-art-course/cartels/"
+        "software":"p5.js, linux, juicy-gcode, gcode-cli, gcode",
+        "description":"Données et algorithme utilisés pour générer les cartels de l'exposition",
+        "code": "https://github.com/rethread-studio/ algorithmic-art-course/cartels/"
     },
     {
         "title": "Gertraud & the machines",
         "artist": "Lena MK & William Diakité",
         "country": "Humains",
         "hardware":"Boîte à musique avec peigne de lamelles métalliques Kalliope (début 1900), disques, 2 interfaces audio, 2 ordinateurs, hauts-parleurs, projecteur",
-        "software":"p5.js, Max/Msp",
+        "software":"p5.js, Max/Msp, linux",
         "description":"",
-        "code":"https://github.com/lenaMK/art-algorithmique/tree/main/gertraud-and-the-machines"
-        },
+        "code":"https://github.com/lenaMK/art-algorithmique/ tree/main/gertraud-and-the-machines",
+        "color": "#FAE800"
+    },
     {
         "title": "varia",
         "artist": "margelle et les étudiant·e·s du IFT6251",
         "country": "Canada",
-        "hardware":"un Arduino et deux imitations · six cent pixels de DEL flexible RVB ·des restes d’un lit et du marché du tel-quel IKEA",
+        "hardware":"un Arduino et deux imitations · six cent pixels de DEL flexible RVB · des restes d’un lit et du marché du tel-quel IKEA",
         "software":"python · Arduino IDE {C++} · FastLED",
         "description":"",
-        "code": "https://github.com/margelle/algorithmic-art-tasks/tree/main/task4"
+        "code": "https://github.com/margelle/algorithmic-art-tasks/ tree/main/task4"
     },
     {
         "title": "CloudsByCircles",
         "artist": "Maud Boisnard",
         "country": "France, Canada",
         "hardware": "Projecteur, ChromeBook",
-        "software": "python, Turtle",
+        "software": "python, Turtle, linux",
         "description": "",
-        "code":""
+        "code":"https://github.com/MdBoisnard/projets-Cloud2024/",
+        "color": "#5D8AA8"
     },
     {
         "title": "",
         "artist": "Brice",
-        "country": "",
-        "hardware":"",
-        "software":"",
-        "description":"",
-        "code":""
-    },
-    {
-        "title": "test",
-        "artist": "Ivan",
         "country": "",
         "hardware":"",
         "software":"",
@@ -92,7 +85,7 @@
     {
         "title": "bagel",
         "artist": "Ivan Puhachov",
-        "county": "Ukraine",
+        "country": "Ukraine",
         "hardware": "UUNATEK H3",
         "software": "Python, Blender",
         "description": "",
@@ -101,7 +94,7 @@
     {
         "title": "bagel bagel bagel",
         "artist": "Ivan Puhachov",
-        "county": "Ukraine",
+        "country": "Ukraine",
         "hardware": "UUNATEK H3",
         "software": "Python, Inkscape",
         "description": "",
@@ -111,7 +104,7 @@
     {
         "title": "bagel#",
         "artist": "Ivan Puhachov",
-        "county": "Ukraine",
+        "country": "Ukraine",
         "hardware": "UUNATEK H3",
         "software": "Python, Inkscape",
         "description": "",
@@ -121,7 +114,7 @@
     {
         "title": "pretzelll",
         "artist": "Ivan Puhachov",
-        "county": "Ukraine",
+        "country": "Ukraine",
         "hardware": "UUNATEK H3",
         "software": "Python, Inkscape",
         "description": "",
@@ -131,7 +124,7 @@
     {
         "title": "bagel et amis",
         "artist": "Ivan Puhachov",
-        "county": "Ukraine",
+        "country": "Ukraine",
         "hardware": "UUNATEK H3",
         "software": "Python, pytorch, kdtree, Inkscape",
         "description": "Google QuickDraw",
