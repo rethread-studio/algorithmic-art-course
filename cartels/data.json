@@ -28,6 +28,15 @@
         "color":"#5D3FD3"
     },
     {
+        "title": "varia",
+        "artist": "margelle et les étudiant·e·s du IFT6251",
+        "country": "la République de l'anosognosie",
+        "hardware":"un Arduino · deux imitations · six cent pixels de DEL flexibles RVB · des restes d’un lit et du marché du tel-quel IKEA",
+        "software":"python · Arduino IDE {C++} · FastLED et/ou Adafruit_NeoPixel",
+        "description":"margelle fait un hachage du code des autres étudiant·e·s et nous le montre par moyen de DEL",
+        "code": "https://github.com/margelle/algorithmic-art-tasks/ blob/main/task4/make_a_hash_of_it.py"
+    },
+    {
         "title": "BPMosaic",
         "artist": "Yvan Brunel",
         "country": "Cameroon",
@@ -64,15 +73,6 @@
         "code":"https://github.com/lenaMK/art-algorithmique/ tree/main/gertraud-and-the-machines",
         "color": "#FAE800"
     },   
-    {
-        "title": "varia",
-        "artist": "margelle et les étudiant·e·s du IFT6251",
-        "country": "la République de l'anosognosie",
-        "hardware":"un Arduino · deux imitations · six cent pixels de DEL flexibles RVB · des restes d’un lit et du marché du tel-quel IKEA",
-        "software":"python · Arduino IDE {C++} · FastLED et/ou Adafruit_NeoPixel",
-        "description":"margelle fait un hachage du code des autres étudiant·e·s et nous le montre par moyen de DEL",
-        "code": "https://github.com/margelle/algorithmic-art-tasks/ blob/main/task4/make_a_hash_of_it.py"
-    },
     {
         "title": "CloudsByCircles",
         "artist": "Maud Boisnard",
