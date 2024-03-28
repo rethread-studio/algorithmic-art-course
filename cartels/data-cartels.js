@@ -95,7 +95,7 @@ function writedata() {
         }
         else {
             text(c, x, y)
-            y += fSize + 1.8
+            y += fSize + 1.6
         }
     }
 }

@@ -67,7 +67,7 @@ function savesvg() {
 
 function preload() {
     font = loadFont("./fonts/1CAMBam_Stick_9.ttf");
-    data = loadJSON("data-last.json")
+    data = loadJSON("data.json")
 
 }
 
