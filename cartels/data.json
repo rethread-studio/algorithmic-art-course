@@ -9,13 +9,13 @@
         "code": "https://github.com/ivanpuhachov/alg-art-works"
     },
     {
-        "title": "",
-        "artist": "Brice",
-        "country": "",
-        "hardware":"",
-        "software":"",
+        "title": "nature",
+        "artist": "Brice M. Bigendako",
+        "country": "Burundi",
+        "hardware":"Laptop, Projecteur",
+        "software":"p5.js",
         "description":"",
-        "code":""
+        "code":"https://github.com/bricemichelb/nature"
     },
     {
         "title": "Bio-Entangle",
