@@ -23,8 +23,8 @@
         "country": "Mexico, Australia, Canada",
         "hardware":"MacBook Pro, Projecteur",
         "software":"p5.js, 3DMol.js, TouchDesigner",
-        "description":"An algorithmic art piece depicting a 3D human figure engulfed by vivid, twisting SARS-CoV-2 protein strands, evoking humanity's vulnerability and interconnectedness with the complex natural world."
- 	    "code":"https://github.com/siliconfeather/algo-art"",
+        "description":"An algorithmic art piece depicting a 3D human figure engulfed by vivid, twisting SARS-CoV-2 protein strands, evoking humanity's vulnerability and interconnectedness with the complex natural world.",
+ 	    "code":"https://github.com/siliconfeather/algo-art",
         "color":"#5D3FD3"
     },
     {
