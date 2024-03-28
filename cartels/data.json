@@ -36,54 +36,6 @@
         "code": "https://github.com/YBTopaz8/DataDrivenArt"
     },
     {
-        "title": "bagel",
-        "artist": "Ivan Puhachov",
-        "country": "Ukraine",
-        "hardware": "UUNATEK H3",
-        "software": "Python, Blender",
-        "description": "",
-        "code": "None"
-    },
-    {
-        "title": "bagel bagel bagel",
-        "artist": "Ivan Puhachov",
-        "country": "Ukraine",
-        "hardware": "UUNATEK H3",
-        "software": "Python, Inkscape",
-        "description": "",
-        "code": "None"
-    },
-
-    {
-        "title": "bagel#",
-        "artist": "Ivan Puhachov",
-        "country": "Ukraine",
-        "hardware": "UUNATEK H3",
-        "software": "Python, Inkscape",
-        "description": "",
-        "code": "None"
-    },
-
-    {
-        "title": "pretzelll",
-        "artist": "Ivan Puhachov",
-        "country": "Ukraine",
-        "hardware": "UUNATEK H3",
-        "software": "Python, Inkscape",
-        "description": "",
-        "code": "None"
-    },
-
-    {
-        "title": "bagel et amis",
-        "artist": "Ivan Puhachov",
-        "country": "Ukraine",
-        "hardware": "UUNATEK H3",
-        "software": "Python, pytorch, kdtree, Inkscape",
-        "description": "Google QuickDraw",
-        "code": "None"
-    },
-    {
         "title": "otomatik",
         "artist": "al.my.re",
         "country": "France",
@@ -158,7 +110,6 @@
         "description": "noise",
         "code": "https://github.com/ivanpuhachov/alg-art-works"
     },
-
     {
         "title": "pretzelll",
         "artist": "Ivan Puhachov",
