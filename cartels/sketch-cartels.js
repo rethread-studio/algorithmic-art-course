@@ -1,18 +1,18 @@
 
-//pixel = dpi * mm / 25.4 mm
-//A3: 297mm × 420mm
-//letter: 8.5in x 11in
-//96dpi is for plotting on the UUNA TEK iDraw
-//w=96*8.5=816
-//h=96*11=1056
+/*
+// fetch data from data.json
+// layout six cartels on an A3 page
+// each cartel includes name of artwork, name of author(s), origin of author(s), hardware, software, description and code location 
+*/ 
+
 //A3 in inches: 11.693 x 16.535
-var w = 11.69 
-var h = 16.53 
-let printerDPI = 96
-var rightmargin = 0.93 * (w*printerDPI)
-var leftmargin = 0.02 * (w*printerDPI)
-var topmargin = 0.01 * (h*printerDPI)
-var bottommargin = 0.95 * (h*printerDPI)
+var w = 11.69
+var h = 16.53
+let printerDPI = 96 //96dpi is for plotting on the UUNA TEK iDraw
+var rightmargin = 0.93 * (w * printerDPI)
+var leftmargin = 0.02 * (w * printerDPI)
+var topmargin = 0.01 * (h * printerDPI)
+var bottommargin = 0.95 * (h * printerDPI)
 var actualwidth = rightmargin - leftmargin
 var actualheight = bottommargin - topmargin
 var cnv
@@ -37,7 +37,7 @@ function setup() {
     paperWidthPx = w * printerDPI
     paperHeightPx = h * printerDPI
     cnv = createCanvas(paperWidthPx, paperHeightPx, SVG).mousePressed(savesvg);
-    var x = (windowWidth - w*printerDPI) / 2;
+    var x = (windowWidth - w * printerDPI) / 2;
     var y = 0
     cnv.position(x, y);
 
@@ -67,20 +67,20 @@ function savesvg() {
 
 function preload() {
     font = loadFont("./fonts/1CAMBam_Stick_9.ttf");
-    data = loadJSON("data.json")
+    data = loadJSON("data-last.json")
 
 }
 
 function draw() {
-    background(0,0,100)
+    background(0, 0, 100)
     //quad(leftmargin, topmargin, rightmargin, topmargin, rightmargin, bottommargin, leftmargin, bottommargin)
-    stroke(0,100,100);rect(0, 0, w*printerDPI, h*printerDPI);stroke(0,0,0)
+    stroke(0, 100, 100); rect(0, 0, w * printerDPI, h * printerDPI); stroke(0, 0, 0)
     var fSize = 12
     stroke(0, 0, 0)
     textFont(font)
-   for (var x = leftmargin+cartelMarginsPx; x <= w*printerDPI; x += cartelWidth*printerDPI) {
-        for (var y = topmargin+cartelMarginsPx; y <= h*printerDPI; y += cartelHeight*printerDPI) {
-            rect(x-cartelMarginsPx, y-cartelMarginsPx, cartelWidthPx, cartelHeightPx)
+    for (var x = leftmargin + cartelMarginsPx; x <= w * printerDPI; x += cartelWidth * printerDPI) {
+        for (var y = topmargin + cartelMarginsPx; y <= h * printerDPI; y += cartelHeight * printerDPI) {
+            rect(x - cartelMarginsPx, y - cartelMarginsPx, cartelWidthPx, cartelHeightPx)
             drawCartel(x, y, cartelWidthPx - cartelMarginsPx * 2, cartelHeightPx - cartelMarginsPx * 2)
         }
     }
@@ -88,7 +88,7 @@ function draw() {
 }
 
 function drawCartel(x, y, width, height) {
-    
+
     if (data[currentCartel]) {
         console.log(data[currentCartel])
         //all text is black
@@ -111,6 +111,5 @@ function drawCartel(x, y, width, height) {
         text(`${data[currentCartel].code}`, x, y + cartelHeightPx - cartelMarginsPx * 1.8, width)
 
     }
-
     currentCartel++;
 }
