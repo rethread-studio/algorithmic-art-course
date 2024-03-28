@@ -27,13 +27,13 @@
         "code":""
     },
     {
-        "title": "test",
-        "artist": "Yvan",
+        "title": "BPMosaic",
+        "artist": "Yvan Brunel",
         "country": "Cameroon",
-        "hardware":"Projecteur",
-        "software":"",
-        "description":"",
-        "code": ""
+        "hardware":"MacBook Air, Projecteur",
+        "software":"p5.js",
+        "description":"A Generative Artwork where art meets algorithm in a celebration of life's rhythm. Each heartbeat's measure is not just a number, but a burst of particles cascading from the epicenter of the canvas, with the aim of illustrating how one’s heartbeats per minute can paint a vibrant mosaic of their daily existence.",
+        "code": "https://github.com/YBTopaz8/DataDrivenArt"
     },
     {
         "title": "bagel",
