@@ -1,5 +1,7 @@
 The course on algorithmic art at Université de Montréal ([IFT6251](https://admission.umontreal.ca/cours-et-horaires/cours/IFT-6251/https://admission.umontreal.ca/cours-et-horaires/cours/IFT-6251/)) is given in the winter 2024, Tuesday and Thursday 15.30 - 17.30; Z-337 Pav. Claire McNicoll.
 
+To take this course, you need to know (i) how to program (in any language) and (ii) tha basics of github. Dan Shiffman's [Git and Github for poets](https://thecodingtrain.com/tracks/git-and-github-for-poets) is a great resource.
+
 Contact: benoit.baudry@umontreal.ca
 
 ## Week 1 (Jan 9 & 11):  introduction
