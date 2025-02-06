@@ -54,7 +54,7 @@ Le format de l'oeuvre présentée pour le vernissage est libre.
 # Semaine 8 (25, 27 février)
 - data art
 - présentations d'étudiants
-- 
+ 
 ✨JEUDI 27 février, le cours est en 2078 à la bibliothèque de littérature et sciences humaines✨
 
 # Semaine 9 (11, 13 mars)
@@ -64,7 +64,7 @@ Le format de l'oeuvre présentée pour le vernissage est libre.
 # Semaine 10 (18, 20 mars)
 - un article
 - présentations d'étudiants
-- 
+
 ✨JEUDI 20 mars, le cours est en 2078 à la bibliothèque de littérature et sciences humaines✨
 
 # Semaine 11 (25, 27 mars)
