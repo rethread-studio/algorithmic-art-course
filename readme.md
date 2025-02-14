@@ -70,6 +70,7 @@ Le format de l'oeuvre présentée pour le vernissage est libre.
 # Semaine 11 (25, 27 mars)
 - un article
 - présentations d'étudiants
+✨JEUDI 27 mars, le cours est en hors campus. Nous sommes accueillis à [antimodular](https://antimodular.com/)✨
 
 # Semaine 12 (01, 03 avril)
 - [inspiration](https://www.rightclicksave.com/article/the-power-of-the-plotter-generative-art-aleksandra-jovanic-julien-gachadoat-feral-file-graph-interview)
