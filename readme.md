@@ -52,6 +52,7 @@ Le format de l'oeuvre présentée pour le vernissage est libre.
 - recherche pour data art et vernissage
 
 # Semaine 8 (25, 27 février)
+- [inspiration](https://www.academia.edu/download/120893431/AFT5104_07_Lee.pdf)
 - data art
 - présentations d'étudiants
  
