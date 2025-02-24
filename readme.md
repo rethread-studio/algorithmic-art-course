@@ -63,13 +63,13 @@ Le format de l'oeuvre présentée pour le vernissage est libre.
 - présentations d'étudiants
 
 # Semaine 10 (18, 20 mars)
-- un article
+- un [article](papers.md)
 - présentations d'étudiants
 
 ✨JEUDI 20 mars, le cours est en 2078 à la bibliothèque de littérature et sciences humaines✨
 
 # Semaine 11 (25, 27 mars)
-- un article
+- un [article](papers.md)
 - présentations d'étudiants
 ✨JEUDI 27 mars, le cours est en hors campus. Nous sommes accueillis à [antimodular](https://antimodular.com/)✨
 
