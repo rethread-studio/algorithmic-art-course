@@ -1,6 +1,6 @@
 [The creative process where the artist is amplified or superseded by the computer](https://muse.jhu.edu/pub/6/article/597993), 1973
 
-[Éloge de l’ordinateur dans les arts visuels](http://www.veramolnar.com/?p=1002), 1984
+[Éloge de l’ordinateur dans les arts visuels](http://www.veramolnar.com/blog/wp-content/uploads/VM1984_eloge.pdf), 1984
 
 [The Aesthetics of Exhibition: A Discussion of Recent American Computer Art Shows](https://muse.jhu.edu/article/600598/pdf?casa_token=KVUgr0jfJpcAAAAA:QpPHxkX-jocuE1tRjaquehWYd0ZsIsRgLZ9tNzihHj9yotPZ7RLs3oVWV-dq5IXKTAK7nUFb0Lq9), 1988
 
