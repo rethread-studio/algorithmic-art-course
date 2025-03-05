@@ -12,7 +12,7 @@
 
 [Making programming languages to dance to: live coding with tidal](https://dl.acm.org/doi/pdf/10.1145/2633638.2633647), 2014
 
-[Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.academia.edu/download/54169650/Wharton_Engel_Reading_Between_the_Lines_Source_Code_Documentation.pdf), 2014
+[Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115?casa_token=mKlFlvzjvw4AAAAA:trOIRMCrtiHwNP2g7-P3njdtSLoG_inf50SXHQzjmTbmlYie0Vxa3Y-FD9Pa6cHmfPB4ghAioRnb), 2014
 
 [Evolving Glitch Art](https://eelcodenheijer.nl/publications/Eelco_den_Heijer-Evolving-Glitch-Art-2013.pdf), 2013
 
