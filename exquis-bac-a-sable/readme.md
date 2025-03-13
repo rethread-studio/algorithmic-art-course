@@ -14,10 +14,10 @@ To design, experiment and tune your own artworks:
   - ```O_sectionheight```: height of the section in which you draw
   - ```O_sectionwidth```: width of the section in which you draw
   - a section object has different fields
-    - x, y: the coordinates of the top left corner for the section
-    - x1, y1: a point on the top edge of section (to anchor with the artwork on top of yous)
-    - x2, y2: a point on the right edge of section (to anchor with the artwork on right of yous)
-    - x3, y3: a point on the bottom edge of section (to anchor with the artwork on bottom of yous)
-    - x4, y4: a point on the left edge of section (to anchor with the artwork on left of yous)
-    - a unique id (between 0 and 26) for your section
+    - ```x```, ```y```: the coordinates of the top left corner for the section
+    - ```x1```, ```y1```: a point on the top edge of section (to anchor with the artwork on top of yous)
+    - ```x2```, ```y2```: a point on the right edge of section (to anchor with the artwork on right of yous)
+    - ```x3```, ```y3```: a point on the bottom edge of section (to anchor with the artwork on bottom of yous)
+    - ```x4```, ```y4```: a point on the left edge of section (to anchor with the artwork on left of yous)
+    - ```id```: a unique id (between 0 and 26) for your section
  
