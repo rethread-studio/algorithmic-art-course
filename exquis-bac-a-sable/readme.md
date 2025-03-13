@@ -1,4 +1,4 @@
-# Cadavre exquis, a.k.a exquisite corpse, for a collective generative artwork
+# Sample project to experiment with cadavre exquis artworks
 
 This folder includes a sandbox to experiment with two gen art pieces to be included in the IFT6251 [exquisite corpse](https://en.wikipedia.org/wiki/Exquisite_corpse).
 
