@@ -33,7 +33,7 @@
             //for each object in the configuration , get the sketch name and add the sketch file to the current document
             for (const s of data) {
               var js = document.createElement("script");
-              js.type = "text/javascript";
+              js.type = "module";
               js.src = "./" + s.art_code + ".js";
               document.body.appendChild(js);
             }
