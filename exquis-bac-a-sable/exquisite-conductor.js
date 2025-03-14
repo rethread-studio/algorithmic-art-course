@@ -95,12 +95,12 @@ function draw() {
   } else {
     if (O_counter % O_sectionduration == 0) {
       O_currentsection = O_sections[index];
-      artCode = O_configurationexquise[index].art_code.replace(".js", "");
+      artCode = O_configurationexquise[index].art_code;
       artObject = window[artCode]["init"]();
       index++;
     }
     if (O_counter % O_sectionduration > 0) {
-      artCode = O_configurationexquise[index - 1].art_code.replace(".js", "");
+      artCode = O_configurationexquise[index - 1].art_code;
       artObject = window[artCode]["draw"]();
     }
     O_counter++;

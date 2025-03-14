@@ -35,7 +35,7 @@
             for (const s of data) {
               var js = document.createElement("script");
               js.type = "text/javascript";
-              js.src = "./" + s.art_code;
+              js.src = "./" + s.art_code + ".js";
               document.body.appendChild(js);
             }
           })
