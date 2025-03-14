@@ -23,8 +23,10 @@ function setup() {
   O_widthexquis = Math.floor(windowWidth * 0.8);
   O_heightexquis = Math.floor(O_widthexquis / 1.82);
   O_canvas = createCanvas(O_widthexquis, O_heightexquis);
-  O_nbsectionshorizontal = 1;
-  O_nbsectionsvertical = 2;
+  O_nbsectionsvertical = 3;
+  O_nbsectionshorizontal = Math.ceil(
+    Object.keys(O_configurationexquise).length / O_nbsectionsvertical,
+  );
   O_sectionduration = 60 * 2;
 
   // center the canvas
