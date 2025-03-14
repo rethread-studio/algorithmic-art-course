@@ -95,15 +95,13 @@ function draw() {
   } else {
     if (O_counter % O_sectionduration == 0) {
       O_currentsection = O_sections[index];
-      functionName = O_configurationexquise[index].art_set;
-      fn = new Function(`return ${functionName}()`);
-      fn();
+      artCode = O_configurationexquise[index].art_code.replace(".js", "");
+      artObject = window[artCode]["init"]();
       index++;
     }
     if (O_counter % O_sectionduration > 0) {
-      functionName = O_configurationexquise[index - 1].art_gen;
-      fn = new Function(`return ${functionName}()`);
-      fn();
+      artCode = O_configurationexquise[index - 1].art_code.replace(".js", "");
+      artObject = window[artCode]["draw"]();
     }
     O_counter++;
   }

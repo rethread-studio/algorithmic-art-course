@@ -1,13 +1,8 @@
 [
   {
-    "art_code": "exquisitebw.js",
-    "art_set": "initbw",
-    "art_gen": "drawbw"
+    "art_code": "exquisitebw.js"
   },
   {
-    "art_code": "exquisitered.js",
-    "art_set": "initred",
-    "art_gen": "drawred"
+    "art_code": "exquisitered.js"
   }
 ]
-
