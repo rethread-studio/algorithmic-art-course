@@ -26,5 +26,6 @@
     pop();
   }
 
+  // Use the name of the current js file (without the extension) as the key in the object window.
   window.exquisitered = { init, draw };
 })();
