@@ -1,7 +1,7 @@
 (() => {
   let s;
 
-  function init() {
+  async function init() {
     s = O_currentsection;
   }
 

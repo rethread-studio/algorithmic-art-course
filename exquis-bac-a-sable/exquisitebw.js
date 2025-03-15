@@ -1,7 +1,7 @@
 (() => {
   let s, r, rinc;
 
-  function init() {
+  async function init() {
     s = O_currentsection;
     r = 7;
     rinc = 0.5;

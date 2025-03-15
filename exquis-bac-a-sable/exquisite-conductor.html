@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"
-      integrity="sha512-1YMgn4j8cIL91s14ByDGmHtBU6+F8bWOMcF47S0cRO3QNm8SKPNexy4s3OCim9fABUtO++nJMtcpWbINWjMSzQ=="
+      src="https://cdn.jsdelivr.net/npm/p5@2.0.0-beta.4/lib/p5.min.js"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
@@ -32,7 +31,7 @@
           .then((data) => {
             //for each object in the configuration , get the sketch name and add the sketch file to the current document
             for (const s of data) {
-              var js = document.createElement("script");
+              let js = document.createElement("script");
               js.type = "module";
               js.src = "./" + s.art_code + ".js";
               document.body.appendChild(js);
