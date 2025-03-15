@@ -82,7 +82,7 @@ function initsections() {
 
 var index = 0;
 
-function draw() {
+async function draw() {
   var functionName, fn;
   if (
     O_counter ==
@@ -96,12 +96,12 @@ function draw() {
     if (O_counter % O_sectionduration == 0) {
       O_currentsection = O_sections[index];
       artCode = O_configurationexquise[index].art_code;
-      artObject = window[artCode]["init"]();
+      await window[artCode]["init"]();
       index++;
     }
     if (O_counter % O_sectionduration > 0) {
       artCode = O_configurationexquise[index - 1].art_code;
-      artObject = window[artCode]["draw"]();
+      await window[artCode]["draw"]();
     }
     O_counter++;
   }
