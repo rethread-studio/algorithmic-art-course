@@ -7,8 +7,12 @@
 
   function draw() {
     let r = random();
+
+    // Move to the section
     push();
     translate(s.x, s.y);
+
+    // Draw our art
     if (r > 0.42) {
       fill(0, 100, 100);
       noStroke();
@@ -23,6 +27,7 @@
       quad(s.x1, s.y1, s.x2, s.y2, s.x3, s.y3, s.x4, s.y4);
     }
 
+    // Pop out of the section
     pop();
   }
 
