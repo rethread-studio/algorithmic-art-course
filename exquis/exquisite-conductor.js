@@ -40,7 +40,7 @@ async function setup() {
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 2// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
@@ -108,14 +108,19 @@ function initsections() {
       id++;
     }
   }
-  console.log(O_sections.length)
 }
 
 let index = 0;
 function draw() {
+  // drawsections just draws a grid, we use it for calibration
+  // drawsections(); noLoop()
+  // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
+   drawcorpse()
+}
+
+function drawcorpse(){
   // Check if we are done with all the artworks
   if (O_counter == O_nbartworks * O_sectionduration) {
-    //background(0, 0, 0)
     noLoop();
     O_counter = 0;
     index = 0;
@@ -131,7 +136,18 @@ function draw() {
   if (O_counter % O_sectionduration > 0) {
     let artCode = O_configurationexquise[index - 1].art_code;
     window[artCode]["draw"]();
-    O_currentsection=O_sections[index-1]
   }
   O_counter++;
+}
+
+function drawsections(){
+  var s
+  for(index in O_sections){
+    push()
+    stroke(0,0,100); noFill()
+    s=O_sections[index]
+    translate(s.x,s.y);console.log(s.x+" "+s.y)
+    rect(0,0,O_sectionwidth,O_sectionheight)
+    pop()
+  }
 }
