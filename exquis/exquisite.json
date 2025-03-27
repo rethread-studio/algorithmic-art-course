@@ -1,12 +1,36 @@
 [
     {
-        "art_code":"exquisitebw.js",
-        "art_set":"initbw",
-        "art_gen":"drawbw"
+    "art_code": "exquisiteTron"
     },
     {
-        "art_code":"exquisitered.js",
-        "art_set":"initred",
-        "art_gen":"drawred"
-    }
+    "art_code": "exquisiteAfterRain"
+    },
+    {
+      "art_code": "exquisitebw"
+    },
+    {
+      "art_code": "exquisitered"
+    },    
+    {
+        "art_code": "exquisitebw"
+      },
+      {
+        "art_code": "exquisitered"
+      },    
+      {
+        "art_code": "exquisitebw"
+      },
+      {
+        "art_code": "exquisitered"
+      },
+      {
+        "art_code": "exquisitebw"
+      },
+      {
+        "art_code": "exquisitered"
+      },
+      {
+        "art_code": "exquisitebw"
+      }  
 ]
+  
