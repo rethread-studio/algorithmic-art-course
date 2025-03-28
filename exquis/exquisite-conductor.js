@@ -52,13 +52,13 @@ async function setup() {
   textSize(84);
   textFont(O_policeexquise);
   stroke(0, 0, 100);
+  pixelDensity(0.5)
 
   // Initialize the artworks
   let promises = [];
   for (let i = 0; i < O_nbartworks; i++) {
     // Initialize all sketches
     O_currentsection = O_sections[i];
-    console.log(O_currentsection)
     let artCode = O_configurationexquise[i].art_code;
     let promise = window[artCode]["init"]();
     promises.push(promise);
@@ -114,7 +114,7 @@ function initsections() {
 let index = 0;
 function draw() {
   // drawsections just draws a grid, we use it for calibration
-  // drawsections(); noLoop()
+  // background(0,0,0); drawsections(); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
    drawcorpse()
 }
@@ -146,8 +146,9 @@ function drawsections(){
   for(index in O_sections){
     push()
     stroke(0,0,100); noFill()
+    if(random()<0.05){fill(0,0,100)}
     s=O_sections[index]
-    translate(s.x,s.y);console.log(s.x+" "+s.y)
+    translate(s.x,s.y);
     rect(0,0,O_sectionwidth,O_sectionheight)
     pop()
   }
