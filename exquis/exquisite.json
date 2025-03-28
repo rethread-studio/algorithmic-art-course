@@ -1,5 +1,8 @@
 [
-    {
+  {
+    "art_code": "exquisitebwb"
+  },
+  {
     "art_code": "exquisiteTron"
     },
     {
@@ -8,9 +11,6 @@
     {
       "art_code": "exquisitebw"
     },    
-    {
-      "art_code": "exquisitebw2"
-    },
     {
       "art_code": "exquisitered"
     },    

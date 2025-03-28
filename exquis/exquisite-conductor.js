@@ -25,7 +25,7 @@ async function setup() {
   O_nbartworks = Object.keys(O_configurationexquise).length;
 
   // Create the canvas
-  O_widthexquis = Math.floor(windowWidth * 0.8);
+  O_widthexquis = Math.floor(windowWidth);
   O_heightexquis = Math.floor(O_widthexquis / 1.82);
   O_canvas = createCanvas(O_widthexquis, O_heightexquis);
 
@@ -36,11 +36,11 @@ async function setup() {
   colorMode(HSB, 360, 100, 100, 250);
 
   // Set the duration of a section
-  O_sectionduration = 60 * 2;
+  O_sectionduration = 60 * 30;
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 2// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
@@ -58,6 +58,7 @@ async function setup() {
   for (let i = 0; i < O_nbartworks; i++) {
     // Initialize all sketches
     O_currentsection = O_sections[i];
+    console.log(O_currentsection)
     let artCode = O_configurationexquise[i].art_code;
     let promise = window[artCode]["init"]();
     promises.push(promise);

@@ -4,7 +4,7 @@
     async function init() {
       s = O_currentsection;
       r = 7;
-      rinc = 0.5;
+      rinc = 0.1;
       console.log(s.x,s.y)
     }
   
