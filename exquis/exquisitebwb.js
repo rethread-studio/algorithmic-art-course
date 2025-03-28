@@ -4,7 +4,7 @@
     async function init() {
         s = O_currentsection;
         localcount = 0
-        molnar = 420
+        molnar = 300
         console.log(s.x, s.y)
     }
 
@@ -22,18 +22,40 @@
         if (localcount < molnar) {
             drawline()
         }
-
         if (localcount >= molnar && localcount < molnar * 2) {
-            drawline()
-        }
-        if (localcount >= molnar * 2 && localcount < molnar * 3) {
             drawlines()
         }
-        if (localcount >= molnar * 3 && localcount < molnar * 4) {
+        if (localcount >= molnar * 2 && localcount < molnar * 3) {
             drawlineswtriangle()
         }
-        if (localcount >= molnar * 4) {
+        if (localcount >= molnar * 3 && localcount < molnar * 4) {
             drawlineswtriangles()
+        }
+        if (localcount >= molnar * 4 && localcount < molnar * 5) {
+            var dice = Math.floor(random(4))
+            switch (dice) {
+                case 0: drawtriangledeep(1, 0, s.x1, s.y1, s.x2, s.y2, s.x3, s.y3)
+                    break;
+                case 1: drawtriangledeep(1, 0, s.x1, s.y1, s.x3, s.y3, s.x4, s.y4)
+                    break;
+                case 2: drawtriangledeep(1, 0, s.x1, s.y1, s.x2, s.y2, s.x4, s.y4)
+                    break;
+                case 3: drawtriangledeep(1, 0, s.x2, s.y2, s.x3, s.y3, s.x4, s.y4)
+                    break;
+            }
+        }
+        if (localcount >= molnar * 5) {
+            var dice = Math.floor(random(4))
+            switch (dice) {
+                case 0: drawtriangledeep(3, 0, s.x1, s.y1, s.x2, s.y2, s.x3, s.y3)
+                    break;
+                case 1: drawtriangledeep(3, 0, s.x1, s.y1, s.x3, s.y3, s.x4, s.y4)
+                    break;
+                case 2: drawtriangledeep(3, 0, s.x1, s.y1, s.x2, s.y2, s.x4, s.y4)
+                    break;
+                case 3: drawtriangledeep(3, 0, s.x2, s.y2, s.x3, s.y3, s.x4, s.y4)
+                    break;
+            }
         }
         localcount++
 
@@ -41,30 +63,31 @@
         pop();
     }
 
-    function drawlines(){
-        var dice = Math.floor(random(1,6))
-        for(let i=0;i<dice;i++){
+    function drawlines() {
+        var dice = Math.floor(random(1, 6))
+        for (let i = 0; i < dice; i++) {
             drawline()
         }
     }
-    function drawtriangles(){
-        var dice = Math.floor(random(1,6))
-        for(let i=0;i<dice;i++){
+    function drawtriangles() {
+        var dice = Math.floor(random(1, 6))
+        for (let i = 0; i < dice; i++) {
             drawtriangle()
         }
     }
 
-    function drawlineswtriangle(){
+    function drawlineswtriangle() {
         drawlines()
         drawtriangle()
     }
 
-    function drawlineswtriangles(){
+    function drawlineswtriangles() {
         drawlines()
         drawtriangles()
     }
 
-    function drawtriangle(){
+    function drawtriangle() {
+        ikedastroke()
         noFill()
         var dice = Math.floor(random(4))
         switch (dice) {
@@ -79,33 +102,40 @@
         }
     }
 
-    function drawtriangledeep(depth,x1,y1,x2,y2,x3,y3,x4,y4){
+    function drawtriangledeep(maxdepth, depth, x1, y1, x2, y2, x3, y3) {
+        ikedastroke()
         noFill()
-        var dice = Math.floor(random(4))
-        switch (dice) {
-            case 0: triangle(x1, y1, x2, y2, x3, y3)
-                break;
-            case 1: triangle(x1, y1, x3, y3, x4, y4)
-                break;
-            case 2: triangle(x1, y1, x2,y2, x4, y4)
-                break;
-            case 3: triangle(x2, y2, x3, y3, x4, y4)
-                break;
+        triangle(x1, y1, x2, y2, x3, y3)
+        if (depth < maxdepth) {
+            depth++
+            var dice = Math.floor(random(3))
+            var x, y, t
+            t = random()
+            switch (dice) {
+                case 0:
+                    x = (1 - t) * x1 + (t * x2);
+                    y = (1 - t) * y1 + (t * y2);
+                    drawtriangledeep(maxdepth, depth, x1, y1, x, y, x3, y3)
+                    drawtriangledeep(maxdepth, depth, x, y, x2, y2, x3, y3)
+                    break;
+                case 1:
+                    x = (1 - t) * x2 + (t * x3);
+                    y = (1 - t) * y2 + (t * y3);
+                    drawtriangledeep(maxdepth, depth, x1, y1, x, y, x3, y3)
+                    drawtriangledeep(maxdepth, depth, x1, y1, x2, y2, x, y)
+                    break;
+                case 2:
+                    x = (1 - t) * x3 + (t * x1);
+                    y = (1 - t) * y3 + (t * y1);
+                    drawtriangledeep(maxdepth, depth, x1, y1, x2, y2, x, y)
+                    drawtriangledeep(maxdepth, depth, x, y, x2, y2, x3, y3)
+                    break;
+            }
         }
     }
 
     function drawline() {
-        if(random()<0.1){
-            stroke(0,0,100)
-        }
-        if(random()>0.01){
-            if(random()<0.5){
-            stroke(0,100,100)
-        }
-        else{
-            stroke(180,100,100)
-        }
-        }
+        ikedastroke()
         var dice = Math.floor(random(6))
         switch (dice) {
             case 0: line(s.x1, s.y1, s.x2, s.y2)
@@ -120,6 +150,20 @@
                 break;
             case 5: line(s.x3, s.y3, s.x4, s.y4)
                 break;
+        }
+    }
+
+    function ikedastroke() {
+        if (random() < 0.9) {
+            stroke(0, 0, 100)
+        }
+        else {
+            if (random() < 42) {
+                stroke(0, 100, 100)
+            }
+            else {
+                stroke(180, 100, 100)
+            }
         }
     }
 
