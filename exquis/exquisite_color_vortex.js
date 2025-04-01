@@ -2,10 +2,10 @@
     let s, _height, _width;
 
     const colors = [
-        [267, 52, 100],    // #937AFF - Lavender Purple
-        [54, 72, 97],      // #F8DB46 - Bright Yellow
-        [333, 76, 100],    // #FF3D9A - Bright Pink
-        [251, 86, 100]     // #5627FF - Deep Blue-Violet
+        [267, 52, 100],    
+        [54, 72, 97],      
+        [333, 76, 100],    
+        [251, 86, 100]     
     ];
 
     async function init() {
