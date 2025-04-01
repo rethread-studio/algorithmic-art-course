@@ -40,7 +40,7 @@ async function setup() {
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 9// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
@@ -160,4 +160,10 @@ function drawsections(flash,fr){
     text(frameRate().toFixed(2),O_widthexquis*0.37,O_heightexquis*0.5)
     pop()
   }
+}
+
+function windowResized() {
+  w = document.documentElement.clientWidth;//width of window that is available for drawing
+  h = document.documentElement.clientHeight;//width of window that is available for drawing
+  resizeCanvas(w, h);
 }
