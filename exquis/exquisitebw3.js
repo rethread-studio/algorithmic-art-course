@@ -4,7 +4,7 @@
     async function init() {
       s = O_currentsection;
       r = 7;
-      rinc = 0.1;
+      rinc = 0.11;
       console.log(s.x,s.y)
     }
   
@@ -31,6 +31,6 @@
     }
   
     // Use the name of the current js file (without the extension) as the key in the object window.
-    window.exquisitebw = { init, draw };
+    window.exquisitebw3 = { init, draw };
   })();
   

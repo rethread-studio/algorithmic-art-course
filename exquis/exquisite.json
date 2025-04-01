@@ -1,22 +1,35 @@
 [
-
-    {
-      "art_code": "exquisite_noisy_matrix"
-    },
-    {
-      "art_code": "exquisite_color_vortex"
-    },
-    {
-      "art_code": "exquisiteTron"
-      },
-      {
-      "art_code": "exquisiteAfterRain"
-      },
-      {
-        "art_code": "exquisitebw"
-      },
-      {
-        "art_code": "exquisitered"
-      }
+  {
+    "art_code": "exquisitebwb"
+  },
+  {
+    "art_code": "exquisiteTron"
+  },
+  {
+    "art_code": "exquisiteAfterRain"
+  },
+  {
+    "art_code": "exquisitegibberish"
+  },
+  {
+    "art_code": "exquisitescratches"
+  },
+  {
+    "art_code": "exquisitebw"
+  },
+  {
+    "art_code": "exquisitered"
+  },
+  {
+    "art_code": "exquisitebw3"
+  },
+  {
+    "art_code": "exquisitered2"
+  },
+  {
+    "art_code": "exquisite_noisy_matrix"
+  },
+  {
+    "art_code": "exquisite_color_vortex"
+  }
 ]
-  
