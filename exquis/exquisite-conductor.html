@@ -29,7 +29,7 @@
             return response.json();
           })
           .then((data) => {
-            //for each object in the configuration , get the sketch name and add the sketch file to the current document
+            // Create JS module for each art_code file
             for (const s of data) {
               let js = document.createElement("script");
               js.type = "module";
