@@ -114,9 +114,9 @@ function initsections() {
 let index = 0;
 function draw() {
   // drawsections just draws a grid, we use it for calibration
-  // background(0,0,0); drawsections(); 
+   background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
-   drawcorpse()
+  // drawcorpse()
 }
 
 function drawcorpse(){
@@ -141,15 +141,23 @@ function drawcorpse(){
   O_counter++;
 }
 
-function drawsections(){
+function drawsections(flash,fr){
   var s
   for(index in O_sections){
     push()
     stroke(0,0,100); noFill()
-    if(random()<0.05){fill(0,0,100)}
+    if(flash&&random()<0.05){fill(0,0,100)}
     s=O_sections[index]
     translate(s.x,s.y);
     rect(0,0,O_sectionwidth,O_sectionheight)
+    pop()
+  }
+  if(fr){
+    push()
+    fill(0,0,0); noStroke()
+    rect(O_widthexquis*0.37,O_heightexquis*0.5-70,O_widthexquis*0.15,84)
+    stroke(110,100,100);fill(110,100,100)
+    text(frameRate().toFixed(2),O_widthexquis*0.37,O_heightexquis*0.5)
     pop()
   }
 }
