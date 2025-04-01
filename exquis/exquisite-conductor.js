@@ -54,6 +54,9 @@ async function setup() {
   stroke(0, 0, 100);
   pixelDensity(0.5)
 
+  // Shuffle the artworks
+  O_configurationexquise = shuffle(O_configurationexquise);
+
   // Initialize the artworks
   let promises = [];
   for (let i = 0; i < O_nbartworks; i++) {
