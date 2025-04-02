@@ -7,7 +7,8 @@ var O_widthexquis,
   O_nbsectionshorizontal,
   O_nbsectionsvertical,
   O_configurationexquise,
-  O_nbartworks;
+  O_nbartworks,
+  O_allcode;
 
 // Global variables that can be used in all sketches
 var O_sectionwidth; // Width of a section
@@ -36,7 +37,7 @@ async function setup() {
   colorMode(HSB, 360, 100, 100, 250);
 
   // Set the duration of a section
-  O_sectionduration = 60 * 2;
+  O_sectionduration = 60 * 5;
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
@@ -58,14 +59,22 @@ async function setup() {
 
   // Initialize the artworks
   let promises = [];
+  O_allcode = []
+  let piececode
   for (let i = 0; i < O_nbartworks; i++) {
     // Initialize all sketches
     O_currentsection = O_sections[i];
     let artCode = O_configurationexquise[i].art_code;
     let promise = window[artCode]["init"]();
     promises.push(promise);
+    piececode = await loadStrings(artCode + ".js");
+    console.log(piececode)
+    O_allcode.push(piececode)
   }
   await Promise.all(promises);
+  console.log(O_allcode)
+  onelineCode(O_allcode)
+  console.log(O_allcode)
 }
 
 function initsections() {
@@ -114,18 +123,38 @@ function initsections() {
 }
 
 let index = 0;
+let stablepiece = 0;
+let stablecode = 0;
 function draw() {
   // Check if we are done with all the artworks
   if (O_counter == O_nbartworks * O_sectionduration) {
     //background(0, 0, 0)
-    noLoop();
-    O_counter = 0;
-    index = 0;
+    //noLoop();
+    if (stablepiece < O_sectionduration) {
+      stablepiece++
+    }
+    else {
+      background(0, 0, 0)
+      if (stablecode < O_sectionduration * 2) {
+        showcode()
+        stablecode++
+      }
+      else {
+
+        O_counter = 0;
+        index = 0;
+        stablepiece = 0
+        stablecode = 0
+      }
+    }
     return;
   }
 
   // Check if we need to initialize a new section
   if (O_counter % O_sectionduration == 0) {
+    O_currentsection = O_sections[index];
+    let artCode = O_configurationexquise[index].art_code;
+    window[artCode]["init"]();
     index++;
   }
 
@@ -135,4 +164,52 @@ function draw() {
     window[artCode]["draw"]();
   }
   O_counter++;
+}
+
+
+function showcode() {
+  var fSize = 33
+  for (var i in O_sections) {
+    var s = O_sections[i]
+    push()
+    translate(s.x, s.y)
+    noStroke(); fill(0, 0, 100)
+    rect(s.x1 - 21, s.y1, 42, 42)
+    rect(s.x2 - 42, s.y2 - 21, 42, 42)
+    rect(s.x3 - 21, s.y3 - 42, 42, 42)
+    rect(s.x4, s.y4 - 21, 42, 42)
+    var x, y, c, tw, lineofcode
+    x = 0
+    y = fSize
+    textSize(fSize)
+    lineofcode = O_allcode[i]
+    stroke(110,100,100); fill(110,100,100)
+    for (b in lineofcode) {
+      c = lineofcode.charAt(b)
+      tw = textWidth(c)
+      if (x + tw > O_sectionwidth) {
+        x = 0
+        y += fSize + 1
+      }
+      text(c, x, y)
+      x += tw
+    }
+    pop()
+  }
+}
+
+// receives an array of arrays of strings, where each array the src code of one piece
+// transforms each array of source code into one single string of src code 
+// stores each string into O_allcode
+function onelineCode(codearrays) {
+  var temparray = []
+  for (i in codearrays) {
+    var codestring = ""
+    for (j in codearrays[i]) {
+      codestring += codearrays[i][j]
+    }
+    temparray.push(codestring)
+  }
+  O_allcode = []
+  O_allcode = temparray
 }
