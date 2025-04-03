@@ -40,7 +40,7 @@ async function setup() {
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 9// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
@@ -52,13 +52,16 @@ async function setup() {
   textSize(84);
   textFont(O_policeexquise);
   stroke(0, 0, 100);
+  pixelDensity(0.5)
+
+  // Shuffle the artworks
+  O_configurationexquise = shuffle(O_configurationexquise);
 
   // Initialize the artworks
   let promises = [];
   for (let i = 0; i < O_nbartworks; i++) {
     // Initialize all sketches
     O_currentsection = O_sections[i];
-    console.log(O_currentsection)
     let artCode = O_configurationexquise[i].art_code;
     let promise = window[artCode]["init"]();
     promises.push(promise);
@@ -114,9 +117,9 @@ function initsections() {
 let index = 0;
 function draw() {
   // drawsections just draws a grid, we use it for calibration
-  // drawsections(); noLoop()
+   background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
-   drawcorpse()
+  // drawcorpse()
 }
 
 function drawcorpse(){
@@ -141,14 +144,29 @@ function drawcorpse(){
   O_counter++;
 }
 
-function drawsections(){
+function drawsections(flash,fr){
   var s
   for(index in O_sections){
     push()
     stroke(0,0,100); noFill()
+    if(flash&&random()<0.05){fill(0,0,100)}
     s=O_sections[index]
-    translate(s.x,s.y);console.log(s.x+" "+s.y)
+    translate(s.x,s.y);
     rect(0,0,O_sectionwidth,O_sectionheight)
     pop()
   }
+  if(fr){
+    push()
+    fill(0,0,0); noStroke()
+    rect(O_widthexquis*0.37,O_heightexquis*0.5-70,O_widthexquis*0.15,84)
+    stroke(110,100,100);fill(110,100,100)
+    text(frameRate().toFixed(2),O_widthexquis*0.37,O_heightexquis*0.5)
+    pop()
+  }
+}
+
+function windowResized() {
+  w = document.documentElement.clientWidth;//width of window that is available for drawing
+  h = document.documentElement.clientHeight;//width of window that is available for drawing
+  resizeCanvas(w, h);
 }
