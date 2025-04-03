@@ -45,6 +45,11 @@ async function setup() {
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
+  // Get the number of artworks
+  let nbsketches = Object.keys(O_configurationexquise).length;
+  let nbsections = O_nbsectionshorizontal * O_nbsectionsvertical
+  O_nbartworks = (nbsketches<nbsections) ? nbsketches : nbsections;
+
   // Initialize all sections and shuffle them
   initsections();
   O_sections = shuffle(O_sections);
@@ -133,9 +138,12 @@ function draw() {
 let index = 0;
 let stablepiece = 0;
 let stablecode = 0;
+
 function drawcorpse(){
+  console.log("nb pieces "+O_nbartworks+", and index "+index)
+
   // Check if we are done with all the artworks
-  if (O_counter == O_nbartworks * O_sectionduration) {
+  if (O_counter == (O_nbsectionshorizontal * O_nbsectionsvertical) * O_sectionduration) {
     if (stablepiece < O_sectionduration) {
       stablepiece++
     }
@@ -164,7 +172,7 @@ function drawcorpse(){
   }
 
   // Check if we need to initialize a new section
-  if (O_counter % O_sectionduration == 0) {
+  if (O_counter % O_sectionduration == 0 && index < O_nbartworks) {
     O_currentsection = O_sections[index];
     let artCode = O_configurationexquise[index].art_code;
     window[artCode]["init"]();
