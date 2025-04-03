@@ -132,7 +132,7 @@ function draw() {
   // background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
    drawcorpse()
-   console.log(frameRate())
+   //console.log(frameRate())
 }
 
 let index = 0;
