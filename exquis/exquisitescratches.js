@@ -22,7 +22,6 @@
     function draw() {
         push();
         translate(s.x, s.y);
-        background(0, 0, 0, 0);
         fill(0).stroke(0).rect(0, 0, O_sectionwidth, O_sectionheight);
         push();
         drawingContext.beginPath();

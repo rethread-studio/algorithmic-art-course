@@ -76,7 +76,6 @@
     function draw() {
         push();
         translate(s.x, s.y);
-        background(0,0,0,0);
         fill(42, 10, 93).stroke(0).rect(0,0,O_sectionwidth,O_sectionheight);
         amt = Math.min((amt + 0.002*dir), 1);
         lines.forEach(function(lineObj) {
