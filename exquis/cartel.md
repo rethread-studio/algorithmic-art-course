@@ -1,5 +1,5 @@
 Maze PUZZLE Orange. 2025
-IFT6251 H 25, art algorithmique à l’Université de Montréal. 
+IFT6251 H 25, art algorithmique à l’Université de Montréal.
 
 N30 (b. FR) 		bitdandelions & bitroses
 Higo (b. FR) 		worms & walkers
@@ -7,12 +7,12 @@ Nadia (b. CU) 	 vortex & the matrix
 Gabriel (b. CA) 	SunAfterRain & Enlighten
 Yogya (b. LK) 	gibberish & scratches
 Jean (b. FR) 		shattered aperture & cave distorsion
-itsjdio_art (b. BN) 
+itsjdio_art (b. BN)
 Kiruthika (b. MA) 	snow & bubble storms
-Benoit (b. QC) 	turbulent currents & 
-Maltsev (b. MC) 	balafre & stella
+etiennecollin (b. QC)   turbulent currents & soothing waves & cosmic attraction
+Maltsev (b. MC)     balafre & stella
 St34dyArt (b. COD) cyflowe & OUTLINE
-Luchino (b. BX) 
+Luchino (b. BX)
 almyre (b. FR) 	adeki
 
 
