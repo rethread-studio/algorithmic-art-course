@@ -12,7 +12,7 @@
       this.noiseOffsetX = random(1000); // For Perlin noise-based movement
       this.noiseOffsetY = random(1000);
       this.stepSize = 5; // Determines the amount of movement per step
-      this.charSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"; // Character set
+      this.charSet = "10"; // Character set
     }
 
     step() {
@@ -24,19 +24,21 @@
       let distance = Math.sqrt(dx * dx + dy * dy);
 
       // Add Perlin noise-based randomness to movement
-      let noiseFactorX = map(noise(this.noiseOffsetX), 0, 1, -2, 2);
-      let noiseFactorY = map(noise(this.noiseOffsetY), 0, 1, -2, 2);
+      let noiseFactorX = map(noise(this.noiseOffsetX), 0, 1, -5, 5);
+      let noiseFactorY = map(noise(this.noiseOffsetY), 0, 1, -5, 5);
 
       // Move with randomness but also toward the target
       this.x += (dx / distance) * this.stepSize + noiseFactorX;
       this.y += (dy / distance) * this.stepSize + noiseFactorY;
 
+      this.x = max(0.0, min(this.x, O_sectionwidth)); // Keep within bounds
+      this.y = max(0.0 + (4*(O_sectionwidth/O_sectionheight)), min(this.y, O_sectionheight)); // Keep within bounds
       // Store the new position for the path
       this.path.push({ x: this.x, y: this.y });
 
       // Occasionally spawn a flower at a random position along the path
-      if (random() < 0.1) { // 10% chance to spawn a flower
-        flowers.push(new Rose(this.x, this.y));
+      if (random() < 0.01) { // 10% chance to spawn a flower
+        flowers.push(new Flower(this.x, this.y));
       }
 
       // Increment noise offsets for next step
@@ -48,7 +50,7 @@
 
     draw() {
       fill(255, 255, 0); // Set text color to yellow
-      textSize(16);
+      textSize(5*(O_sectionwidth/O_sectionheight));
 
       for (let p of this.path) {
         // Pick a random character from the character set
@@ -60,7 +62,7 @@
     }
   }
 
-  class Rose {
+  class Flower {
     constructor(x, y) {
       this.x = x;
       this.y = y;
@@ -76,21 +78,32 @@
 
     draw() {
       noStroke();
-      fill(255, 0, 255); // Flower color (magenta)
+      fill(50, 0, 255); // Flower color (magenta)
 
-      // Draw petals in a spiral pattern to resemble a rose
-      for (let angle = 0; angle < TWO_PI; angle += PI / 12) { // Spiral with multiple rotations
-        let radius = this.size * (angle / (TWO_PI * 3)); // Gradually increase radius
-        let petalX = this.x + cos(angle + this.petalsAngleOffset) * radius;
-        let petalY = this.y + sin(angle + this.petalsAngleOffset) * radius;
+      // Draw lines radiating from the center to resemble dandelion seeds
+      strokeWeight(10); // Thin lines for a delicate look
+      for (let i = 0; i < 8; i++) { // 8 lines radiating outward
+        let angle = (TWO_PI / 8) * i; // Divide the circle into 8 parts
+        let radius = min(this.size, 30); // Limit the growth to a maximum radius of 20
+        let endX = this.x + cos(angle) * radius;
+        let endY = this.y + sin(angle) * radius;
 
-        // Draw each petal as an ellipse
-        ellipse(petalX, petalY, this.size * 0.4, this.size * 0.6); // Petals with slight elongation
+        // Draw each main line from the center outward
+        line(this.x, this.y, endX, endY);
+
+          if (radius > 10) { // Only add branches if the flower is large enough
+              // Add branching lines at the end of each main line
+              let branchLength = radius * 0.3; // Length of the branches
+              for (let j = -1; j <= 1; j += 2) { // Two branches, one on each side
+                  let branchAngle = angle + j * QUARTER_PI / 2; // Offset angle for branches
+                  let branchX = endX + cos(branchAngle) * branchLength;
+                  let branchY = endY + sin(branchAngle) * branchLength;
+
+                  // Draw the branch line
+                  line(endX, endY, branchX, branchY);
+              }
+        }
       }
-
-      // Draw the center of the rose
-      fill(255, 100, 200); // Slightly different color for the center
-      ellipse(this.x, this.y, this.size * 0.5, this.size * 0.5);
     }
   }
 
