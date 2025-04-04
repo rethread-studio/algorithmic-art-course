@@ -2,9 +2,9 @@
   let s;
   let grid = [];
   let bikes = [];
-  let cellSize = 20; //changer selon le nombre de cases souhaité
+  let cellSize = 10; //Changer selon la taille des cases souhaitée
   let gridWidth, gridHeight;
-  let moveInterval = 2; // changer selon la vitesse souhaitée
+  let moveInterval = 2;
   let lastMove = 0;
   let lookAheadDistance = 5;
 
@@ -15,46 +15,47 @@
     gridHeight = Math.floor(O_sectionheight / cellSize);
     grid = Array.from({ length: gridWidth }, () => Array(gridHeight).fill(0));
 
-    bikes = [
+     bikes = [
       {
         active: true,
         color: "#601EF9",
-        x: Math.floor(s.x1 / cellSize),
-        y: Math.floor(s.y1 / cellSize),
+        x: Math.min(Math.floor(s.x1 / cellSize), gridWidth - 1),
+        y: Math.min(Math.floor(s.y1 / cellSize), gridHeight - 1),
         dx: 0,
         dy: 1,
-        path: [{ x: Math.floor(s.x1 / cellSize), y: Math.floor(s.y1 / cellSize) }],
+        path: [],
       },
       {
         active: true,
         color: "#04D9FF",
-        x: Math.floor(s.x2 / cellSize),
-        y: Math.floor(s.y2 / cellSize),
+        x: Math.min(Math.floor(s.x2 / cellSize), gridWidth - 1),
+        y: Math.min(Math.floor(s.y2 / cellSize), gridHeight - 1),
         dx: -1,
         dy: 0,
-        path: [{ x: Math.floor(s.x2 / cellSize), y: Math.floor(s.y2 / cellSize) }],
+        path: [],
       },
       {
         active: true,
         color: "#FF5F1F",
-        x: Math.floor(s.x3 / cellSize),
-        y: Math.floor(s.y3 / cellSize),
+        x: Math.min(Math.floor(s.x3 / cellSize), gridWidth - 1),
+        y: Math.min(Math.floor(s.y3 / cellSize), gridHeight - 1),
         dx: 0,
         dy: -1,
-        path: [{ x: Math.floor(s.x3 / cellSize), y: Math.floor(s.y3 / cellSize) }],
+        path: [],
       },
       {
         active: true,
         color: "#39FF14",
-        x: Math.floor(s.x4 / cellSize),
-        y: Math.floor(s.y4 / cellSize),
+        x: Math.min(Math.floor(s.x4 / cellSize), gridWidth - 1),
+        y: Math.min(Math.floor(s.y4 / cellSize), gridHeight - 1),
         dx: 1,
         dy: 0,
-        path: [{ x: Math.floor(s.x4 / cellSize), y: Math.floor(s.y4 / cellSize) }],
+        path: [],
       },
     ];
 
     bikes.forEach((bike) => {
+      bike.path = [{ x: bike.x, y: bike.y }];
       if (bike.x >= 0 && bike.x < gridWidth && bike.y >= 0 && bike.y < gridHeight) {
         grid[bike.x][bike.y] = 1;
       }
@@ -79,15 +80,15 @@
   function drawGrid() {
     stroke(20);
     for (let x = 0; x <= gridWidth; x++) {
-      line(x * cellSize, 0, x * cellSize, O_sectionheight);
+      line(x * cellSize, 0, x * cellSize, gridHeight * cellSize);
     }
     for (let y = 0; y <= gridHeight; y++) {
-      line(0, y * cellSize, O_sectionwidth, y * cellSize);
+      line(0, y * cellSize, gridWidth * cellSize, y * cellSize);
     }
   }
 
   function drawBikes() {
-    noStroke(); //beau aussi en commentant ceci, donc peut-être garder l'effet de case ?
+    noStroke(); //beau aussi avec Stroke.
     bikes.forEach((bike) => {
       fill(bike.color);
       for (let i = 0; i < bike.path.length; i++) {
@@ -113,6 +114,7 @@
       let next_Y = bike.y + bike.dy;
 
       if (next_X < 0 || next_X >= gridWidth || next_Y < 0 || next_Y >= gridHeight || grid[next_X][next_Y] === 1) {
+        bike.active = false;
         return;
       }
 
