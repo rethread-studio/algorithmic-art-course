@@ -9,7 +9,7 @@ Yogya (b. LK) 	gibberish & scratches
 Jean (b. FR) 		shattered aperture & cave distorsion
 itsjdio_art (b. BN)
 Kiruthika (b. MA) 	snow & bubble storms
-etiennecollin (b. QC)   turbulent currents & soothing waves & cosmic attraction
+etiennecollin (b. QC)   étoiles effervescentes & pulsations universelles
 Maltsev (b. MC)     balafre & stella
 St34dyArt (b. COD) cyflowe & OUTLINE
 Luchino (b. BX)

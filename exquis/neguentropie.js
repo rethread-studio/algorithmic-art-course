@@ -199,5 +199,5 @@
     }
   }
 
-  window.turbulent_currents = { init, draw };
+  window.neguentropie = { init, draw };
 })();

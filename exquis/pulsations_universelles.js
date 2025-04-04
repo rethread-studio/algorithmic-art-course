@@ -154,5 +154,5 @@
     }
   }
 
-  window.soothing_waves = { init, draw };
+  window.pulsations_universelles = { init, draw };
 })();
