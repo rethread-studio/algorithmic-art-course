@@ -4,7 +4,7 @@
     async function init() {
       s = O_currentsection;
       r = 7;
-      rinc = 0.1;
+      rinc = 0.5;
       console.log(s.x,s.y)
     }
   
@@ -12,8 +12,6 @@
       // Move to the section
       push();
       translate(s.x, s.y);
-      fill(0,0,100); noStroke
-      rect(0,0,O_sectionwidth,O_sectionheight)
   
       // Create border around section
       fill(0, 0, 0);
@@ -33,6 +31,6 @@
     }
   
     // Use the name of the current js file (without the extension) as the key in the object window.
-    window.exquisitebw = { init, draw };
+    window.exquisitebw2 = { init, draw };
   })();
   

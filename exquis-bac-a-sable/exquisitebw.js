@@ -2,9 +2,11 @@
   let s, r, rinc;
 
   async function init() {
+    //this is exquisitebw
     s = O_currentsection;
     r = 7;
     rinc = 0.5;
+    console.log("x: "+s.x+", y: "+s.y+", r :"+r)
   }
 
   function draw() {
