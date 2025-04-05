@@ -166,5 +166,5 @@
     }
   }
 
-  window.cosmic_attraction = { init, draw };
+  window.etoiles_effervescentes = { init, draw };
 })();
