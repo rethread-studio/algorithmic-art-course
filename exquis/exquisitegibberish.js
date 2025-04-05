@@ -40,12 +40,12 @@
             var ed = Math.floor((i+1)*segSize);
             var cx = lerp(x1, x2, i/(tCount-1));
             var cy = lerp(y1, y2, i/(tCount-1));
-            var maxR = O_sectionwidth*0.20*amt;
+            var maxR = O_sectionwidth*0.10*amt;
             var r = Math.min(maxR, cx, cy, O_sectionwidth-cx, O_sectionheight-cy);
 
             for(var j = st; j <= ed; j++) {
                 var t = (j-st)/(ed-st);
-                var spiralT = lerp(0.7, 0.8, t);
+                var spiralT = lerp(0.1, 0.8, t);
                 var baseAngle = random(spiralT*TWO_PI + Math.sin(spiralT*Math.PI) + i*TWO_PI);
                 var radius = r*(0.3+spiralT*0.7) + 
                     Math.sin(baseAngle)*Math.cos(spiralT*Math.PI*4)*20*amt + 
@@ -77,7 +77,7 @@
         push();
         translate(s.x, s.y);
         fill(42, 10, 93).stroke(0).rect(0,0,O_sectionwidth,O_sectionheight);
-        amt = Math.min((amt + 0.002*dir), 1);
+        amt = Math.min((amt + 0.001*dir), 1);
         lines.forEach(function(lineObj) {
             lineObj.points.forEach(function(p) {
                 p.x = p.bx;
