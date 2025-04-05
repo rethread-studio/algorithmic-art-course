@@ -12,7 +12,7 @@ Kiruthika (b. MA) 	snow & bubble storms
 etiennecollin (b. QC)   étoiles effervescentes & pulsations universelles
 Maltsev (b. MC)     balafre & stella
 St34dyArt (b. COD) cyflowe & OUTLINE
-Luchino (b. BX)
+Luchino (b. BX) exquisiteTension & exquisiteAttention
 almyre (b. FR) 	adeki
 Léandre (b. FR) Artwork #4 & Artwork #5
 
