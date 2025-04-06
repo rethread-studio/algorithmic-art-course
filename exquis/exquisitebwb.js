@@ -63,7 +63,6 @@
             }
         }
         if (O_counter % O_sectionduration == O_sectionduration - 1){
-            console.log("finale")
             drawtriangledeep(3, 0, s.x2, s.y2, s.x3, s.y3, s.x4, s.y4,true)
             drawtriangledeep(3, 0, s.x2, s.y2, s.x4, s.y4, s.x1, s.y1,true)
 
@@ -126,7 +125,7 @@
         ikedastroke()
     
         if (inside) {
-            ikedafill();console.log("inside")
+            ikedafill();
         }
         else { noFill() }
         triangle(x1, y1, x2, y2, x3, y3)
