@@ -1,5 +1,11 @@
 [
   {
+    "art_code": "etoiles_effervescentes"
+  },
+  {
+    "art_code": "exquisWalkers"
+  },
+  {
     "art_code": "exquisWorms"
   },
   {
@@ -37,14 +43,5 @@
   },
   {
     "art_code": "exquisite_color_vortex"
-  },
-  {
-    "art_code": "exquisite_noisy_matrix"
-  },
-  {
-    "art_code": "etoiles_effervescentes"
-  },
-  {
-    "art_code": "exquisWalkers"
   }
 ]
