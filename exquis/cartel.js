@@ -17,7 +17,7 @@ var topmargin = 0.05 * h
 var bottommargin = 0.93 * h
 var actualwidth = rightmargin - leftmargin
 var actualheight = bottommargin - topmargin
-var cnv, imgbtn, fSize, exquisitecartel, font1, font2
+var cnv, imgbtn, fSize, initfSize, exquisitecartel, font1, font2
 
 function preload() {
     font1 = loadFont("../cartels/fonts/1CamBam_Stick_2.ttf");
@@ -33,6 +33,7 @@ function setup() {
     strokeCap(SQUARE)
     noFill()
     fSize = 46
+    initfSize = fSize
     background(0, 0, 100)
     noFill()
     stroke(0, 0, 0)
@@ -73,6 +74,29 @@ function savepng() {
 }
 
 function draw() {
+    drawCartel()
+//    drawleaflet()
+    noLoop()
+}
+
+function drawleaflet(){
+    translate(w,0)
+    rotate(radians(90))
+    fill(0,100,100)
+    rect(0,0,h*0.5,w)
+    fill(0,0,100)
+    ellipse(0,0,27,27)
+    drawCartel()
+    translate(h*0.5,0)
+    fill(0,100,100)
+    rect(0,0,h*0.5,w)
+    fill(0,0,100)
+    ellipse(0,0,27,27)
+    fSize=initfSize
+    drawCartel()
+}
+
+function drawCartel(){
     var t, x, y
     strokeWeight(2)
     //Title of the piece
