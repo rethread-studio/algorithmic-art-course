@@ -23,13 +23,13 @@
   async function init() {
     s = O_currentsection;
     rBall = 10;
-    speedBall = 6;
+    speedBall = 17;
     fc = 0;
     notBlocked = false;
     border = 42;
     pointRight = 0;
     pointLeft = 0;
-    scoreSize = 20;
+    scoreSize = 30;
     heightRect = O_sectionheight/3;
     widthRect = 10;
     xRect1 = border-widthRect-rBall;
@@ -82,9 +82,9 @@
 
     rect(xRect1, yRect1, widthRect, heightRect);
     rect(xRect2, yRect2, widthRect, heightRect);
-    yRect1 += 15*(noise(0.15*O_counter)-0.5)*2;
+    yRect1 += O_sectionheight/4*(noise(0.1*O_counter)-0.5)*2;
     yRect1 = constrain(yRect1, 0, O_sectionheight-heightRect);
-    yRect2 += 15*(noise(0.15*O_counter+1000)-0.5)*2;
+    yRect2 += O_sectionheight/4*(noise(0.1*O_counter+1000)-0.5)*2;
     yRect2 = constrain(yRect2, 0, O_sectionheight-heightRect);
     if (side == 1) {
       distance = Math.sqrt(Math.pow(O_sectionwidth-constrain(s.x1, xRect1+widthRect+rBall, xRect2-rBall), 2)+Math.pow(constrain(s.y2, rBall, O_sectionheight-rBall)-constrain(s.y1, rBall, O_sectionheight-rBall), 2));
@@ -159,8 +159,9 @@
     fc += 1;
     // console.log(fc*speedBall/distance);
     // console.log(xBall)
-    circle(xBall, yBall, 2*rBall);
-
+    if (xBall+rBall < O_sectionwidth && xBall-rBall >= 0) {
+      circle(xBall, yBall, 2*rBall);
+    }
     // Pop out of the section
     pop();
   }
