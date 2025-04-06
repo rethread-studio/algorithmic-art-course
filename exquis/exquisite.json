@@ -43,5 +43,17 @@
   },
   {
     "art_code": "exquisite_color_vortex"
+<<<<<<< HEAD
+=======
+  },
+  {
+    "art_code": "exquisite_noisy_matrix"
+  },
+  {
+    "art_code": "etoiles_effervescentes"
+  },
+  {
+    "art_code": "exquisPong"
+>>>>>>> 7558039aac1f7371a87fe438aa295e1234f6c09a
   }
 ]
