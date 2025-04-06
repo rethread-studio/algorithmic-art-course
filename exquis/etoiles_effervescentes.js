@@ -12,7 +12,7 @@
   const ATTRACTION_STRENGTH = 200;
 
   let section;
-  let particles = [];
+  let particles;
   let meeting_points;
 
   const background = ["#1d2021", "#282828"];
@@ -44,6 +44,7 @@
     ];
 
     // Create particles at the meeting points
+    particles = [];
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       let x = random(0, O_sectionwidth);
       let y = random(0, O_sectionheight);

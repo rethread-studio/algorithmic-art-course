@@ -37,10 +37,10 @@ async function setup() {
   colorMode(HSB, 360, 100, 100, 250);
 
   // Set the duration of a section
-  O_sectionduration = 60 * 3;
+  O_sectionduration = 60 * 21;
 
   // Compute the number of sections their size
-  O_nbsectionsvertical = 2;
+  O_nbsectionsvertical = 3;
   O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
@@ -61,7 +61,7 @@ async function setup() {
   pixelDensity(0.5)
 
   // Shuffle the artworks
-  O_configurationexquise = shuffle(O_configurationexquise);
+  //O_configurationexquise = shuffle(O_configurationexquise);
 
   // Initialize the artworks
   let promises = [];
@@ -132,7 +132,7 @@ function draw() {
   // background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
    drawcorpse()
-   //console.log(frameRate())
+   if(index>0){console.log(frameRate()+" "+O_configurationexquise[index-1].art_code)}
 }
 
 let index = 0;
@@ -140,8 +140,6 @@ let stablepiece = 0;
 let stablecode = 0;
 
 function drawcorpse(){
-  console.log("nb pieces "+O_nbartworks+", and index "+index)
-
   // Check if we are done with all the artworks
   if (O_counter == (O_nbsectionshorizontal * O_nbsectionsvertical) * O_sectionduration) {
     if (stablepiece < O_sectionduration) {
@@ -214,6 +212,8 @@ function showcode() {
     var s = O_sections[i]
     push()
     translate(s.x, s.y)
+    noStroke(); fill(0, 0, 100)
+    rect(0, 0, O_sectionwidth, O_sectionheight)
     noStroke(); fill(0, 0, 100)
     rect(s.x1 - 21, s.y1, 42, 42)
     rect(s.x2 - 42, s.y2 - 21, 42, 42)

@@ -9,7 +9,7 @@
 
   let section;
   let meeting_points;
-  let waves = [];
+  let waves;
 
   const background = ["#1d2021", "#282828"];
   const gruvbox_palette = [
@@ -32,6 +32,7 @@
   async function init() {
     // Set some global variables
     section = O_currentsection;
+    waves = [];
     meeting_points = [
       { x: section.x1, y: section.y1 + 1, angle: 0 },
       { x: section.x2 - 1, y: section.y2, angle: PI / 2 },

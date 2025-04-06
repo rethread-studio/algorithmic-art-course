@@ -1,5 +1,20 @@
 [
   {
+    "art_code": "exquisWorms"
+  },
+  {
+    "art_code": "exquisitebw"
+  },
+  {
+    "art_code": "exquisiteTension"
+  },
+  {
+    "art_code": "pulsations_universelles"
+  },
+  {
+    "art_code": "neguentropie"
+  },
+  {
     "art_code": "exquisitebwb"
   },
   {
@@ -7,6 +22,9 @@
   },
   {
     "art_code": "exquisiteAfterRain"
+  },
+  {
+    "art_code": "exquisiteAttention"
   },
   {
     "art_code": "exquisitegibberish"
@@ -18,15 +36,9 @@
     "art_code": "exquisite_color_vortex"
   },
   {
-    "art_code": "exquisitered"
+    "art_code": "exquisite_noisy_matrix"
   },
   {
     "art_code": "etoiles_effervescentes"
-  },
-  {
-    "art_code": "pulsations_universelles"
-  },
-  {
-    "art_code": "exquisite_flow"
   }
 ]
