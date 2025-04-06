@@ -136,7 +136,7 @@
     walkers = [];
     countWalkers = 0;
     speed = 1;
-    period = 3;
+    period = Math.floor(random(6, 20));
 
     lineLengthMax = 100;
     lineWeightMax = 15;
