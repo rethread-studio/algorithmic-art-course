@@ -1,5 +1,17 @@
 [
   {
+    "art_code": "exquisWorms"
+  },
+  {
+    "art_code": "exquisiteTension"
+  },
+  {
+    "art_code": "pulsations_universelles"
+  },
+  {
+    "art_code": "neguentropie"
+  },
+  {
     "art_code": "exquisitebwb"
   },
   {
@@ -30,18 +42,6 @@
     "art_code": "etoiles_effervescentes"
   },
   {
-    "art_code": "exquisiteWalkers"
-  },
-  {
-    "art_code": "exquisiteWorms"
-  },
-  {
-    "art_code": "exquisiteTension"
-  },
-  {
-    "art_code": "pulsations_universelles"
-  },
-  {
-    "art_code": "neguentropie"
+    "art_code": "exquisWalkers"
   }
 ]
