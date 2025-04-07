@@ -24,25 +24,44 @@ function setup() {
 }
 
 async function initcodefiles() {
-    var code, allcode, codestring, codefile, y
-    console.log("Going through " + Object.keys(codefiles).length + " code files")
-    y = fSize
-    allcode=[]
-    for (var i in Object.keys(codefiles)) {
-        code = await loadStrings("../" + codefiles[i].art_code + ".js")
-        allcode.push(code)
+    let codestring, codefile, y;
+    console.log("Going through " + Object.keys(codefiles).length + " code files");
+    y = fSize;
+    
+    function loadStringsPromise(path) {
+        return new Promise((resolve, reject) => {
+            loadStrings(path, 
+                (result) => resolve(result),
+                (error) => reject(error)
+            );
+        });
     }
-    for (var j in allcode){
-        console.log(allcode[j])
-        console.log(allcode[j].length)
-        codestring = ""
-        for (var k in allcode[j]) {
-            codestring += allcode[j][k]
+    
+    // Process files one by one to ensure each is fully loaded
+    let allcode = [];
+    for (let i = 0; i < Object.keys(codefiles).length; i++) {
+        const key = Object.keys(codefiles)[i];
+        try {
+            const code = await loadStringsPromise("../" + codefiles[key].art_code + ".js");
+            allcode.push(code);
+        } catch (error) {
+            console.error("Error loading file:", error);
         }
-        codefile = new CodeFile(codestring, y + j * fSize)
-        textarray.push(codefile)
     }
-    console.log("Created " + textarray.length + " codefile objects")
+    
+    // Now process the loaded code
+    for (let j = 0; j < allcode.length; j++) {
+        console.log("Content:", allcode[j]);
+        console.log("Length:", allcode[j].length);
+        
+        codestring = "";
+        for (let k = 0; k < allcode[j].length; k++) {
+            codestring += allcode[j][k];
+        }
+        codefile = new CodeFile(codestring, y + j * fSize);
+        textarray.push(codefile);
+    }
+    console.log("Created " + textarray.length + " codefile objects");
 }
 
 function flattencode(data) {
@@ -58,7 +77,7 @@ function flattencode(data) {
 }
 
 function draw() {
-    if (frameCount < 11) {
+    if (frameCount < 111) {
         textFont(font)
         textSize(fSize)
         text("wow", 0, 200)
