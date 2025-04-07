@@ -23,6 +23,9 @@ fi
 
 # Lancer la commande cmd.exe pour ouvrir index.html pendant 60 secondes
 echo "Lancement de la commande dans le dossier : $dossier_choisi"
-cmd.exe /c start "" index.html
+
+cmd.exe /c start "" index.html # pour windows
+# open index.html # pour mac OS
+# xdg-open index.html # pour linux 
 
 
