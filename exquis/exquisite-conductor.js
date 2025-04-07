@@ -7,7 +7,8 @@ var O_widthexquis,
   O_nbsectionshorizontal,
   O_nbsectionsvertical,
   O_configurationexquise,
-  O_nbartworks;
+  O_nbartworks,
+  O_allcode;
 
 // Global variables that can be used in all sketches
 var O_sectionwidth; // Width of a section
@@ -36,13 +37,18 @@ async function setup() {
   colorMode(HSB, 360, 100, 100, 250);
 
   // Set the duration of a section
-  O_sectionduration = 60 * 30;
+  O_sectionduration = 60 * 21;
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 9// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
+
+  // Get the number of artworks
+  let nbsketches = Object.keys(O_configurationexquise).length;
+  let nbsections = O_nbsectionshorizontal * O_nbsectionsvertical
+  O_nbartworks = (nbsketches<nbsections) ? nbsketches : nbsections;
 
   // Initialize all sections and shuffle them
   initsections();
@@ -55,18 +61,24 @@ async function setup() {
   pixelDensity(0.5)
 
   // Shuffle the artworks
-  O_configurationexquise = shuffle(O_configurationexquise);
+  //O_configurationexquise = shuffle(O_configurationexquise);
 
   // Initialize the artworks
   let promises = [];
+  O_allcode = []
+  let piececode
   for (let i = 0; i < O_nbartworks; i++) {
     // Initialize all sketches
     O_currentsection = O_sections[i];
     let artCode = O_configurationexquise[i].art_code;
     let promise = window[artCode]["init"]();
     promises.push(promise);
+    piececode = await loadStrings(artCode + ".js");
+    O_allcode.push(piececode)
   }
   await Promise.all(promises);
+  onelineCode(O_allcode)
+
 }
 
 function initsections() {
@@ -114,25 +126,54 @@ function initsections() {
   }
 }
 
-let index = 0;
+
 function draw() {
-  // drawsections just draws a grid, we use it for calibration
-   background(0,0,0); drawsections(true,true); 
+  // draw only a grid; used for calibration
+  // background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
-  // drawcorpse()
+   drawcorpse()
+   if(index>0){console.log(frameRate()+" "+O_configurationexquise[index-1].art_code)}
 }
+
+let index = 0;
+let stablepiece = 0;
+let stablecode = 0;
 
 function drawcorpse(){
   // Check if we are done with all the artworks
-  if (O_counter == O_nbartworks * O_sectionduration) {
-    noLoop();
-    O_counter = 0;
-    index = 0;
+  if (O_counter == (O_nbsectionshorizontal * O_nbsectionsvertical) * O_sectionduration) {
+    if (stablepiece < O_sectionduration) {
+      stablepiece++
+    }
+    else {
+      
+      if (stablecode < O_sectionduration * 2) {
+        if(stablecode==0){
+          background(0, 0, 100)
+        showcode()}
+        stablecode++
+      }
+      else {
+        background(0, 0, 0)
+        // Shuffle the artworks and the sequence of sections
+        // artworks and sections appear in a different order and location at every loop of the corpse
+        O_configurationexquise = shuffle(O_configurationexquise);
+        O_sections = shuffle(O_sections);
+
+        O_counter = 0;
+        index = 0;
+        stablepiece = 0
+        stablecode = 0
+      }
+    }
     return;
   }
 
   // Check if we need to initialize a new section
-  if (O_counter % O_sectionduration == 0) {
+  if (O_counter % O_sectionduration == 0 && index < O_nbartworks) {
+    O_currentsection = O_sections[index];
+    let artCode = O_configurationexquise[index].art_code;
+    window[artCode]["init"]();
     index++;
   }
 
@@ -144,7 +185,7 @@ function drawcorpse(){
   O_counter++;
 }
 
-function drawsections(flash,fr){
+function drawsections(flash,showframerate){
   var s
   for(index in O_sections){
     push()
@@ -155,7 +196,7 @@ function drawsections(flash,fr){
     rect(0,0,O_sectionwidth,O_sectionheight)
     pop()
   }
-  if(fr){
+  if(showframerate){
     push()
     fill(0,0,0); noStroke()
     rect(O_widthexquis*0.37,O_heightexquis*0.5-70,O_widthexquis*0.15,84)
@@ -163,6 +204,55 @@ function drawsections(flash,fr){
     text(frameRate().toFixed(2),O_widthexquis*0.37,O_heightexquis*0.5)
     pop()
   }
+}
+
+function showcode() {
+  var fSize = 33
+  for (var i in O_sections) {
+    var s = O_sections[i]
+    push()
+    translate(s.x, s.y)
+    noStroke(); fill(0, 0, 100)
+    rect(0, 0, O_sectionwidth, O_sectionheight)
+    noStroke(); fill(0, 0, 100)
+    rect(s.x1 - 21, s.y1, 42, 42)
+    rect(s.x2 - 42, s.y2 - 21, 42, 42)
+    rect(s.x3 - 21, s.y3 - 42, 42, 42)
+    rect(s.x4, s.y4 - 21, 42, 42)
+    var x, y, c, tw, lineofcode
+    x = 0
+    y = fSize
+    textSize(fSize)
+    lineofcode = O_allcode[i]
+    stroke(110,100,100); fill(110,100,100)
+    for (b in lineofcode) {
+      c = lineofcode.charAt(b)
+      tw = textWidth(c)
+      if (x + tw > O_sectionwidth) {
+        x = 0
+        y += fSize + 1
+      }
+      text(c, x, y)
+      x += tw
+    }
+    pop()
+  }
+}
+
+// receives an array of arrays of strings, where each array the src code of one piece
+// transforms each array of source code into one single string of src code 
+// stores each string into O_allcode
+function onelineCode(codearrays) {
+  var temparray = []
+  for (i in codearrays) {
+    var codestring = ""
+    for (j in codearrays[i]) {
+      codestring += codearrays[i][j]
+    }
+    temparray.push(codestring)
+  }
+  O_allcode = []
+  O_allcode = temparray
 }
 
 function windowResized() {

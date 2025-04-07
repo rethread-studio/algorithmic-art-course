@@ -1,0 +1,32 @@
+/* style.css */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+button {
+  background-color: #771d63; 
+  color: white;
+  border: none; 
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #672059; /* Couleur plus sombre au survol */
+}
+
+

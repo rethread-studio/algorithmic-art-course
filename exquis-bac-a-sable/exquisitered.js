@@ -1,3 +1,4 @@
+//artwork: exquisitered
 (() => {
   let s;
 
