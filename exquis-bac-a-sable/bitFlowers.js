@@ -1,66 +1,91 @@
 (() => {
   let s, walkers, flowers;
 
-  class RandomWalker {
+class RandomWalker {
     constructor(x, y, target, steps) {
-      this.x = x;
-      this.y = y;
-      this.target = target;
-      this.steps = steps;
-      this.currentStep = 0;
-      this.path = [];
-      this.noiseOffsetX = random(1000); // For Perlin noise-based movement
-      this.noiseOffsetY = random(1000);
-      this.stepSize = 5; // Determines the amount of movement per step
-      this.charSet = "10"; // Character set
+        this.x = x;
+        this.y = y;
+        this.target = target;
+        this.steps = steps / 2;
+        this.currentStep = 0;
+        this.path = [];
+        this.noiseOffsetX = random(1000); // For Perlin noise-based movement
+        this.noiseOffsetY = random(1000);
+        this.stepSize = 5; // Determines the amount of movement per step
+        this.charSet = "10"; //△▢✶✿"; // Character set
+        this.growthMap = new Map(); // Map to track growth of letters
+        this.stemColor = random(40, 70);
     }
 
     step() {
-      if (this.currentStep >= this.steps) return;
+        if (this.currentStep >= this.steps) return;
 
-      // Calculate direction towards the target
-      let dx = this.target.x - this.x;
-      let dy = this.target.y - this.y;
-      let distance = Math.sqrt(dx * dx + dy * dy);
+        // Calculate direction towards the target
+        let dx = this.target.x - this.x;
+        let dy = this.target.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
 
-      // Add Perlin noise-based randomness to movement
-      let noiseFactorX = map(noise(this.noiseOffsetX), 0, 1, -5, 5);
-      let noiseFactorY = map(noise(this.noiseOffsetY), 0, 1, -5, 5);
+        // Add Perlin noise-based randomness to movement
+        let noiseFactorX = map(noise(this.noiseOffsetX), 0, 1, -5, 5);
+        let noiseFactorY = map(noise(this.noiseOffsetY), 0, 1, -5, 5);
 
-      // Move with randomness but also toward the target
-      this.x += (dx / distance) * this.stepSize + noiseFactorX;
-      this.y += (dy / distance) * this.stepSize + noiseFactorY;
+        // Move with randomness but also toward the target
+        this.x += (dx / distance) * this.stepSize + noiseFactorX;
+        this.y += (dy / distance) * this.stepSize + noiseFactorY;
 
-      this.x = max(0.0, min(this.x, O_sectionwidth)); // Keep within bounds
-      this.y = max(0.0 + (4*(O_sectionwidth/O_sectionheight)), min(this.y, O_sectionheight)); // Keep within bounds
-      // Store the new position for the path
-      this.path.push({ x: this.x, y: this.y });
+        this.x = max(0.0, min(this.x, O_sectionwidth)); // Keep within bounds
+        this.y = max(0.0 + (4 * (O_sectionwidth / O_sectionheight)), min(this.y, O_sectionheight)); // Keep within bounds
 
-      // Occasionally spawn a flower at a random position along the path
-      if (random() < 0.01) { // 10% chance to spawn a flower
-        flowers.push(new Flower(this.x, this.y));
-      }
+        // Store the new position for the path
+        this.path.push({ x: this.x, y: this.y });
 
-      // Increment noise offsets for next step
-      this.noiseOffsetX += 0.1;
-      this.noiseOffsetY += 0.1;
+        // Occasionally spawn a flower at a random position along the path
+        if (
+            random() < 0.01 &&
+            this.x > 20 && this.x < O_sectionwidth - 20 &&
+            this.y > 20 && this.y < O_sectionheight - 20
+        ) {
+            // 10% chance to spawn a flower, ensuring it's not too close to the borders
+            flowers.push(new Flower(this.x, this.y));
+        }
 
-      this.currentStep++;
+        // Increment noise offsets for next step
+        this.noiseOffsetX += 0.1;
+        this.noiseOffsetY += 0.1;
+
+        this.currentStep++;
     }
 
-    draw() {
-      fill(255, 255, 0); // Set text color to yellow
-      textSize(5*(O_sectionwidth/O_sectionheight));
+    display() {
+        noStroke();
 
-      for (let p of this.path) {
-        // Pick a random character from the character set
-        let c = this.charSet[Math.floor(Math.random() * this.charSet.length)];
 
-        // Display the character at the path position
-        text(c, p.x, p.y);
-      }
+        fill(70, 100, this.stemColor);
+
+        for (let i = 0; i < this.path.length; i++) {
+            let p = this.path[i];
+
+            // Pick a random character from the character set
+            let c = this.charSet[Math.floor(Math.random() * this.charSet.length)];
+
+            // Handle growth animation for letters
+            if (!this.growthMap.has(i)) {
+                this.growthMap.set(i, 0); // Initialize growth size
+                fill(70, 100, this.stemColor);
+            }
+            else { fill(70, 100, this.growthMap.get(i)*this.stemColor); }
+
+            let growth = this.growthMap.get(i);
+            if (growth < 1) {
+                growth += 0.1; // Increment growth size
+                this.growthMap.set(i, growth);
+            }
+
+            textSize(5 * growth * (O_sectionwidth / O_sectionheight)); // Scale text size based on growth
+            text(c, p.x, p.y);
+        }
     }
-  }
+}
 
   class Flower {
     constructor(x, y) {
@@ -69,43 +94,34 @@
       this.size = 0; // Start with a small size
       this.growthRate = 0.3; // Rate at which the flower grows
       this.numPetals = 6; // Number of petals in the rose
+      this.maxflowerSize = random(30,50); // Maximum size of the flower
       this.petalsAngleOffset = random(TWO_PI); // Random angle offset to make it more organic
     }
 
     grow() {
-      this.size += this.growthRate;
-    }
-
-    draw() {
-      noStroke();
-      fill(50, 0, 255); // Flower color (magenta)
-
-      // Draw lines radiating from the center to resemble dandelion seeds
-      strokeWeight(10); // Thin lines for a delicate look
-      for (let i = 0; i < 8; i++) { // 8 lines radiating outward
-        let angle = (TWO_PI / 8) * i; // Divide the circle into 8 parts
-        let radius = min(this.size, 30); // Limit the growth to a maximum radius of 20
-        let endX = this.x + cos(angle) * radius;
-        let endY = this.y + sin(angle) * radius;
-
-        // Draw each main line from the center outward
-        line(this.x, this.y, endX, endY);
-
-          if (radius > 10) { // Only add branches if the flower is large enough
-              // Add branching lines at the end of each main line
-              let branchLength = radius * 0.3; // Length of the branches
-              for (let j = -1; j <= 1; j += 2) { // Two branches, one on each side
-                  let branchAngle = angle + j * QUARTER_PI / 2; // Offset angle for branches
-                  let branchX = endX + cos(branchAngle) * branchLength;
-                  let branchY = endY + sin(branchAngle) * branchLength;
-
-                  // Draw the branch line
-                  line(endX, endY, branchX, branchY);
-              }
+        this.size += this.growthRate;
+        this.petalsAngleOffset += 0.02; // Rotate the petals slightly over time
+        if (this.size > this.maxflowerSize) {
+            this.size = this.maxflowerSize; // Cap the size to avoid excessive growth
         }
-      }
     }
-  }
+    display() {
+            fill(0,0,100); // Semi-transparent green for the stem
+            stroke(255, 0, 0); // Red color for the rose
+            strokeWeight(1);
+
+            // Draw a rose-like pattern using polar coordinates
+            beginShape();
+            for (let angle = 0; angle < TWO_PI; angle += 0.1) {
+                let r = this.size * cos(this.numPetals * angle + this.petalsAngleOffset);
+                let x = this.x + r * cos(angle);
+                let y = this.y + r * sin(angle);
+                vertex(x, y);
+            }
+            endShape(CLOSE);
+        }
+}
+
 
   async function init() {
     s = O_currentsection;
@@ -132,19 +148,19 @@
     translate(s.x, s.y);
 
     // Create border around section
-    fill(0, 0, 0);
+    fill(0, 0); // White translucent fade
     rect(0, 0, O_sectionwidth, O_sectionheight);
-
+    fill(0, 10);
     // Update and draw all walkers
     for (let walker of walkers) {
       walker.step();
-      walker.draw();
+      walker.display();
     }
 
     // Update and draw all flowers
     for (let flower of flowers) {
       flower.grow(); // Grow each flower
-      flower.draw(); // Draw each flower
+      flower.display(); // Draw each flower
     }
 
     pop();
