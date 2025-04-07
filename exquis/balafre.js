@@ -37,7 +37,9 @@
       */
     for (let i = 0; i < 100; i++) {
       stroke("white"); // Couleur blanche
-      line(s.x1, s.y1, s.x1 + i * 10, O_sectionheight);
+      if (s.x1 + i * 10 <= O_sectionwidth) {
+        line(s.x1, s.y1, s.x1 + i * 10, O_sectionheight);
+      }
     }
     noFill();
     strokeWeight(5);

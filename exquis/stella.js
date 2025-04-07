@@ -119,7 +119,7 @@
 
     let step = O_counter % O_sectionduration;
     if (step >= 1) {
-      if (q1.x3 + x / 20 <= O_sectionwidth) {
+      if (q1.x3 + x / 40 <= O_sectionwidth) {
         q1.update(0, 0, 0, 0, x / 40, 0, x / 40, 0);
       }
       q1.display();
@@ -128,20 +128,20 @@
       console.log(s.y2 - x / 20);
       console.log(s.y2 - x / 20 >= 0);
 
-      if (q2.y3 - x / 20 >= 0) {
+      if (q2.y4 - x / 40 >= 0) {
         q2.update(0, 0, 0, 0, 0, -x / 40, 0, -x / 40); // Update the position of the bottom half
       }
       q2.display();
     }
 
     if (step >= O_sectionduration / 2) {
-      if (q3.x3 - x / 20 >= 0) {
+      if (q3.x3 - x / 40 >= 0) {
         q3.update(0, 0, 0, 0, x / 40, 0, x / 40, 0); // Update the position of the bottom half
         q3.display();
       }
     }
     if (step >= (3 * O_sectionduration) / 4) {
-      if (q4.y3 + x / 20 <= O_sectionheight) {
+      if (q4.y4 + x / 20 <= O_sectionheight) {
         q4.update(0, 0, 0, 0, 0, x / 20, 0, x / 20);
       }
       q4.display();
