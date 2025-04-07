@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Obtenir une liste des dossiers dans le répertoire courant
-dossiers=$(find -mindepth 1 -maxdepth 1 -type d)
+# Hardcode de la liste des dossiers
+dossiers=("fool" "hex_grid" "hex_life" "météo²")
 
 # Sélectionner un dossier au hasard
 dossier_choisi=$(echo "$dossiers" | shuf -n 1)
@@ -21,7 +21,7 @@ if [ ! -f "index.html" ]; then
   exit 1
 fi
 
-# Lancer la commande cmd.exe pour ouvrir index.html pendant 60 secondes
+# Lancer la commande cmd.exe pour ouvrir index.html
 echo "Lancement de la commande dans le dossier : $dossier_choisi"
 
 cmd.exe /c start "" index.html # pour windows
