@@ -27,16 +27,16 @@ async function initcodefiles() {
     let codestring, codefile, y;
     console.log("Going through " + Object.keys(codefiles).length + " code files");
     y = fSize;
-    
+
     function loadStringsPromise(path) {
         return new Promise((resolve, reject) => {
-            loadStrings(path, 
+            loadStrings(path,
                 (result) => resolve(result),
                 (error) => reject(error)
             );
         });
     }
-    
+
     // Process files one by one to ensure each is fully loaded
     let allcode = [];
     for (let i = 0; i < Object.keys(codefiles).length; i++) {
@@ -48,12 +48,12 @@ async function initcodefiles() {
             console.error("Error loading file:", error);
         }
     }
-    
-    // Now process the loaded code
+
+    // Now process the loaded code and create one CodeFile object for each code file 
     for (let j = 0; j < allcode.length; j++) {
         console.log("Content:", allcode[j]);
         console.log("Length:", allcode[j].length);
-        
+
         codestring = "";
         for (let k = 0; k < allcode[j].length; k++) {
             codestring += allcode[j][k];
@@ -64,6 +64,7 @@ async function initcodefiles() {
     console.log("Created " + textarray.length + " codefile objects");
 }
 
+// takes an array of Strings and returns a single String that concatnates all elements of the array
 function flattencode(data) {
     var codestring = ""
     console.log(data)
@@ -77,16 +78,17 @@ function flattencode(data) {
 }
 
 function draw() {
-    if (frameCount < 111) {
-        textFont(font)
-        textSize(fSize)
-        text("wow", 0, 200)
-        text(Object.keys(codefiles).length, 0, 300)
-        for (var f in textarray) {
+    var f
+    if (textarray.length != 0) {
+        for (var i = 0; i < 3; i++) {
+            f = Math.floor(random(textarray.length - 1))
+            console.log("index " + f + " in " + textarray.length)
             textarray[f].bouge()
         }
     }
-    else {
-        noLoop()
-    }
+    /*for (var f in textarray) {
+        console.log("index: "+f+" in "+textarray.length)
+        textarray[f].bouge()
+    }*/
+    console.log(frameRate())
 }
