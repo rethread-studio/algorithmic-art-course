@@ -74,6 +74,7 @@ function savepng() {
 }
 
 function draw() {
+    drawback()
     drawCartel()
 //    drawleaflet()
     noLoop()
@@ -149,4 +150,26 @@ function drawCartel(){
         text(t,x,y)
         x+=w
     }
+}
+
+function drawback(){
+    noFill()
+    push()
+    var r, a1, a2 
+    stroke(30,100,100)
+    strokeWeight(3)
+    //ellipse(w*0.5,h*0.5,w*0.8,w*0.8)
+    a1=random(21,42)
+    a2=random(99,151)
+    r=w*0.8
+    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    a1=random(21,42)
+    a2=random(99,151)
+    r=w*0.7
+    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    a1=random(21,42)
+    a2=random(99,151)
+    r=w*0.6
+    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    pop()
 }
