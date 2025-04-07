@@ -1,5 +1,5 @@
 const side = 800; // w & h of canva
-const nb = 50 // number of hexagons in top line
+const nb = 37 // number of hexagons in top line
 const thick = 0; // épaisseur entre chaque hexagone
 
 // Calcul des constantes géométriques
@@ -23,7 +23,7 @@ let grid = new Array(nb_rows).fill().map(() => new Array(nb_cols).fill());
 
 let stack = []; // utilisé dans la création du "maze"
 var started = false;
-const fr = 42; // frame rate
+const fr = 60; // frame rate
 
 function setup() {
   createCanvas(0, 0); 
