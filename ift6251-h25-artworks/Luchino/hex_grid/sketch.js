@@ -26,11 +26,6 @@ var started = false;
 const fr = 60; // frame rate
 
 function setup() {
-  createCanvas(0, 0); 
-  // pour pas avoir le default canvas et pouvoir centrer le bouton
-
-  osc1 = new p5.Oscillator('sine');
-  osc2 = new p5.Oscillator('sine');
   createCanvas(side, side);
   started = true
   colorMode(HSB, 360, 100, 100, 250)

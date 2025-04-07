@@ -15,18 +15,3 @@ body {
   align-items: center;
 }
 
-button {
-  background-color: #771d63; 
-  color: white;
-  border: none; 
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #672059; /* Couleur plus sombre au survol */
-}
-
-
