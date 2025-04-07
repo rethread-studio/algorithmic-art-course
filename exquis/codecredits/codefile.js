@@ -27,7 +27,7 @@ class CodeFile {
             }
             text(this.boutdecode, this.x, this.y)
             this.index++
-
+            //console.log(this.boutdecode.length)
         }
         this.counter++
     }
