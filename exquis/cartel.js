@@ -106,8 +106,9 @@ function drawCartel(){
     y = topmargin + fSize
     t = exquisitecartel.title.main
     text(t, x, y)
-    //Short description
+    //change font for the rest of the cartel, to use a font that has accents and apostrophe
     textFont(font2)
+    //Short description
     fSize = fSize * 0.55
     textSize(fSize)
     t = exquisitecartel.subtitle.line1

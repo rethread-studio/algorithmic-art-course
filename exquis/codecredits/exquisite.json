@@ -1,22 +1,15 @@
 [
-
   {
-    "art_code": "balafre"
+    "art_code": "etoiles_effervescentes"
   },
   {
-    "art_code": "stella"
+    "art_code": "exquisPong"
   },
   {
     "art_code": "exquisWorms"
   },
   {
-    "art_code": "etoiles_effervescentes"
-  },
-  {
     "art_code": "exquisite_flow"
-  },
-  {
-    "art_code": "exquisPong"
   },
   {
     "art_code": "exquisitebw"
@@ -50,12 +43,5 @@
   },
   {
     "art_code": "exquisite_color_vortex"
-  },
-  { "art_code": "exquisiteglow"},
-    
-  { "art_code": "exquisitebubblefield"}
-
   }
-
 ]
-
