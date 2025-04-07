@@ -1,7 +1,10 @@
+//artwork: exquisitered
 (() => {
   let s;
 
   async function init() {
+        //this is exquisitered
+
     s = O_currentsection;
   }
 

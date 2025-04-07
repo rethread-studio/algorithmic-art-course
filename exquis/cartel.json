@@ -1,0 +1,104 @@
+{
+    "title": {
+        "main": "Maze PUZZLE Orange. 2025",
+        "sub": "IFT6251 H 25, art algorithmique à l’Université de Montréal"
+    },
+    "subtitle": {
+        "line1" : "Cadavre exquis génératif. Oeuvre collective réalisée par",
+        "line2" : "IFT6251 H 25, le cours d'art algorithmique à l’Université de Montréal"
+    },
+    "artworks": [
+        {
+            "artist": "N30",
+            "origin": "FR",
+            "art1": "bitdandelions",
+            "art2": "bitroses"
+        },
+        {
+            "artist": "Higo",
+            "origin": "FR",
+            "art1": "worms",
+            "art2": "pong"
+        },
+        {
+            "artist": "Nadia",
+            "origin": "CU",
+            "art1": "vortex",
+            "art2": "the matrix"
+        },
+        {
+            "artist": "Gabriel",
+            "origin": "CA",
+            "art1": "SunAfterRain",
+            "art2": "Enlighten"
+        },
+        {
+            "artist": "Yogya",
+            "origin": "LK",
+            "art1": "gibberish",
+            "art2": "scratches"
+        },
+        {
+            "artist": "Jean",
+            "origin": "FR",
+            "art1": "shattered aperture",
+            "art2": "cave distorsion"
+        },
+        {
+            "artist": "itsjdio_art",
+            "origin": "BN",
+            "art1": "",
+            "art2": ""
+        },
+        {
+            "artist": "Kiruthika",
+            "origin": "MA",
+            "art1": "snow",
+            "art2": "bubble storms"
+        },
+        {
+            "artist": "etiennecollin",
+            "origin": "QC",
+            "art1": "étoiles effervescentes",
+            "art2": "pulsations universelles"
+        },
+        {
+            "artist": "Maltsev",
+            "origin": "MA",
+            "art1": "balafre",
+            "art2": "stella"
+        },
+        {
+            "artist": "St34dyArt",
+            "origin": "CD",
+            "art1": "cyflowe",
+            "art2": "OUTLINE"
+        },    
+        {
+            "artist": "Choinul",
+            "origin": "BX",
+            "art1": "Tension",
+            "art2": "Attention"
+        },
+        {
+            "artist": "almyre",
+            "origin": "FR",
+            "art1": "adeki",
+            "art2": "pulse"
+        },
+        {
+            "artist": "Léandre",
+            "origin": "FR",
+            "art1": "Artwork #4",
+            "art2": "Artwork #5"
+        },
+        {
+            "artist": "Houda",
+            "origin": "MA",
+            "art1": "SpinForm",
+            "art2": "The ShapeCycle"
+        }
+    ],
+    "ack" : "Tim Toady, Daniel Shiffman, mamans, Benoit, m. Perlin, a. Turing. t. b. lee, all scientists, artists, creative technologists who brought us here, Ada Lovelace, Vera Molnar, antimodular studio, Bram, Ghislain Dubé, the audience for the vernissage, Mont Royal, Lauren Lee McCarthy, Casey Reas, Benjamin, Emir, Indiana, "
+}
+
