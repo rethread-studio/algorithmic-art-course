@@ -22,25 +22,7 @@ var color_index = 0 // couleur de la case
 let grid = new Array(nb_rows).fill().map(() => new Array(nb_cols).fill());
 
 let stack = []; // utilisé dans la création du "maze"
-
-let osc1, osc2; // oscilateurs
-let duration = 0; // durée qu'une note est jouée (en frames)
-
-const octave = 1.05946;
-
-// fréquence des notes
-var doo = 261.63
-var ree = 293.66
-var mii = 329.63
-var faa = 349.23
-var sol = 392.00
-var laa = 440.00
-var sii = 493.88
-
-var notes = [doo, mii, sol] // notes choisies
-var all_notes = [] // toutes les notes (octaves au dessus et en dessous) 
 var started = false;
-
 const fr = 42; // frame rate
 
 function setup() {
@@ -49,15 +31,8 @@ function setup() {
 
   osc1 = new p5.Oscillator('sine');
   osc2 = new p5.Oscillator('sine');
-
-  const button = select('#startButton'); // run quand on appuie sur le bouton
-  button.mousePressed(() => {
-    start();
-    createCanvas(side, side);
-    button.hide();
-    started = true
-  });
-
+  createCanvas(side, side);
+  started = true
   colorMode(HSB, 360, 100, 100, 250)
   frameRate(fr);
   init()
@@ -66,16 +41,7 @@ function setup() {
 function draw() {
   if (started){
     draw_next()
-    duration--;
   }
-}
-
-// Démarre les oscillateurs lors du clic
-function start() {
-  osc1.start();
-  osc2.start()
-  osc1.amp(0, 0)
-  osc2.amp(0, 0)
 }
 
 // initiation de la grille
@@ -88,50 +54,19 @@ function init() {
   if (a % 2) { a += 1 }
 
   stack = [grid[a][a - 2]] // ajout au stack de la case de départ
-
-  make_all_notes() // création des notes jouables
 }
-
-// création de la liste de toutes les notes (dans l'ordre) 
-// (octaves au dessus et en dessous)
-function make_all_notes() {
-  for (i = 2; i > 0; i--) { // pour deux octaves en dessous
-    for (j = 0; j < notes.length; j++) { // pour chaque note choises
-      all_notes.push(notes[j] / (octave * i)) 
-      // division pour les octaves plus basses
-    }
-  }
-  for (j = 0; j < notes.length; j++) { //notes choises
-    all_notes.push(notes[j])
-  }
-  for (i = 1; i < 2; i++) { // pour les octaves au dessus
-    for (j = 0; j < notes.length; j++) {
-      all_notes.push(notes[j] * (octave * i)) 
-      // multiplication pour les octaves plus hautes
-    }
-  }
-}
-
 
 // dessine le prochain hex et joue une note (si possible)
 function draw_next() {
   var current_cell = stack[stack.length - 1]
   if (!current_cell.visited) {
     draw_hex(current_cell);
-    if (duration <= 0) {
-      play_note();
-    }
     current_cell.visited = true;
-  } else {
-    osc1.amp(0.25, 0.2)
-    osc2.amp(0.125, 0.2)
   }
   var next_cell_index = get_random_unvisited_neighbour(current_cell);
   if (next_cell_index == -1) {
     stack.pop()
     if (stack.length == 0) {
-      osc1.stop()
-      osc2.stop()
       noLoop()
     }
   } else {
@@ -139,17 +74,6 @@ function draw_next() {
     var l = current_cell.links[next_cell_index]
     stack.push(grid[l[0]][l[1]]);
   }
-}
-
-function play_note() {
-  // joue une note aléatoire pour une durée aléatoire
-  duration = 5 + Math.floor(random(6))
-  var r = Math.floor(random(all_notes.length))
-  var freq = all_notes[r]
-  osc1.freq(freq);
-  osc2.freq(freq / octave);
-  osc1.amp(0.5, 0.2);
-  osc2.amp(0.25, 0.2);
 }
 
 
