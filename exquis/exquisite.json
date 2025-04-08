@@ -1,6 +1,24 @@
 [
+  { 
+    "art_code": "exquisitebubblefield"
+  },
+  {
+    "art_code": "bitFlowers"
+  },
+  {
+    "art_code": "exquisWorms"
+  },
+  {
+    "art_code": "bitRoses"
+  },
   {
     "art_code": "stella"
+  },
+  {
+    "art_code": "exquisiteA4"
+  },
+  {
+    "art_code": "exquisiteA5"
   },
   {
     "art_code": "balafre"
@@ -13,12 +31,6 @@
   },
   {
     "art_code": "iberic2"
-  },
-  { 
-    "art_code": "exquisitebubblefield"
-  },
-  {
-    "art_code": "exquisWorms"
   },
   {
     "art_code": "etoiles_effervescentes"
@@ -60,28 +72,13 @@
     "art_code": "exquisite_color_vortex"
   },
   {
-    "art_code": "exquisitered"
-  },
-  {
     "art_code": "cosmic_attraction"
   },
   {
     "art_code": "soothing_waves"
   },
   {
-    "art_code": "bitFlowers"
-  },
-    {
-    "art_code": "bitRoses"
-  },
-  {
     "art_code": "turbulent_currents"
-  },
-  {
-    "art_code": "exquisiteA4"
-  },
-  {
-    "art_code": "exquisiteA5"
   }
 ]
 
