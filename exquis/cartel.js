@@ -9,8 +9,8 @@
 //h=96*11=1056
 
 var echelle = 1
-var w = 816 * echelle
-var h = 1056 * echelle
+var w = 1122 * echelle
+var h = 1587 * echelle
 var rightmargin = 0.96 * w
 var leftmargin = 0.04 * w
 var topmargin = 0.05 * h
@@ -32,7 +32,7 @@ function setup() {
     colorMode(HSB, 360, 100, 100, 250);
     strokeCap(SQUARE)
     noFill()
-    fSize = 46
+    fSize =63
     initfSize = fSize
     background(0, 0, 100)
     noFill()
@@ -74,8 +74,11 @@ function savepng() {
 }
 
 function draw() {
-    drawback()
-    drawCartel()
+    //drawback()
+    //drawCartel()
+    //drawtop()
+    //drawartworks()
+    drawack()
 //    drawleaflet()
     noLoop()
 }
@@ -97,16 +100,23 @@ function drawleaflet(){
     drawCartel()
 }
 
-function drawCartel(){
+function drawtop(){
     var t, x, y
     strokeWeight(2)
     //Title of the piece
     textSize(fSize)
     textFont(font1)
     x = leftmargin
-    y = topmargin + fSize
+    y = topmargin + fSize*2
     t = exquisitecartel.title.main
     text(t, x, y)
+}
+
+function drawartworks(){
+    var t, x, y
+    x = leftmargin
+    y = topmargin + fSize*3
+
     //change font for the rest of the cartel, to use a font that has accents and apostrophe
     textFont(font2)
     //Short description
@@ -133,11 +143,76 @@ function drawCartel(){
         x -= textWidth(t)
         text(t, x, y)
     }
+
+}
+
+function drawack(){
+    var t, x, y
+    fSize = fSize * 0.55
     //Acknowledgements
     x=leftmargin
     fSize=fSize*0.6
     textSize(fSize)
-    y = bottommargin-fSize * 4
+    textFont(font2)
+//    stroke(0,0,0);noFill()
+    y = bottommargin-fSize * 3
+    var ack = "Remerciements: "+exquisitecartel.ack
+    var w
+    for(var j=0;j<ack.length;j++){
+        t=ack.charAt(j)
+        w=textWidth(t)
+        if(x+w>rightmargin){
+            x=leftmargin
+            y+=fSize
+        }
+        text(t,x,y)
+        x+=w
+    }
+}
+
+function drawCartel(){
+    var t, x, y
+    strokeWeight(2)
+    //Title of the piece
+    textSize(fSize)
+    textFont(font1)
+    x = leftmargin
+    y = topmargin + fSize*2
+    t = exquisitecartel.title.main
+    text(t, x, y)
+    //change font for the rest of the cartel, to use a font that has accents and apostrophe
+    textFont(font2)
+    //Short description
+    fSize = fSize * 0.55
+    textSize(fSize)
+    t = exquisitecartel.subtitle.line1
+    x = leftmargin
+    y += fSize * 3
+    text(t, x, y)
+    t = exquisitecartel.subtitle.line2
+    y += fSize * 1.1
+    text(t, x, y)
+    //Artists and artworks
+    y += fSize * 6
+    for (i in exquisitecartel.artworks) {
+        x = leftmargin + actualwidth * 0.3
+        y+=fSize
+        t = "  " + exquisitecartel.artworks[i].art1 
+        if(exquisitecartel.artworks[i].art2!=""){
+            t=t+ "  &  " + exquisitecartel.artworks[i].art2
+        }
+        text(t, x, y)
+        t = exquisitecartel.artworks[i].artist + " (b. " + exquisitecartel.artworks[i].origin + ")  "
+        x -= textWidth(t)
+        text(t, x, y)
+    }
+    //Acknowledgements
+    strokeWeight(1)
+    stroke(300,100,100)
+    x=leftmargin
+    fSize=fSize*0.6
+    textSize(fSize)
+    y = bottommargin-fSize * 3
     var ack = "Remerciements: "+exquisitecartel.ack
     var w
     for(var j=0;j<ack.length;j++){
@@ -155,21 +230,20 @@ function drawCartel(){
 function drawback(){
     noFill()
     push()
-    var r, a1, a2 
+    var x,y,sectionw,sectionh
+    sectionw=actualwidth/9
+    sectionh=actualheight/3
     stroke(30,100,100)
     strokeWeight(3)
-    //ellipse(w*0.5,h*0.5,w*0.8,w*0.8)
-    a1=random(21,42)
-    a2=random(99,151)
-    r=w*0.8
-    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
-    a1=random(21,42)
-    a2=random(99,151)
-    r=w*0.7
-    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
-    a1=random(21,42)
-    a2=random(99,151)
-    r=w*0.6
-    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    for(var i = 0; i<9; i++){
+        x=leftmargin+i*sectionw
+        for(var j = 0; j<3; j++){
+            y=topmargin+j*sectionh
+            if (random()<0.42){
+                rect(x,y,sectionw,sectionh)
+            }
+        }
+    }
+    
     pop()
 }

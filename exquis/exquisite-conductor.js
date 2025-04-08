@@ -27,7 +27,7 @@ async function setup() {
 
   // Create the canvas
   O_widthexquis = Math.floor(windowWidth);
-  O_heightexquis = Math.floor(O_widthexquis / 1.82);
+  O_heightexquis = Math.floor(windowHeight)//O_widthexquis / 1.82);
   O_canvas = createCanvas(O_widthexquis, O_heightexquis);
 
   // Center the canvas
@@ -41,7 +41,7 @@ async function setup() {
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 9// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
@@ -55,14 +55,19 @@ async function setup() {
   O_sections = shuffle(O_sections);
 
   // Initialize drawing parameters
-  textSize(84);
+  textSize(42);
   textFont(O_policeexquise);
   stroke(0, 0, 100);
   pixelDensity(0.5)
 
   // Shuffle the artworks
-  //O_configurationexquise = shuffle(O_configurationexquise);
+  O_configurationexquise = shuffle(O_configurationexquise);
 
+  // Initialize the artworks
+  initallworks()
+}
+
+async function initallworks(){
   // Initialize the artworks
   let promises = [];
   O_allcode = []
@@ -132,7 +137,7 @@ function draw() {
   // background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
    drawcorpse()
-   if(index>0){console.log(frameRate()+" "+O_configurationexquise[index-1].art_code)}
+//   if(index>0){console.log(frameRate()+" "+O_configurationexquise[index-1].art_code)}
 }
 
 let index = 0;
@@ -159,7 +164,7 @@ function drawcorpse(){
         // artworks and sections appear in a different order and location at every loop of the corpse
         O_configurationexquise = shuffle(O_configurationexquise);
         O_sections = shuffle(O_sections);
-
+        initallworks()
         O_counter = 0;
         index = 0;
         stablepiece = 0
@@ -171,8 +176,10 @@ function drawcorpse(){
 
   // Check if we need to initialize a new section
   if (O_counter % O_sectionduration == 0 && index < O_nbartworks) {
+    console.log("index: "+index+"; nb artworks: "+O_nbartworks+"; nb sections: "+O_nbsectionshorizontal*O_nbsectionsvertical+"; nb sketches: "+Object.keys(O_configurationexquise).length)
     O_currentsection = O_sections[index];
     let artCode = O_configurationexquise[index].art_code;
+    console.log("drawing "+O_configurationexquise[index].art_code)
     window[artCode]["init"]();
     index++;
   }
@@ -214,7 +221,7 @@ function showcode() {
     translate(s.x, s.y)
     noStroke(); fill(0, 0, 100)
     rect(0, 0, O_sectionwidth, O_sectionheight)
-    noStroke(); fill(0, 0, 100)
+    noStroke(); fill(0, 0, 80)
     rect(s.x1 - 21, s.y1, 42, 42)
     rect(s.x2 - 42, s.y2 - 21, 42, 42)
     rect(s.x3 - 21, s.y3 - 42, 42, 42)
@@ -224,7 +231,8 @@ function showcode() {
     y = fSize
     textSize(fSize)
     lineofcode = O_allcode[i]
-    stroke(110,100,100); fill(110,100,100)
+    //stroke(110,100,100); 
+    fill(110,100,100)
     for (b in lineofcode) {
       c = lineofcode.charAt(b)
       tw = textWidth(c)
