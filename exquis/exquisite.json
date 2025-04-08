@@ -1,29 +1,5 @@
 [
   {
-    "art_code":"exquisiteShapeCycle"
-  },
-  {
-    "art_code":"exquisiteSpin"
-  },
-  {
-    "art_code": "wordcycle"
-  },
-  {
-    "art_code": "wordFlowparticles"
-  },
-  {
-    "art_code": "bitFlowers"
-  },
-  { 
-    "art_code": "exquisitebubblefield"
-  },
-  {
-    "art_code": "exquisWorms"
-  },
-  {
-    "art_code": "bitRoses"
-  },
-  {
     "art_code": "stella"
   },
   {
@@ -49,6 +25,30 @@
   },
   {
     "art_code": "exquisite_flow"
+  },
+  {
+    "art_code":"exquisiteShapeCycle"
+  },
+  {
+    "art_code":"exquisiteSpin"
+  },
+  {
+    "art_code": "wordcycle"
+  },
+  {
+    "art_code": "wordFlowparticles"
+  },
+  {
+    "art_code": "bitFlowers"
+  },
+  { 
+    "art_code": "exquisitebubblefield"
+  },
+  {
+    "art_code": "exquisWorms"
+  },
+  {
+    "art_code": "bitRoses"
   },
   {
     "art_code": "exquisPong"
