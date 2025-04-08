@@ -7,12 +7,26 @@
     <title>Sketch</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+      }
+      .imgbox {
+          display: grid;
+          height: 100%;
+      }
+      .center-fit {
+          max-width: 100%;
+          max-height: 100vh;
+          margin: auto;
+      }
+  </style>
   </head>
 
   <body>
-    <script src="sketch.js"></script>
+    <div class="imgbox">
+      <img class="center-fit" src='results/a2600.png'>
+  </div>
   </body>
 </html>
