@@ -81,7 +81,7 @@
         ];
 
         for (let i = 0; i < numStars; i++) {
-            stars.push(new Star(random(O_sectionwidth), random(O_sectionheight), random(2,4)));
+            stars.push(new Star(random(O_sectionwidth), random(O_sectionheight), random(4,8)));
         }
 
         let insideStars = stars.filter(s => pointInPolygon(s.pos, border));
