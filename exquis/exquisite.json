@@ -1,6 +1,18 @@
 [
   {
+    "art_code": "caveDistorsion"
+  },
+  {
+    "art_code": "shatteredAperture"
+  },
+ {
     "art_code": "stella"
+  },
+  {
+    "art_code": "exquisiteA4"
+  },
+  {
+    "art_code": "exquisiteA5"
   },
   {
     "art_code": "balafre"
@@ -14,6 +26,27 @@
   {
     "art_code": "iberic2"
   },
+  {
+    "art_code": "etoiles_effervescentes"
+  },
+  {
+    "art_code": "exquisite_flow"
+  },
+  {
+    "art_code":"exquisiteShapeCycle"
+  },
+  {
+    "art_code":"exquisiteSpin"
+  },
+  {
+    "art_code": "wordcycle"
+  },
+  {
+    "art_code": "wordFlowparticles"
+  },
+  {
+    "art_code": "bitFlowers"
+  },
   { 
     "art_code": "exquisitebubblefield"
   },
@@ -21,10 +54,7 @@
     "art_code": "exquisWorms"
   },
   {
-    "art_code": "etoiles_effervescentes"
-  },
-  {
-    "art_code": "exquisite_flow"
+    "art_code": "bitRoses"
   },
   {
     "art_code": "exquisPong"
@@ -37,9 +67,6 @@
   },
   {
     "art_code": "pulsations_universelles"
-  },
-  {
-    "art_code": "neguentropie"
   },
   {
     "art_code": "exquisitebwb"
@@ -61,24 +88,6 @@
   },
   {
     "art_code": "exquisite_color_vortex"
-  },
-  {
-    "art_code": "exquisitered"
-  },
-  {
-    "art_code": "cosmic_attraction"
-  },
-  {
-    "art_code": "soothing_waves"
-  },
-  {
-    "art_code": "bitFlowers"
-  },
-    {
-    "art_code": "bitRoses"
-  },
-  {
-    "art_code": "turbulent_currents"
   }
 ]
 

@@ -125,8 +125,8 @@
       q1.display();
     }
     if (step >= O_sectionduration / 4) {
-      console.log(s.y2 - x / 20);
-      console.log(s.y2 - x / 20 >= 0);
+      //console.log(s.y2 - x / 20);
+      //console.log(s.y2 - x / 20 >= 0);
 
       if (q2.y4 - x / 40 >= 0) {
         q2.update(0, 0, 0, 0, 0, -x / 40, 0, -x / 40); // Update the position of the bottom half

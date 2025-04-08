@@ -33,12 +33,12 @@
       this.x += (dx / distance) * this.stepSize + noiseFactorX;
       this.y += (dy / distance) * this.stepSize + noiseFactorY;
 
-      if (
-        this.x > (this.textSize/3) && this.x < O_sectionwidth - (this.textSize/3) &&
-        this.y > (this.textSize/3) && this.y < O_sectionheight - (this.textSize/3)
-      ) {
-        this.path.push({ x: this.x, y: this.y });
-      }
+        if (
+            this.x > (this.textSize/6) && this.x < O_sectionwidth - (this.textSize/2) &&
+            this.y > (this.textSize/2) && this.y < O_sectionheight - (this.textSize/6)
+        ) {
+            this.path.push({ x: this.x, y: this.y });
+        }
 
       // Flower spawn
       if (
