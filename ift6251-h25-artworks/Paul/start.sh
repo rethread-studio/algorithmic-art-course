@@ -1,13 +1,13 @@
 #!/bin/sh
 awhile=10
 echo "executing each piece for $awhile seconds"
-firefox ./Pixel-Sorting/exemples/purple_hazard.png &
+open ./Pixel-Sorting/exemples/purple_hazard.png &
 sleep $awhile
 pkill -f firefox
-firefox ./Life/index.html &
+open ./Life/assets/ex2.png &
 sleep $awhile
 pkill -f firefox
-firefox ./FlowLake/results/a2600.png &
+open ./FlowLake/index.html &
 sleep $awhile
 pkill -f firefox
 echo "done"
