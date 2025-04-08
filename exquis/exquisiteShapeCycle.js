@@ -23,7 +23,7 @@
 
 
     fill(0, 0.1); 
-    rect(0, 0, width, height); 
+    rect(0, 0, O_sectionwidth, O_sectionheight);
 
     push();
     translate(s.x, s.y);
