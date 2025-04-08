@@ -331,6 +331,6 @@
     }
 
     // Use the name of the current js file (without the extension) as the key in the object window.
-    window.cave = { init, draw };
+    window.caveDistorsion = { init, draw };
   })();
   
