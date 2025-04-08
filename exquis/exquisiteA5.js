@@ -4,7 +4,7 @@
 // n'est pas suffisament visible je pourrais lui ajouter les bordures
 (() => {
     let stars;
-    let numStars = 1000;
+    let numStars = 2000;
     let pivot;
     let border = [];
     let angleStep = 0.001;
@@ -81,7 +81,7 @@
         ];
 
         for (let i = 0; i < numStars; i++) {
-            stars.push(new Star(random(O_sectionwidth), random(O_sectionheight), random(4,8)));
+            stars.push(new Star(random(O_sectionwidth), random(O_sectionheight), random(1,3)));
         }
 
         let insideStars = stars.filter(s => pointInPolygon(s.pos, border));
@@ -97,7 +97,7 @@
         push();
         
         translate(s.x, s.y);
-        fill(0,0,0, 1)
+        fill(0,0,0, 0.01)
         rect(0,0,O_sectionwidth, O_sectionheight)
 
         // noFill();
