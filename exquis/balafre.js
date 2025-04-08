@@ -46,7 +46,7 @@
     stroke((30 + 10 * beta) % 360, 80, 80, beta % 250);
     bezier(
       s.x2,
-      x.y2,
+      s.y2,
       O_sectionwidth / 4,
       O_sectionheight / 4,
       O_sectionwidth / 4,
@@ -74,7 +74,7 @@
     //consol.log(O_sectionduration)
 
     beta += 0.5;
-    if (O_sectionwidth / 2 + b < O_sectionwidth) {
+    if (O_sectionwidth / 2 + b + 20 < O_sectionwidth) {
       b += 5;
     }
 
