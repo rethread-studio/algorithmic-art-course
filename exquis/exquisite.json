@@ -1,5 +1,11 @@
 [
   {
+    "art_code": "wordcycle"
+  },
+  {
+    "art_code": "wordFlowparticles"
+  },
+  {
     "art_code":"exquisiteSpin"
   },
   {
@@ -75,15 +81,11 @@
     "art_code": "exquisite_color_vortex"
   },
   {
-    "art_code": "exquisitered"
-  },
-  {
     "art_code": "cosmic_attraction"
   },
   {
     "art_code": "soothing_waves"
   },
-
   {
     "art_code": "turbulent_currents"
   },
