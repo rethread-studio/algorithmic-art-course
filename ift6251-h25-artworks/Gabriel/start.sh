@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Hardcode de la liste des dossiers
-dossiers=("glass" "theo")
+dossiers=("oeuvre_1" "oeuvre_2" "oeuvre_3" )
 
 # Sélectionner un dossier au hasard
 #dossier_choisi=$(echo "$dossiers" | shuf -n 1)
@@ -26,6 +26,7 @@ fi
 echo "Lancement de la commande dans le dossier : $dossier_choisi"
 
 cmd.exe /c start "" index.html # pour windows
-# open index.html # pour mac OS
+#open index.html # pour mac OS
 # xdg-open index.html # pour linux 
+
 

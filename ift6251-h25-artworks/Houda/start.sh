@@ -1,21 +1,31 @@
 #!/bin/bash
 
-cd "$(dirname "$0")"
+# Hardcode de la liste des dossiers
+dossiers=("Oeuvre1" "Oeuvre2" "Oeuvre3")
 
-# Cherche les index.html dans les dossiers nommés oeuvre*
-files=($(find . -type f -path "./Oeuvre*/index.html"))
+# Sélectionner un dossier au hasard
+#dossier_choisi=$(echo "$dossiers" | shuf -n 1)
+dossier_choisi=$(printf "%s\n" "${dossiers[@]}" | shuf -n 1)
 
-# Vérifie qu'il y en a
-if [ ${#files[@]} -eq 0 ]; then
-  echo "Aucune œuvre trouvée (index.html manquant ?)"
+# Vérifier si un dossier a été trouvé
+if [ -z "$dossier_choisi" ]; then
+  echo "Aucun dossier trouvé dans le répertoire courant."
   exit 1
 fi
 
-# Choisit un au hasard
-random_file=${files[RANDOM % ${#files[@]}]}
-echo "→ Lancement de : $random_file"
+# Se déplacer dans le dossier choisi
+cd "$dossier_choisi" || exit
 
-# cmd.exe /c start "" index.html # pour windows
-# Ouvre dans le navigateur (macOS)
-open "$random_file"
+# Vérifier si le fichier index.html existe dans ce dossier
+if [ ! -f "index.html" ]; then
+  echo "Le fichier index.html n'a pas été trouvé dans le dossier $dossier_choisi."
+  exit 1
+fi
+
+# Lancer la commande cmd.exe pour ouvrir index.html
+echo "Lancement de la commande dans le dossier : $dossier_choisi"
+
+cmd.exe /c start "" index.html # pour windows
+# open index.html # pour mac OS
 # xdg-open index.html # pour linux 
+

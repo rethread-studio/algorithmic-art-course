@@ -5,7 +5,7 @@ dossiers=("blackNwhite" "letter_flow_field")
 
 # Sélectionner un dossier au hasard
 #dossier_choisi=$(echo "$dossiers" | shuf -n 1)
-dossier_choisi=$(printf "%s\n" "${dossiers[@]}" | gshuf -n 1)
+dossier_choisi=$(printf "%s\n" "${dossiers[@]}" | shuf -n 1)
 
 # Vérifier si un dossier a été trouvé
 if [ -z "$dossier_choisi" ]; then
@@ -25,6 +25,7 @@ fi
 # Lancer la commande cmd.exe pour ouvrir index.html
 echo "Lancement de la commande dans le dossier : $dossier_choisi"
 
-# cmd.exe /c start "" index.html # pour windows
-open index.html # pour mac OS
+cmd.exe /c start "" index.html # pour windows
+# open index.html # pour mac OS
 # xdg-open index.html # pour linux 
+
