@@ -55,7 +55,7 @@ async function setup() {
   O_sections = shuffle(O_sections);
 
   // Initialize drawing parameters
-  textSize(84);
+  textSize(63);
   textFont(O_policeexquise);
   stroke(0, 0, 100);
   pixelDensity(0.5)
@@ -231,7 +231,8 @@ function showcode() {
     y = fSize
     textSize(fSize)
     lineofcode = O_allcode[i]
-    stroke(110,100,100); fill(110,100,100)
+    //stroke(110,100,100); 
+    fill(110,100,100)
     for (b in lineofcode) {
       c = lineofcode.charAt(b)
       tw = textWidth(c)
