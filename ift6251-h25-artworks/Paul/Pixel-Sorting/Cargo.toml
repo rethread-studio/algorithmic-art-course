@@ -1,0 +1,9 @@
+[package]
+name = "pixel-sorting"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+image = "0.25.5"
+noise = "0.9.0"
+rand = "0.8.5"
