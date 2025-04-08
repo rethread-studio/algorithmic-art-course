@@ -36,7 +36,7 @@ void main() {
     if (intensity < threshold) {
         color.rgb = mix(vec3(1.0, 1.0, 1.0), vec3(0.0, 0.0, 0.0), pow(intensity / threshold,pow(2.7,2.)));
     } else {
-        color.rgb = mix(vec3(0.0784, 0.8706, 0.8706), vec3(0.0118, 0.2431, 1.0), (intensity - threshold) / (1.-threshold));
+        color.rgb = mix(vec3(0.0784, 0.8706, 0.8706), vec3(0.2314, 0.8078, 1.0), (intensity - threshold) / (1.-threshold));
     }
 
     gl_FragColor = color;
