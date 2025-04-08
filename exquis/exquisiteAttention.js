@@ -1,10 +1,23 @@
 (() => {
-  let s,p,mp;
+  let s,c,w,h,inc;
+  let p = []
+  let cols = []
 
   async function init() {
     s = O_currentsection;
-    colorMode(HSB)
+    c = [Math.max(s.x1,s.x3)/2+Math.min(s.x1,s.x3)/2,
+         Math.max(s.y2,s.y4)/2+Math.min(s.y2,s.y4)/2]
+    p = [[c[0],c[1]],
+         [c[0],c[1]],
+         [c[0],c[1]],
+         [c[0],c[1]]];
+    inc = 3
+    h = O_sectionheight;
+    w = O_sectionwidth;
+    cols =[[0, 96, 78],"white"]
   }
+
+  function r(){return random(cols)}
 
   function draw() {
     
@@ -12,49 +25,29 @@
     translate(s.x, s.y);
 
     stroke(0, 0, 100);
-    fill(0,0,0,100)
-    rect(0, 0, O_sectionwidth, O_sectionheight);
+    noFill()
+    rect(0, 0, w, h);
 
-    p = [[s.x1,s.y1],
-         [s.x2,s.y2],
-         [s.x3,s.y3],
-         [s.x4,s.y4]]
-    mp = []
+    fill(r())
+    quad(0,0,0,s.y4,p[0][0],p[0][1],s.x1,0)
+    fill(r())
+    quad(0,h,0,s.y4,p[1][0],p[1][1],s.x3,h)
+    fill(r())
+    quad(p[2][0],p[2][1],s.x1,0,w,0,w,s.y2)
+    fill(r())
+    quad(w,s.y2,w,h,s.x3,h,p[3][0],p[3][1])
+    
+    p[0][0] = Math.max(p[0][0]-2*inc,0)
+    p[0][1] = Math.max(p[0][1]-inc,0)
+    p[1][0] = Math.max(p[1][0]-2*inc,0)
+    p[1][1] = Math.min(p[1][1]+inc,h)
+    p[2][0] = Math.min(p[2][0]+2*inc,w)
+    p[2][1] = Math.max(p[2][1]-inc,0)
+    p[3][0] = Math.min(p[3][0]+2*inc,w)
+    p[3][1] = Math.min(p[3][1]+inc,h)
 
-    let color_index = 160 
-    for(var iter=0; iter< 12; iter++){
-      make(p,mp)
-      for(var i=0;i<4;i++){
-        fill(random(360),100,75)
-          bezier(p[i%4][0],p[i%4][1],
-                 p[i][0]+r(),p[i][1]+r(),
-                 p[(i+1)%4][0]+r(),mp[(i+1)%4][1]+r(),
-                 p[(i+1)%4][0],p[(i+1)%4][1])
-      }
-            
-    color_index +=20    
-    update(p,mp)
-
-    }
     pop();
   }
   window.exquisiteAttention = { init, draw };
 })();
 
-function mid(p1,p2){ return [(p1[0]+p2[0])/2,(p1[1]+p2[1])/2] }
-
-function make(p,mp){
-  for(var i=0;i<4;i++){
-    mp[i] = mid(p[i],p[(i+1)%4])
-  }
-}
-
-function update(p,mp){
-  for(var i=0;i<4;i++){
-    p[i] = mp[i]
-  }
-}
-
-function r(){
-  return random(-40,40)
-}
