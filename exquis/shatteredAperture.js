@@ -45,6 +45,7 @@
 
     // Générer d'autres points
     let nbPoints = Math.floor(O_sectionduration/3);
+    // let nbPoints = 10;
     for (let i = 0; i < nbPoints; i++) {
       let x = random(-w / 2, w / 2);
       let y = random(-h / 2, h / 2);
@@ -59,9 +60,12 @@
     }
 
     pop();
+
+    console.log(O_sectionduration, nbPoints)
   }
 
   function draw() {
+    console.log(frameCount)
     push();
 
     colorMode(RGB);
@@ -82,7 +86,7 @@
     drawCracks();
     drawArks();  
 
-    for (let i = 0; i < iter; i++) {
+    for (let i = 0; i < min(iter, cracksCopy.length); i++) {
       applyTexture(cracksCopy[i]);
     }
 
@@ -95,7 +99,7 @@
   function applyTexture(c, k) {
     let r1 = dist(0, 0, c.p1.x, c.p1.y);
     let r2 = dist(0, 0, c.p2.x, c.p2.y);
-    console.log(c);
+
     fill(c.c[0], c.c[1], c.c[2]);
 
     beginShape();
