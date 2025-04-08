@@ -1,9 +1,3 @@
-let font;
-
-function preload() {
-    font = loadFont('./font/vermin-vibes-2-soft-font/VerminVibes2Soft-grr4.ttf');
-}
-
 // Fait le contour de la flèche principale pour pouvoir écraser les flèches qui dépassent
 function draw_main_arrow() {
     x = width / 2;
@@ -54,6 +48,7 @@ function setup() {
     canvas.parent(div);
     div.style('text-align', 'center');
     background(255);
+    noLoop();
 }
 
 function draw() {
@@ -66,22 +61,11 @@ function draw() {
 
     // si dans les 100 premières albums, met le background en Gold
     album_number = int(random(1,1000))
-    if(album_number < 100){
-        fill(239,191,4)
-        draw_main_arrow()
-    }else{
+    // if(album_number < 100){
+    //     fill(239,191,4)
+    //     draw_main_arrow()
+    // }else{
         fill(255)
         draw_main_arrow()
-    }
-
-    //écrire tous ce qui doit être écrit
-    fill(0);
-    textFont(font);
-    textSize(128);
-    textAlign(CENTER, TOP);
-    text('U', width / 2 - 42-13, 10);
-    text('P', width / 2 + 42+13, 10);
-    text('ASCII', width / 2, height - 142);
-    text('#101', width -42-13, height - 10);  
-    noLoop();
+    // }
 }
