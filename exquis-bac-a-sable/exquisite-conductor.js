@@ -37,7 +37,7 @@ async function setup() {
   colorMode(HSB, 360, 100, 100, 250);
 
   // Set the duration of a section
-  O_sectionduration = 60 * 5;
+  O_sectionduration = 60 * 21;
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
@@ -72,9 +72,7 @@ async function setup() {
     O_allcode.push(piececode)
   }
   await Promise.all(promises);
-  console.log(O_allcode)
   onelineCode(O_allcode)
-  console.log(O_allcode)
 }
 
 function initsections() {
@@ -173,7 +171,9 @@ function showcode() {
     var s = O_sections[i]
     push()
     translate(s.x, s.y)
-    noStroke(); fill(0, 0, 100)
+    noStroke(); fill(0, 0, 0)
+    rect(0, 0, O_sectionwidth, O_sectionheight)
+    fill(0, 0, 100)
     rect(s.x1 - 21, s.y1, 42, 42)
     rect(s.x2 - 42, s.y2 - 21, 42, 42)
     rect(s.x3 - 21, s.y3 - 42, 42, 42)
@@ -183,7 +183,7 @@ function showcode() {
     y = fSize
     textSize(fSize)
     lineofcode = O_allcode[i]
-    stroke(110,100,100); fill(110,100,100)
+    stroke(110, 100, 100); fill(110, 100, 100)
     for (b in lineofcode) {
       c = lineofcode.charAt(b)
       tw = textWidth(c)

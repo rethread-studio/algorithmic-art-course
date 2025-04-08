@@ -33,7 +33,8 @@ for subdir in "${subdirs[@]}"; do
 done
 
  # Select a random element from the list
-random_subdir=${subdirs[$RANDOM % ${#subdirs[@]}]}
+random_subdir="Higo"
+#${subdirs[$RANDOM % ${#subdirs[@]}]}
 
 # Print the randomly selected subdirectory
 echo "Randomly selected subdirectory: $random_subdir"

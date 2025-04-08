@@ -23,21 +23,11 @@ var max_nb_iteration = 100;
 
 
 function setup() {
-  createCanvas(0, 0);
-  // pour pas avoir le default canvas et pouvoir centrer le bouton
-
+  createCanvas(side, side);
   colorMode(HSB, 360, 100, 100, 250)
   frameRate(fr)
-
-  const button = select('#startButton'); // run quand on appuie sur le bouton
-  button.mousePressed(() => {
-    createCanvas(side, side);
-    button.hide();
-    start()
-  });
+  start()
   max_nb_iteration = random(nb/2,nb);
-  console.log(max_nb_iteration);
-
   make_grid()
   initiate()
 }

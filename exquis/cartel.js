@@ -17,7 +17,7 @@ var topmargin = 0.05 * h
 var bottommargin = 0.93 * h
 var actualwidth = rightmargin - leftmargin
 var actualheight = bottommargin - topmargin
-var cnv, imgbtn, fSize, exquisitecartel, font1, font2
+var cnv, imgbtn, fSize, initfSize, exquisitecartel, font1, font2
 
 function preload() {
     font1 = loadFont("../cartels/fonts/1CamBam_Stick_2.ttf");
@@ -33,6 +33,7 @@ function setup() {
     strokeCap(SQUARE)
     noFill()
     fSize = 46
+    initfSize = fSize
     background(0, 0, 100)
     noFill()
     stroke(0, 0, 0)
@@ -73,6 +74,30 @@ function savepng() {
 }
 
 function draw() {
+    drawback()
+    drawCartel()
+//    drawleaflet()
+    noLoop()
+}
+
+function drawleaflet(){
+    translate(w,0)
+    rotate(radians(90))
+    fill(0,100,100)
+    rect(0,0,h*0.5,w)
+    fill(0,0,100)
+    ellipse(0,0,27,27)
+    drawCartel()
+    translate(h*0.5,0)
+    fill(0,100,100)
+    rect(0,0,h*0.5,w)
+    fill(0,0,100)
+    ellipse(0,0,27,27)
+    fSize=initfSize
+    drawCartel()
+}
+
+function drawCartel(){
     var t, x, y
     strokeWeight(2)
     //Title of the piece
@@ -82,8 +107,9 @@ function draw() {
     y = topmargin + fSize
     t = exquisitecartel.title.main
     text(t, x, y)
-    //Short description
+    //change font for the rest of the cartel, to use a font that has accents and apostrophe
     textFont(font2)
+    //Short description
     fSize = fSize * 0.55
     textSize(fSize)
     t = exquisitecartel.subtitle.line1
@@ -124,4 +150,26 @@ function draw() {
         text(t,x,y)
         x+=w
     }
+}
+
+function drawback(){
+    noFill()
+    push()
+    var r, a1, a2 
+    stroke(30,100,100)
+    strokeWeight(3)
+    //ellipse(w*0.5,h*0.5,w*0.8,w*0.8)
+    a1=random(21,42)
+    a2=random(99,151)
+    r=w*0.8
+    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    a1=random(21,42)
+    a2=random(99,151)
+    r=w*0.7
+    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    a1=random(21,42)
+    a2=random(99,151)
+    r=w*0.6
+    arc(w*0.5,h*0.5,r,r,radians(a1),radians(a2))
+    pop()
 }

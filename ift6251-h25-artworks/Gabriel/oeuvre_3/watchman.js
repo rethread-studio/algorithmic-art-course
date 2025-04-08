@@ -5,46 +5,21 @@ let index = 0;
 let speed = 1;
 let i = 0;
 
-
-function preload() {
-    music = loadSound("MoonlightSonata.mp3");
-    csv = loadTable("suicides_stats_clean.csv", "csv", "header");
-}
-
 function setup() {
     createCanvas(800, 400);
     background(20);
 
-    for (let i = 0; i < csv.getRowCount(); i++) {
-        let year = int(csv.getString(i, "year"));
-        let sex = csv.getString(i, "sex");
-        let age = csv.getString(i, "age");
-        let nombre_succide = csv.getString(i, "suicides_no");
-
-        data.push({
-            year: year,
-            sex: sex,
-            age: age,
-            nombre_succide: nombre_succide
-        });
-    }
 
     drawSmileYellow();
     drawSmilePink();
-}
-
-function mousePressed() {
-    if (!music.isPlaying()) {
-        music.play();
-    }
 }
 
 
 function draw() {
     if (i++ < 100 - speed) return;
 
-    if (index < data.length) {
-        makeBloodPoint(data[index]);
+    if (index < 300) {
+        makeBloodPoint();
         index++;
         speed = min(speed * 1.5, 75);
         i = 0;
@@ -53,49 +28,39 @@ function draw() {
     }
 }
 
-function makeBloodPoint(data) {
+function makeBloodPoint() {
 
-        let size = map(data.nombre_succide, 0, 75000, 5, 50);
-
-
-        let bloodColor;
-        switch (data.age) {
-            case "5-14 years":
-            bloodColor = color('#C13617');
-            break;
-            case "15-24 years":
-            bloodColor = color('#B21613');
-            break;
-            case "25-34 years":
-            bloodColor = color('#A50F34');
-            break;
-            case "35-54 years":
-            bloodColor = color('#992E16');
-            break;
-            case "55-74 years":
-            bloodColor = color('#861C10');
-            break;
-            case "75+ years":
-            bloodColor = color('#83110C');
-            break;
-            default:
-            bloodColor = color('#000000');
-            break;
-        }
-        
         let x;
         let y = height / 2;
-        if (data.sex === "male") {
+        let nombre_succide;
+        if (index % 2 === 0) {
             x = 3 * width / 4;
+            nombre_succide = floor(random(10000, 75000));
         } else {
             x = width / 4;
+            nombre_succide = floor(random(2000, 20000));
         }
+
+        let size = map(nombre_succide, 0, 75000, 5, 50);
+
+
+        const colors = [
+            color('#992E16'),
+            color('#861C10'),
+            color('#A50F34'),
+            color('#B21613'),
+            color('#83110C'),
+            color('#C13617'),
+        ];
+
+        let bloodColor = random(colors);
+        
+        
         // Pour faire que les points soient dans le cercle
         let rayon = sqrt(random()) * 140;
         let angle = random(TWO_PI);
         x = x + rayon * cos(angle);
         y = y + rayon * sin(angle);
-
 
 
         noStroke();

@@ -6,13 +6,6 @@ let caseLargeur, caseHauteur;
 let Scale = 3.0;
 let ScaleFin = 1.0;
 let Compteur = 0;
-let tickSound;
-let lastSound = 0;
-let soundInterval = 1000;
-
-function preload() {
-    tickSound = loadSound('clock.mp3');
-}
 
 function setup() {
     frameRate(30);
@@ -53,7 +46,6 @@ function draw() {
         }
     }
 
-    playSound();
     Compteur++;
     if (Compteur >= 15) {
         updateGrid();
@@ -61,13 +53,6 @@ function draw() {
     }
     drawGrid();
     pop();
-}
-
-function playSound() {
-    if (millis() - lastSound > soundInterval) {
-        tickSound.play();
-        lastSound = millis();
-    }
 }
 
 function updateGrid() {
@@ -111,7 +96,6 @@ function drawGrid() {
         }
     }
 }
-
 
 function getLettreVoisins(i, j) {
     let voisins = [];

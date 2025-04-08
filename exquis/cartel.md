@@ -2,7 +2,7 @@ Maze PUZZLE Orange. 2025
 IFT6251 H 25, art algorithmique à l’Université de Montréal.
 
 N30 (b. FR) 		bitdandelions & bitroses
-Higo (b. FR) 		worms & walkers
+Higo (b. FR) 		worms & pong
 Nadia (b. CU) 	 vortex & the matrix
 Gabriel (b. CA) 	SunAfterRain & Enlighten
 Yogya (b. LK) 	gibberish & scratches
