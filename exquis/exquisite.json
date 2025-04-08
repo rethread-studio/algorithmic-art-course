@@ -1,5 +1,47 @@
 [
   {
+    "art_code": "stella"
+  },
+  {
+    "art_code": "balafre"
+  },
+  { 
+    "art_code": "exquisiteglow"
+  },  
+  {
+    "art_code": "iberic"
+  },
+  {
+    "art_code": "iberic2"
+  },
+  { 
+    "art_code": "exquisitebubblefield"
+  },
+  {
+    "art_code": "exquisWorms"
+  },
+  {
+    "art_code": "etoiles_effervescentes"
+  },
+  {
+    "art_code": "exquisite_flow"
+  },
+  {
+    "art_code": "exquisPong"
+  },
+  {
+    "art_code": "exquisitebw"
+  },
+  {
+    "art_code": "exquisiteTension"
+  },
+  {
+    "art_code": "pulsations_universelles"
+  },
+  {
+    "art_code": "neguentropie"
+  },
+  {
     "art_code": "exquisitebwb"
   },
   {
@@ -7,6 +49,9 @@
   },
   {
     "art_code": "exquisiteAfterRain"
+  },
+  {
+    "art_code": "exquisiteAttention"
   },
   {
     "art_code": "exquisitegibberish"
@@ -36,3 +81,4 @@
     "art_code": "turbulent_currents"
   }
 ]
+

@@ -13,7 +13,7 @@
 
   let section;
   let meeting_points;
-  let particles = [];
+  let particles;
 
   const background = ["#1d2021", "#282828"];
   const gruvbox_palette = [
@@ -44,6 +44,7 @@
     ];
 
     // Initialize lines with random start positions
+    particles = [];
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       let start_x = random(O_sectionwidth);
       let start_y = random(O_sectionheight);
@@ -199,5 +200,5 @@
     }
   }
 
-  window.turbulent_currents = { init, draw };
+  window.neguentropie = { init, draw };
 })();

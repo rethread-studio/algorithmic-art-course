@@ -1,12 +1,13 @@
 (() => {
     let s, seed, dir = 1, amt = 0, numPoints = 900;
     const clrs = [[330,40,70],[355,40,85],[24,50,95],[43,40,95]];
-    const pointsLists = [];
+    let pointsLists = [];
 
     async function init() {
         s = O_currentsection;
         seed = random(100);
-        
+        pointsLists = [];
+        amt = 0;
         for (let i = 0; i < 5; i++) {
             pointsLists[i] = Array.from({length: 901}, (_, j) => {
                 return {
