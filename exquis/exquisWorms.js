@@ -144,8 +144,6 @@
     for (let i = 0; i < numberWalkers; i++) {
       walkers[i] = new Walker();
     }
-
-    background(random(210, 230), random(200, 220), random(185, 210));
   }
 
   function draw() {
