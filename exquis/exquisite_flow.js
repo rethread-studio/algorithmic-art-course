@@ -15,9 +15,10 @@
         s = O_currentsection;
         _height = O_sectionheight;
         _width = O_sectionwidth;
+
+        push()
         fill(0, 0, 0);
         stroke(0, 0, 0);
-        push()
         translate(s.x,s.y)
         for (let i = 0; i < num; i++) {
             particles.push(createVector(random(_width), random(_height)));
@@ -30,7 +31,6 @@
             createVector(s.x4, s.y4)
         ];
         pop()
-
     }
 
     function draw() {
