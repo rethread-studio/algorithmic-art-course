@@ -35,8 +35,12 @@ class RandomWalker {
         this.x += (dx / distance) * this.stepSize + noiseFactorX;
         this.y += (dy / distance) * this.stepSize + noiseFactorY;
 
-        this.x = max(0.0, min(this.x, O_sectionwidth)); // Keep within bounds
-        this.y = max(0.0 + (4 * (O_sectionwidth / O_sectionheight)), min(this.y, O_sectionheight)); // Keep within bounds
+        if (
+            this.x > (this.textSize/3) && this.x < O_sectionwidth - (this.textSize/3) &&
+            this.y > (this.textSize/3) && this.y < O_sectionheight - (this.textSize/3)
+        ) {
+            this.path.push({ x: this.x, y: this.y });
+        }
 
         // Store the new position for the path
         this.path.push({ x: this.x, y: this.y });
@@ -90,7 +94,7 @@ class RandomWalker {
       this.size = 0; // Start with a small size
       this.growthRate = 0.3; // Rate at which the flower grows
       this.numPetals = 6; // Number of petals in the rose
-      this.maxflowerSize = random(0.8,0.10)*min(O_sectionwidth, O_sectionheight); // Maximum size of the flower
+      this.maxflowerSize = random(0.1,0.15)*min(O_sectionwidth, O_sectionheight); // Maximum size of the flower
       this.petalsAngleOffset = random(TWO_PI); // Random angle offset to make it more organic
     }
 
