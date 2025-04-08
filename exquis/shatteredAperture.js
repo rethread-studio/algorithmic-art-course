@@ -13,6 +13,7 @@
     // Important variables
     cracks = [];
     impact = [];
+    images = [];
     arks = [{ r: 10, startAngle: 0, endAngle: 2 * Math.PI }];
     s = O_currentsection;
     d = O_sectionduration;
@@ -44,7 +45,7 @@
     cracks.push({ p1: { x: w / 2, y: -h / 2 }, p2: { x: w / 2, y: h / 2 } });
 
     // Générer d'autres points
-    let nbPoints = Math.floor(O_sectionduration/3);
+    let nbPoints = Math.floor(O_sectionduration/6);
     // let nbPoints = 10;
     for (let i = 0; i < nbPoints; i++) {
       let x = random(-w / 2 + 100, w / 2 - 100);
@@ -104,13 +105,13 @@
 
     beginShape();
 
-    for (let angle = c.ark.startAngle; angle <= c.ark.endAngle; angle += 0.001) {
+    for (let angle = c.ark.startAngle; angle <= c.ark.endAngle; angle += 0.05) {
       let ix = cos(angle) * r1;
       let iy = sin(angle) * r1;
       vertex(ix, iy);
     }
   
-    for (let angle = c.ark.endAngle; angle >= c.ark.startAngle; angle -= 0.001) {
+    for (let angle = c.ark.endAngle; angle >= c.ark.startAngle; angle -= 0.05) {
       let ix = cos(angle) * r2;
       let iy = sin(angle) * r2;
       vertex(ix, iy);

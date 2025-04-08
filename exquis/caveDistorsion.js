@@ -31,15 +31,15 @@
       noiseScale = 0.04; 
 
       listOfStratesCurvesX = [];
-      nbStratesX = 6;
-      nbCurvesX = 5;
+      nbStratesX = 4;
+      nbCurvesX = 3;
 
       listOfStratesCurvesY = [];
       nbStratesY = 3;
-      nbCurvesY = 5;
+      nbCurvesY = 3;
 
       listOfStratesCurvesColor = [];
-      nbCurvesColor = 5;
+      nbCurvesColor = 3;
 
       stars = [];
       nbStars = 150;

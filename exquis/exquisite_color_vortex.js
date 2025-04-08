@@ -12,8 +12,6 @@
         s = O_currentsection;
         _height = O_sectionheight;
         _width = O_sectionwidth;
-        colorMode(HSB);
-
     }
 
     function draw() {
@@ -44,7 +42,8 @@
             const randY = random(_height);
             line(_width / 2, _height / 2, randX, randY);
 
-            drawSectionTriangles();
+            if (i == O_sectionduration - 1)
+                drawSectionTriangles()
         }
     }
 
