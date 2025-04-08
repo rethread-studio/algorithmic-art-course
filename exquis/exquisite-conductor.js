@@ -179,6 +179,7 @@ function drawcorpse(){
     console.log("index: "+index+"; nb artworks: "+O_nbartworks+"; nb sections: "+O_nbsectionshorizontal*O_nbsectionsvertical+"; nb sketches: "+Object.keys(O_configurationexquise).length)
     O_currentsection = O_sections[index];
     let artCode = O_configurationexquise[index].art_code;
+    console.log("drawing "+O_configurationexquise[index].art_code)
     window[artCode]["init"]();
     index++;
   }

@@ -91,7 +91,7 @@
 
       pop();
     } catch (error) {
-      console.error("Erreur lors du chargement des images : ", error);
+     // console.error("Erreur lors du chargement des images : ", error);
     }
   }
 
