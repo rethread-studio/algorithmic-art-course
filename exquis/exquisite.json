@@ -1,5 +1,11 @@
 [
   {
+    "art_code": "caveDistorsion"
+  },
+  {
+    "art_code": "shatteredAperture"
+  },
+ {
     "art_code": "stella"
   },
   {
@@ -82,21 +88,6 @@
   },
   {
     "art_code": "exquisite_color_vortex"
-  },
-  {
-    "art_code": "cosmic_attraction"
-  },
-  {
-    "art_code": "soothing_waves"
-  },
-  {
-    "art_code": "turbulent_currents"
-  },
-  {
-    "art_code": "caveDistorsion"
-  },
-  {
-    "art_code": "shatteredAperture"
   }
 ]
 

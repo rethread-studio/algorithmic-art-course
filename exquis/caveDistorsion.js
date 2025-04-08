@@ -165,7 +165,7 @@
       let xTop = generateStratesAnchorX(nbStratesX);
       let xBot = generateStratesAnchorX(nbStratesX);
       let xPair = xBot.map((item, i) => ({ bot: item, top: xTop[i] }));
-      console.log(xTop, xBot, xPair)
+      //console.log(xTop, xBot, xPair)
       // Génération de l'intérieur des startes
       for (let i = 0; i < nbStratesX; i++) {
         // nbCurves fixe, le rendre semi aléatoire ?
