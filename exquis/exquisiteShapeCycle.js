@@ -22,11 +22,11 @@
     let shapeRotation = t * 0.3;
 
 
-    fill(0, 0.1); 
-    rect(0, 0, O_sectionwidth, O_sectionheight);
 
     push();
     translate(s.x, s.y);
+    fill(0, 0.1); 
+    rect(0, 0, O_sectionwidth, O_sectionheight);
     rotate(shapeRotation);
 
     stroke(currentHue, 80, 100, 0.8);

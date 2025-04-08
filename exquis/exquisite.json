@@ -1,12 +1,15 @@
 [
   {
+    "art_code":"exquisiteShapeCycle"
+  },
+  {
+    "art_code":"exquisiteSpin"
+  },
+  {
     "art_code": "wordcycle"
   },
   {
     "art_code": "wordFlowparticles"
-  },
-  {
-    "art_code":"exquisiteSpin"
   },
   {
     "art_code": "bitFlowers"
@@ -88,12 +91,6 @@
   },
   {
     "art_code": "turbulent_currents"
-  },
-  {
-    "art_code":"exquisteShapeCycle"
-  },
-  {
-    "art_code":"exquisteSpin"
   }
 ]
 
