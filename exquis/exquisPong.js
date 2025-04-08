@@ -82,10 +82,14 @@
 
     rect(xRect1, yRect1, widthRect, heightRect);
     rect(xRect2, yRect2, widthRect, heightRect);
-    yRect1 += O_sectionheight/4*(noise(0.1*O_counter)-0.5)*2;
+    yRect1 += O_sectionheight/4*(noise(0.05*O_counter)-0.5)*2;
     yRect1 = constrain(yRect1, 0, O_sectionheight-heightRect);
-    yRect2 += O_sectionheight/4*(noise(0.1*O_counter+1000)-0.5)*2;
+    yRect2 += O_sectionheight/4*(noise(0.05*O_counter+1000)-0.5)*2;
     yRect2 = constrain(yRect2, 0, O_sectionheight-heightRect);
+    if (O_counter % O_sectionduration == O_sectionduration - 1) {
+      yRect1 = constrain(s.y4, 0, O_sectionheight-heightRect);
+      yRect2 = constrain(s.y2, 0, O_sectionheight-heightRect);
+    }
     if (side == 1) {
       distance = Math.sqrt(Math.pow(O_sectionwidth-constrain(s.x1, xRect1+widthRect+rBall, xRect2-rBall), 2)+Math.pow(constrain(s.y2, rBall, O_sectionheight-rBall)-constrain(s.y1, rBall, O_sectionheight-rBall), 2));
       xBall = constrain(s.x1, xRect1+widthRect+rBall, xRect2-rBall) + (fc*speedBall)/distance*(O_sectionwidth-constrain(s.x1, xRect1+widthRect+rBall, xRect2-rBall));

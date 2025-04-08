@@ -80,9 +80,9 @@ while true; do
     echo "Randomly selected subdirectory: $random_subdir"
 
     # Check if start.sh exists in the selected subdirectory
-    start_script="$random_subdir/start.sh"
+    start_script="$random_subdir/start_mac.sh"
     if [[ -f "$start_script" ]]; then
-        echo "Found 'start.sh' in $random_subdir. Launching script..."
+        echo "Found 'start_mac.sh' in $random_subdir. Launching script..."
 
         # Make sure the script is executable
         chmod +x "$start_script"
@@ -90,7 +90,7 @@ while true; do
         # Change to the directory and start the script
         (
             cd "$random_subdir"
-            ./start.sh &
+            ./start_mac.sh &
             script_pid=$!
             echo $script_pid > .server_pid
 
@@ -121,7 +121,7 @@ while true; do
         )
         ((i++))
     else
-        echo "No 'start.sh' script found in $random_subdir."
+        echo "No 'start_mac.sh' script found in $random_subdir."
     fi
 
     sleep 1 
