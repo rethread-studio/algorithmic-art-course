@@ -1,20 +1,26 @@
 [
+        {
+    "art_code": "bitRoses"
+  },
+      {
+    "art_code": "bitFlowers"
+  },
   {
     "art_code": "stella"
   },
   {
     "art_code": "balafre"
   },
-  { 
+  {
     "art_code": "exquisiteglow"
-  },  
+  },
   {
     "art_code": "iberic"
   },
   {
     "art_code": "iberic2"
   },
-  { 
+  {
     "art_code": "exquisitebubblefield"
   },
   {
@@ -71,12 +77,7 @@
   {
     "art_code": "soothing_waves"
   },
-  {
-    "art_code": "bitFlowers"
-  },
-    {
-    "art_code": "bitRoses"
-  },
+
   {
     "art_code": "turbulent_currents"
   }

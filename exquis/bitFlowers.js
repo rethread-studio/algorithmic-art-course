@@ -36,14 +36,13 @@ class RandomWalker {
         this.y += (dy / distance) * this.stepSize + noiseFactorY;
 
         if (
-            this.x > (this.textSize/3) && this.x < O_sectionwidth - (this.textSize/3) &&
-            this.y > (this.textSize/3) && this.y < O_sectionheight - (this.textSize/3)
+            this.x > (this.textSize/6) && this.x < O_sectionwidth - (this.textSize/2) &&
+            this.y > (this.textSize/2) && this.y < O_sectionheight - (this.textSize/6)
         ) {
             this.path.push({ x: this.x, y: this.y });
         }
 
         // Store the new position for the path
-        this.path.push({ x: this.x, y: this.y });
 
         // Occasionally spawn a flower at a random position along the path
         if (
