@@ -61,7 +61,7 @@ async function setup() {
   pixelDensity(0.5)
 
   // Shuffle the artworks
-  O_configurationexquise = shuffle(O_configurationexquise);
+  //O_configurationexquise = shuffle(O_configurationexquise);
 
   // Initialize the artworks
   initallworks()
