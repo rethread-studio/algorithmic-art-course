@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Hardcode de la liste des dossiers
-dossiers=("oeuvre_1" "oeuvre_2" "oeuvre_3" )
+dossiers=("lines-genuary" "Project2-l-system" "Projet3-Datart" )
 
 # Sélectionner un dossier au hasard
 dossier_choisi=$(echo "$dossiers" | shuf -n 1)
