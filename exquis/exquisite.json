@@ -91,6 +91,12 @@
   },
   {
     "art_code": "turbulent_currents"
+  },
+  {
+    "art_code": "caveDistorsion"
+  },
+  {
+    "art_code": "shatteredAperture"
   }
 ]
 
