@@ -32,8 +32,8 @@
     rect(0, 0, O_sectionwidth, O_sectionheight);
 
     // Top anchor light (optional)
-    fill(180, 50, 100, 50);
-    ellipse(s.x1, s.y1, 80, 25);
+    // fill(180, 50, 100, 50);
+    // ellipse(s.x1, s.y1, 80, 25);
 
     // Bubbles
     for (let i = 0; i < bubbles.length; i++) {
@@ -41,14 +41,18 @@
       stroke(b.hue, 80, 100, 150);
       strokeWeight(1.5);
       noFill();
-      ellipse(b.x, b.y, b.size);
+      if (b.x + b.size >= O_sectionwidth || b.x - b.size <= 0) {
 
-      b.y -= b.speed;
-      b.x += sin(frameCount * 0.01 + i) * 0.2;
+      } else {
+        ellipse(b.x, b.y, b.size);
 
-      if (b.y < 10) {
-        b.y = random(O_sectionheight * 0.4, O_sectionheight * 0.6);
-        b.x = random(O_sectionwidth);
+        b.y -= b.speed;
+        b.x += sin(frameCount * 0.01 + i) * 0.2;
+
+        if (b.y < 10) {
+          b.y = random(O_sectionheight * 0.4, O_sectionheight * 0.6);
+          b.x = random(O_sectionwidth);
+        }
       }
     }
 
