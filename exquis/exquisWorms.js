@@ -136,7 +136,7 @@
     walkers = [];
     countWalkers = 0;
     speed = 1;
-    period = Math.floor(random(6, 20));
+    period = Math.floor(random(12, 20));
 
     lineLengthMax = 100;
     lineWeightMax = 15;
@@ -144,8 +144,6 @@
     for (let i = 0; i < numberWalkers; i++) {
       walkers[i] = new Walker();
     }
-
-    background(random(210, 230), random(200, 220), random(185, 210));
   }
 
   function draw() {

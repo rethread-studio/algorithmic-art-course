@@ -25,7 +25,11 @@
     rect(0, 0, O_sectionwidth, O_sectionheight);
 
     cx+=random(-5,5)
-    cy+=random(-5,5)
+    if (cx < 0 ){cx += O_sectionwidth/20}
+    if (cx > O_sectionwidth){ cx -= O_sectionwidth/20}
+    cy+=random(-3,3)
+    if (cy < 0 ){cx += O_sectionheight/20}
+    if (cy > O_sectionheight){ cx -= O_sectionheight/20}
 
     for(var i=0; i<4;i++){
       if(random()>0.95){
