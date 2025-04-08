@@ -1,9 +1,9 @@
+let cercles = [];
+const espacement = 50;
+const tailleMax = 40;
 (() => {
   let s;
-  let cercles = [];
-  const espacement = 50;
-  const tailleMax = 40;
-  
+
   async function init() {
     //this is exquisitered
 
@@ -64,20 +64,18 @@
       fill(random(255), random(255), random(255), 100);
       ellipse(random(O_sectionwidth), random(O_sectionheight), random(5, 20));
     }
+    
     if (O_counter % O_sectionduration == O_sectionduration - 1) {
-      // fill(0, 100, 100);
-      // noStroke();
-      // quad(s.x1, s.y1, s.x2, s.y2, s.x3, s.y3, s.x4, s.y4);
-
-      fill(0, 100, 100); // Rouge semi-transparent
+      fill(0, 100, 100); // Couleur rouge semi-transparente
       noStroke();
-
-      // Cercles aux 4 coins (coordonnées personnalisables)
-      ellipse(s.x1, s.y1, 60, 60); // Coin supérieur gauche
-      ellipse(s.x2, s.y2, 60, 60); // Coin supérieur droit
-      ellipse(s.x3, s.y3, 60, 60); // Coin inférieur gauche
-      ellipse(s.x4, s.y4, 60, 60); // Coin inférieur droit
+    
+      arc(s.x1, s.y1, 60, 60, 0, PI);
+      arc(s.x2, s.y2, 60, 60, PI * 0.5, PI * 1.5);
+      arc(s.x3, s.y3, 60, 60, PI, 2 * PI);
+      arc(s.x4, s.y4, 60, 60, PI * 1.5, PI * 0.5);
+  
     }
+        
 
 
     // Pop out of the section
