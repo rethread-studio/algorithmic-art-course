@@ -135,10 +135,10 @@
     }
 
     if (step >= O_sectionduration / 2) {
-      if (q3.x3 - x / 40 >= 0) {
+      if (q3.x3 + x / 40 <= O_sectionwidth) {
         q3.update(0, 0, 0, 0, x / 40, 0, x / 40, 0); // Update the position of the bottom half
-        q3.display();
       }
+      q3.display();
     }
     if (step >= (3 * O_sectionduration) / 4) {
       if (q4.y4 + x / 20 <= O_sectionheight) {
