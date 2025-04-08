@@ -5,7 +5,7 @@
 
 (() => {
   let s;
-  let numLines = 6;
+  let numLines = 12;
   let spacing = 20;
   let speed = 0.02;
   let second_gaussian;

@@ -1,5 +1,5 @@
 (() => {
-    const num = 800;
+    const num = 1000;
     const particles = [];
     let s, _height, _width, focalPoints = [];
     let currentIteration = 0;
@@ -12,14 +12,14 @@
     ];
 
     async function init() {
-        colorMode(HSB);
         s = O_currentsection;
         _height = O_sectionheight;
         _width = O_sectionwidth;
+
+        push()
         fill(0, 0, 0);
         stroke(0, 0, 0);
-        rect(0, 0, _width, _height);
-
+        translate(s.x,s.y)
         for (let i = 0; i < num; i++) {
             particles.push(createVector(random(_width), random(_height)));
         }
@@ -30,6 +30,7 @@
             createVector(s.x3, s.y3),
             createVector(s.x4, s.y4)
         ];
+        pop()
     }
 
     function draw() {

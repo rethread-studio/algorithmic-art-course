@@ -1,15 +1,11 @@
-let besuText = "";
-let tekuText = "";
-let commonText = "";
+let besuText = "c o m . f a s t e r x m l : c l a s s m a t e : 1 . 5 . 1 ,   c o m . g i t h u b . j k n a c k : h a n d l e b a r s - h e l p e r s : 4 . 3 . 1"
+let commonText = input_text = "c o m . f a s t e r x m l . j a c k s o n : j a c k s o n - b o m : 2 . 1 8 . 0 c o m . g i t h u b . b e n - m a n e s . c a f f e i n e : c a f f e i n e : 3 . 1 . 8";
+let tekuText = "c o m . e t h l o . t i m e : i t u : 1 . 7 . 0 c o m . f a s t e r x m l . j a c k s o n . c o r e : j a c k s o n - a n n o t a t i o n s : 2 . 1 8 . 2";
+
+
 let besuColor;
 let tekuColor;
 let commonColor;
-
-function preload() {
-    besuText = loadStrings('data/besu_filtered_dependencies.txt');
-    commonText = loadStrings('data/overlap_with_version-25.1.0.txt');
-    tekuText = loadStrings('data/teku_filtered_dependencies.txt');
-}
 
 const noiseScale = 0.01;
 let besuParticles = [];
@@ -22,10 +18,9 @@ function setup() {
     colorMode(HSB);
     background(0, 0, 0);
 
-    // Join all text lines into a single paragraph
-    besuText = besuText.join(' ');
-    commonText = commonText.join(' ');
-    tekuText = tekuText.join(' ');
+    besuText = besuText + " " + besuText + " " + besuText; 
+    commonText = commonText + " " + commonText + " " + commonText;
+    tekuText = tekuText + " " + tekuText + " " + tekuText;   
 
     besuColor = color(320, 100, 100);  
     commonColor = color(50, 100, 100); 
@@ -102,32 +97,9 @@ function updateParticle(p) {
     }
 }
 
-
-// Sinusoidal Waves
-// let time = 0;
-
-// function updateParticle(p) {
-//     p.pos.x += sin(time + p.pos.y * 0.01) * 2;
-//     p.pos.y += cos(time + p.pos.x * 0.01) * 2;
-    
-//     time += 0.001;
-// }
-
-// // Cellular Automata
-// function updateParticle(p, index) {
-//     let n = (index % 2 === 0) ? 1 : -1;
-//     p.pos.x += n * 2;
-//     p.pos.y += sin(p.pos.x * 0.01) * 2;
-// }
-
-// // Brownian Motion (Random Walk)
-// function updateParticle(p) {
-//     p.pos.x += random(-1, 1);
-//     p.pos.y += random(-1, 1);
-// }
-
-
 // Ensure particles stay inside the canvas
 function onScreen(v) {
     return v.x >= 0 && v.x <= width && v.y >= 0 && v.y <= height;
 }
+
+

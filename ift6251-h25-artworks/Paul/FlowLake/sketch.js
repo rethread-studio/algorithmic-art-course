@@ -31,7 +31,7 @@ let backgroundBlend = 0.06;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     colorMode(HSB);
-    loadOceanDataFromFile(); // Load data from file
+    fetchOceanData();
 }
 
 function draw() {
@@ -156,7 +156,7 @@ function lerpAngle(start, end, amt) {
     return start + diff * amt;
 }
 
-function fetchAndSaveOceanData() {
+function fetchOceanData() {
     let stationIndex = Math.floor(Math.random() * stations.length);
     let stationID = stations[stationIndex][0];
     let currentsStationID = stations[stationIndex][1];
@@ -184,10 +184,6 @@ function fetchAndSaveOceanData() {
 
     Promise.all(promises)
         .then(responses => {
-            let tideLevels = [];
-            let waterTemps = [];
-            let oceanCurrents = [];
-
             responses.forEach(([currentsData, tidesData, tempData], index) => {
                 let tideLevel = tidesData.data?.length ? parseFloat(tidesData.data[0].v) || 0 : 0;
                 let waterTemp = tempData.data?.length ? parseFloat(tempData.data[0].v) || 0 : 0;
@@ -199,24 +195,12 @@ function fetchAndSaveOceanData() {
                 oceanCurrents.push({ date: dates[index], speed: currentSpeed, direction: currentDirection });
             });
 
-            let fullData = {
-                tideLevels: tideLevels,
-                waterTemps: waterTemps,
-                oceanCurrents: oceanCurrents
-            };
+            // Initialize previous data to match the first frame
+            previousCurrents = JSON.parse(JSON.stringify(oceanCurrents));
 
-            saveJSON(fullData, 'ocean_data.json');
-            console.log("✅ Données sauvegardées dans ocean_data.json");
+            console.log("Tide Levels:", tideLevels);
+            console.log("Water Temperatures:", waterTemps);
+            console.log("Ocean Currents:", oceanCurrents);
         })
         .catch(error => console.error("API Fetch Error:", error));
-}
-
-function loadOceanDataFromFile(path = 'ocean_data.json') {
-    loadJSON(path, data => {
-        tideLevels = data.tideLevels || [];
-        waterTemps = data.waterTemps || [];
-        oceanCurrents = data.oceanCurrents || [];
-        previousCurrents = JSON.parse(JSON.stringify(oceanCurrents));
-        console.log("Données chargées depuis le fichier :", path);
-    });
 }

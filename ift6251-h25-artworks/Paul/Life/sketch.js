@@ -79,7 +79,7 @@ function draw() {
     shader(myShader);
     myShader.setUniform("threshold", threshold);
     myShader.setUniform("resolution", [width, height]);
-    myShader.setUniform("texelSize", resolution);
+    myShader.setUniform("texelSize", 5);
     myShader.setUniform("tex", pg);
 
     rect(-width / 2, -height / 2, width, height);

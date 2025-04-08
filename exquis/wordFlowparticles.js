@@ -36,9 +36,9 @@ window.wordFlowparticles = {};
     ];
     
     const config = {
-        numParticles: 20,
+        numParticles: 30,
         speed: 2.0,
-        textSize: 50,
+        textSize: 20,
         noiseInfluence: 2.0,
         lifespanMin: 30,        // Minimum frames a particle lives
         lifespanMax: 60,        // Maximum frames a particle lives
@@ -418,7 +418,7 @@ window.wordFlowparticles = {};
         // Draw a bezier curve to connect the words and anchor points in O_currentsection
         push();
         stroke(113, 246, 201, 60); // rgba(113, 246, 201, 230)
-        strokeWeight(5);
+        strokeWeight(2);
         noFill();
         beginShape();
         for (let wordState of finalStateWords) {
@@ -429,7 +429,7 @@ window.wordFlowparticles = {};
         endShape();
         
         stroke(39, 245, 227, 100);  //rgba(39, 245, 227, 200)
-        strokeWeight(3.5);
+        strokeWeight(1.5);
         noFill();
         // Draw bezier curves between the anchor points
         bezier(

@@ -27,7 +27,7 @@ async function setup() {
 
   // Create the canvas
   O_widthexquis = Math.floor(windowWidth);
-  O_heightexquis = Math.floor(O_widthexquis / 1.82);
+  O_heightexquis = Math.floor(windowHeight)//O_widthexquis / 1.82);
   O_canvas = createCanvas(O_widthexquis, O_heightexquis);
 
   // Center the canvas
@@ -37,11 +37,11 @@ async function setup() {
   colorMode(HSB, 360, 100, 100, 250);
 
   // Set the duration of a section
-  O_sectionduration = 60 * 5;
+  O_sectionduration = 60 * 21;
 
   // Compute the number of sections their size
   O_nbsectionsvertical = 3;
-  O_nbsectionshorizontal = 3// Math.ceil(O_nbartworks / O_nbsectionsvertical);
+  O_nbsectionshorizontal = 9// Math.ceil(O_nbartworks / O_nbsectionsvertical);
   O_sectionwidth = Math.floor(O_widthexquis / O_nbsectionshorizontal);
   O_sectionheight = Math.floor(O_heightexquis / O_nbsectionsvertical);
 
@@ -55,13 +55,13 @@ async function setup() {
   O_sections = shuffle(O_sections);
 
   // Initialize drawing parameters
-  textSize(84);
+  textSize(42);
   textFont(O_policeexquise);
   stroke(0, 0, 100);
   pixelDensity(0.5)
 
   // Shuffle the artworks
-  //O_configurationexquise = shuffle(O_configurationexquise);
+  O_configurationexquise = shuffle(O_configurationexquise);
 
   // Initialize the artworks
   initallworks()
@@ -221,7 +221,7 @@ function showcode() {
     translate(s.x, s.y)
     noStroke(); fill(0, 0, 100)
     rect(0, 0, O_sectionwidth, O_sectionheight)
-    noStroke(); fill(0, 0, 100)
+    noStroke(); fill(0, 0, 80)
     rect(s.x1 - 21, s.y1, 42, 42)
     rect(s.x2 - 42, s.y2 - 21, 42, 42)
     rect(s.x3 - 21, s.y3 - 42, 42, 42)
@@ -231,7 +231,8 @@ function showcode() {
     y = fSize
     textSize(fSize)
     lineofcode = O_allcode[i]
-    stroke(110,100,100); fill(110,100,100)
+    //stroke(110,100,100); 
+    fill(110,100,100)
     for (b in lineofcode) {
       c = lineofcode.charAt(b)
       tw = textWidth(c)
