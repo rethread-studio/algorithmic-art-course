@@ -1,9 +1,12 @@
 [
-  { 
-    "art_code": "exquisitebubblefield"
+  {
+    "art_code":"exquisiteSpin"
   },
   {
     "art_code": "bitFlowers"
+  },
+  { 
+    "art_code": "exquisitebubblefield"
   },
   {
     "art_code": "exquisWorms"
@@ -70,21 +73,6 @@
   },
   {
     "art_code": "exquisite_color_vortex"
-  },
-  {
-    "art_code": "cosmic_attraction"
-  },
-  {
-    "art_code": "soothing_waves"
-  },
-  {
-    "art_code": "turbulent_currents"
-  },
-  {
-    "art_code":"exquisteShapeCycle"
-  },
-  {
-    "art_code":"exquisteSpin"
   }
 ]
 
