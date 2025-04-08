@@ -47,8 +47,8 @@
     let nbPoints = Math.floor(O_sectionduration/3);
     // let nbPoints = 10;
     for (let i = 0; i < nbPoints; i++) {
-      let x = random(-w / 2, w / 2);
-      let y = random(-h / 2, h / 2);
+      let x = random(-w / 2 + 100, w / 2 - 100);
+      let y = random(-h / 2 + 50, h / 2 - 50);
       while (x ** 2 + y ** 2 < 10 ** 2) {
         x = random(-w / 2, w / 2);
         y = random(-h / 2, h / 2);
