@@ -61,7 +61,7 @@ async function setup() {
   pixelDensity(0.5)
 
   // Shuffle the artworks
-  O_configurationexquise = shuffle(O_configurationexquise);
+  //O_configurationexquise = shuffle(O_configurationexquise);
 
   // Initialize the artworks
   initallworks()
@@ -137,7 +137,7 @@ function draw() {
   // background(0,0,0); drawsections(true,true); 
   // drawcorpse draws the generative exquisite corspe, we use it when the grid is calibrated
    drawcorpse()
-//   if(index>0){console.log(frameRate()+" "+O_configurationexquise[index-1].art_code)}
+   if(index>0){console.log(frameRate()+" "+O_configurationexquise[index-1].art_code)}
 }
 
 let index = 0;

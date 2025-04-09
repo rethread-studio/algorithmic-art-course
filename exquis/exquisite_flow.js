@@ -36,7 +36,7 @@
     function draw() {
         push()
         translate(s.x,s.y)
-        fill(0, 0, 0, 1);
+        fill(0, 0, 0, 0.01);
         noStroke();
         rect(0, 0, _width, _height);
     

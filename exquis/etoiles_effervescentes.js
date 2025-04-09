@@ -9,7 +9,7 @@
   const NOISE_TIME_SCALE = 0.1;
   const NOISE_SCALE = 0;
   const MAX_SPEED = 2;
-  const ATTRACTION_STRENGTH = 200;
+  const ATTRACTION_STRENGTH = 400;
 
   let section;
   let particles;

@@ -32,11 +32,11 @@
 
       listOfStratesCurvesX = [];
       nbStratesX = 4;
-      nbCurvesX = 10;
+      nbCurvesX = 3;
 
       listOfStratesCurvesY = [];
-      nbStratesY = 8;
-      nbCurvesY = 10;
+      nbStratesY = 3;
+      nbCurvesY = 3;
 
       listOfStratesCurvesColor = [];
       nbCurvesColor = 3;
@@ -69,12 +69,12 @@
    
 
 
-      if (frameCount % 60 == 0) {
+      if (frameCount % 20 == 0) {
         generateStars();
         generateStratesX();
         generateStratesY(); 
         generateColorStrates();
-        noiseScale += 0.01; 
+        noiseScale += 0.03; 
       }   
 
 
@@ -122,9 +122,9 @@
       for (let strate of listOfStratesCurvesColor) {
         for (let i = 0; i < strate.length - 1; i++) {
           let n = noise(i**2);
-          let c = Math.floor(n * 255);
+          let c = Math.floor(n * 200);
        
-          fill(random(255),0,0);
+          fill(random(100,255),0,0);
           beginShape();
           for (let p of strate[i]) {
             curveVertex(p.x, p.y);
@@ -192,10 +192,33 @@
     function generateColorStrates() {
       listOfStratesCurvesColor = []
       
-      let a = 10;
-      let cPair = [{bot: {a: s.x1 + random(-a,0), b: s.x1 + random(0,a)}, top: {a: s.x3 + random(-a,0), b: s.x3 + random(0,a)}},
-                  {bot: {a: s.y2 + random(-a,0), b: s.y2 + random(0,a)}, top: {a: s.y4 + random(-a,0), b: s.y4 + random(0,a)}}
-                ]
+      let cPair = [];
+
+      let a = 20;
+      let b = 5;
+      
+      if (frameCount == O_sectionduration) {
+        cPair = [{bot: {a: s.x1 + random(-a,-b), b: s.x1 + random(b,a)}, top: {a: s.x3 + random(-a,-b), b: s.x3 + random(b,a)}},
+          {bot: {a: s.y2 + random(-a,-b), b: s.y2 + random(b,a)}, top: {a: s.y4 + random(-a,-b), b: s.y4 + random(b,a)}}
+        ]
+      }
+      else {
+        let a1 = random(0,w-20);
+        let b1 = a1 + random(10,20)
+        let a2 = random(0,w-20);
+        let b2 = a2 + random(10,20)
+
+        let a3 = random(0,h-20);
+        let b3 = a3 + random(10,20)
+        let a4 = random(0,h-20);
+        let b4 = a4 + random(10,20)
+
+
+        cPair = [{bot: {a: a1, b: b1}, top: {a: a2, b: b2}},
+                  {bot: {a: a3, b: b3}, top: {a: a4, b: b4}}
+               ]
+      }
+      
 
       // Génération de l'intérieur des startes
       listOfStratesCurvesColor.push(generateStrateX(cPair[0].bot.a, cPair[0].bot.b, cPair[0].top.a, cPair[0].top.b, nbCurvesColor));

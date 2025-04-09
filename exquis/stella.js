@@ -2,7 +2,7 @@
 //les autres sections
 
 (() => {
-  let s, q1, q2, q3, q4, x;
+  let s, q1, q2, q3, q4, x, duration;
 
   class Quadri {
     constructor(x1, y1, x2, y2, x3, y3, x4, y4, color) {
@@ -56,6 +56,7 @@
   async function init() {
     s = O_currentsection;
     x = 0;
+    duration = O_sectionduration / 4;
 
     if (s) {
       q1 = new Quadri(
@@ -119,8 +120,20 @@
 
     let step = O_counter % O_sectionduration;
     if (step >= 1) {
-      if (q1.x3 + x / 40 <= O_sectionwidth) {
-        q1.update(0, 0, 0, 0, x / 40, 0, x / 40, 0);
+      if (
+        q1.x3 + ((O_sectionwidth - (s.x1 + 20)) / duration) <=
+        O_sectionwidth
+      ) {
+        q1.update(
+          0,
+          0,
+          0,
+          0,
+          ((O_sectionwidth - (s.x1 + 20)) / duration),
+          0,
+          ((O_sectionwidth - (s.x1 + 20)) / duration),
+          0
+        );
       }
       q1.display();
     }
@@ -128,21 +141,39 @@
       //console.log(s.y2 - x / 20);
       //console.log(s.y2 - x / 20 >= 0);
 
-      if (q2.y4 - x / 40 >= 0) {
-        q2.update(0, 0, 0, 0, 0, -x / 40, 0, -x / 40); // Update the position of the bottom half
+      if (q2.y4 - (O_sectionheight - s.y4) / duration >= 0) {
+        q2.update(
+          0,
+          0,
+          0,
+          0,
+          0,
+          -(O_sectionheight - s.y4) / duration,
+          0,
+          -(O_sectionheight - s.y4) / duration
+        ); // Update the position of the bottom half
       }
       q2.display();
     }
 
     if (step >= O_sectionduration / 2) {
-      if (q3.x3 + x / 40 <= O_sectionwidth) {
+      if (q3.x4 + x / 40 <= O_sectionwidth) {
         q3.update(0, 0, 0, 0, x / 40, 0, x / 40, 0); // Update the position of the bottom half
       }
       q3.display();
     }
     if (step >= (3 * O_sectionduration) / 4) {
-      if (q4.y4 + x / 20 <= O_sectionheight) {
-        q4.update(0, 0, 0, 0, 0, x / 20, 0, x / 20);
+      if (q4.y4 + (O_sectionheight - s.y4) / duration <= O_sectionheight) {
+        q4.update(
+          0,
+          0,
+          0,
+          0,
+          0,
+          (O_sectionheight - s.y4) / duration,
+          0,
+          (O_sectionheight - s.y4) / duration
+        );
       }
       q4.display();
     }
