@@ -7,7 +7,7 @@
 # repeat infinitely
 
 # duration of each art series, in seconds
-d=3
+d=30
 
 # Infinite loop
 while true; do
@@ -58,6 +58,7 @@ while true; do
     fi
 
     # Wait for a short moment before the next iteration (optional)
-    sleep 10  # You can adjust the sleep time if needed
-    taskkill /F /IM librewolf.exe
+    sleep 30  # You can adjust the sleep time if needed
+    # cmd.exe /c taskkill /F /IM librewolf.exe
+
 done
