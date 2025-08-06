@@ -4,6 +4,8 @@
 
 [The Aesthetics of Exhibition: A Discussion of Recent American Computer Art Shows](https://muse.jhu.edu/article/600598/pdf?casa_token=KVUgr0jfJpcAAAAA:QpPHxkX-jocuE1tRjaquehWYd0ZsIsRgLZ9tNzihHj9yotPZ7RLs3oVWV-dq5IXKTAK7nUFb0Lq9), 1988
 
+[Epigenetic Painting: Software as Genotype](https://archive.aec.at/media/assets/ebbc5373678a5af914de8865fc3e82b2.pdf), 1990
+
 [Software engineering issues in interactive installation art](https://www.cs.vu.nl/~eliens/stage/research/web3d/@archive/info/art-se.pdf), 2008
 
 [Computer Programming in the Creative Arts](https://link.springer.com/chapter/10.1007/978-3-642-31727-9_9), 2012
