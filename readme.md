@@ -1,6 +1,6 @@
-# ift 6251 :art algorithmique:
+# IFT 6256 :art algorithmique et logiciel libre
 
-Ce cours a lieu le mardi et le jeudi, au pavillon André Ainsenstadt. Mardi de 15h30 à 17h30 en 1411, et jeudi de 15h30 à 17h30 en 1207. Les intentions du cours sont exprimées [ici](plan-cours.md)
+Ce cours a lieu le lundi et le mercredi, au pavillon André Ainsenstadt. Lundi de 15h30 à 17h30 en 1411, et mercredi  de 15h30 à 17h30 en 1207. Les intentions du cours sont exprimées [ici](plan-cours.md)
 
 Chaque étudiant doit effectuer, présenter, partager, contribuer 5 exercices
 - une oeuvre algorithmique à partir de [genuary 2025](https://genuary.art/prompts#jan9)
