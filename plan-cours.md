@@ -1,13 +1,13 @@
-# IFT 6251 Algorithmic art course ([version française](https://github.com/bbaudry/algorithmic-art-course/blob/main/README.md#cours-dart-algorithmique-%C3%A0-luniversit%C3%A9-de-montr%C3%A9al))
+# IFT 6256 Algorithmic art and Open Source Software ([version française](https://github.com/bbaudry/algorithmic-art-course/blob/main/README.md#cours-dart-algorithmique-%C3%A0-luniversit%C3%A9-de-montr%C3%A9al))
 
-This course will take place at Université de Montréal, starting on January 8, 2025.
+This course takes place at Université de Montréal.
 
-Contact: Benoit Baudry, <baudry@iro.umontreal.ca>
+Contact: Benoit Baudry, <benoit.baudry@umontreal.ca>
 
 ## Course philosophy
 
-Learn about open source software environments and practices for generative digital art.
-Computer science students dive into the technical challenges of algorithmic art, beyond the utilitarian aspects of software .
+Learn about open source software environments and practices for generative art.
+Computer science students dive into the technical challenges of algorithmic art, beyond the utilitarian aspects of software.
 Artists and designers dive into open source software and the diversity of techniques it offers for algorithmic art.
 
 ## Course contents
@@ -23,17 +23,17 @@ Artists and designers dive into open source software and the diversity of techni
 - design, develop and run a piece of algorithmic art
 - use diverse software environments for algorithmic art
 - use and develop open source software for algorithmic art
-- perform algorithmic art for live coding
+- perform algorithmic art for an audience
 
 ## Prerequisites
 - know how to program in one language at least (Rust, Javascript, Java, Python). The fundamentals of programming for arts are introduced by [Daniel Shiffman](https://thecodingtrain.com/).
 - knowledge of Git
-- enjoy writing and executing code
-- have a strong interest in graphics and visual arts
+- love the beauty writing and executing code
+- enchantment for abstract visual arts and their roots
 
 # Cours d'art algorithmique à l'Université de Montréal 
 
-Ce repo reassemble les resources et les contributions pour le cours IFT6251. 
+Ce repo rassemble les resources et les contributions pour le cours IFT6256. 
 
 Contact: Benoit Baudry, <baudry@iro.umontreal.ca>
 
@@ -63,4 +63,4 @@ Les artistes et les designers se plongent dans le logiciel open source et la div
 - savoir programmer dans au moins un langage (Rust, Javascript, Java, Python). Les bases de la programmation pour l'art sont introduites par [Daniel Shiffman](https://thecodingtrain.com/).
 - connaissance de Git
 - aimer écrire et exécuter du code
-- avoir un fort intérêt pour le graphisme et les arts visuels
+- avoir un fort intérêt pour les arts visuels
