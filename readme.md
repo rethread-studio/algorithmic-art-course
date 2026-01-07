@@ -51,10 +51,12 @@ Le format de l'oeuvre présentée pour le vernissage est libre. L'oeuvre peut ê
 - présentations d'étudiants
 
 # Semaine 7 (16, 18 février)
-- recherche pour data art et vernissage
+- [inspiration](https://www.academia.edu/download/120893431/AFT5104_07_Lee.pdf)
+- un [algorithme](algorithms.md)
+- data art
+- présentations d'étudiants
 
 # Semaine 8 (23, 25 février)
-- [inspiration](https://www.academia.edu/download/120893431/AFT5104_07_Lee.pdf)
 - data art
 - présentations d'étudiants
  
@@ -67,13 +69,18 @@ Le format de l'oeuvre présentée pour le vernissage est libre. L'oeuvre peut ê
 - présentations d'étudiants
 
 # Semaine 11 (23, 25 mars)
-- un [article](papers.md)
-- présentations d'étudiants
+- [inspiration](https://www.ted.com/talks/joshua_schachter_how_i_turned_frustration_into_creative_success)
+- recherche, tests pour le vernissage
 
 # Semaine 12 (30 mars, 01 avril)
 - [inspiration](https://www.rightclicksave.com/article/the-power-of-the-plotter-generative-art-aleksandra-jovanic-julien-gachadoat-feral-file-graph-interview)
-- un [article](papers.md)
+- démos et préparation du vernissage
 - présentations d'étudiants
 
 # Semaine 13 (08 avril)
 - vernissage
+
+# Semaine 14 (13, 15 avril)
+- un [article](papers.md)
+- conclusion
+- présentations d'étudiants
