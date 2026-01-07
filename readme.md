@@ -46,6 +46,7 @@ Le format de l'oeuvre présentée pour le vernissage est libre. L'oeuvre peut ê
 
 # Semaine 6 (09, 11 février)
 - [inspiration](https://www.rightclicksave.com/article/in-search-of-generative-art-history)
+- Lundi 09 février: salle B195 @ la faculté de musique. Cours invité de [Dominic Thibault](https://domthibaultsound.wordpress.com/) sur le traitement algorithmique du son.
 - un [algorithme](algorithms.md)
 - présentations d'étudiants
 
