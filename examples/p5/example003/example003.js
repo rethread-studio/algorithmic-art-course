@@ -25,8 +25,8 @@ function draw() {
     let cx=w*0.5
     let cy=h*0.5
     let vera=random(42,300)
-    let molnar=17
-    let pas=9
+    let molnar=27
+    let pas=29
     for(vera=300;vera>42;vera-=pas){
         noir?fill(0,0,0):fill(230,100,100)
     quad(cx-vera+random(-molnar,molnar),cy-vera+random(-molnar,molnar),
