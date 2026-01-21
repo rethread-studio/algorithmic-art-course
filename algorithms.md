@@ -27,10 +27,11 @@
 - https://en.wikipedia.org/wiki/Vector_field
 - https://www.fxhash.xyz/search?query=flow%20field
 
-## attractors
+## physarum
 
-- https://en.wikipedia.org/wiki/Attractor_network
-- https://www.fxhash.xyz/search?query=attractor
+- https://cargocollective.com/sagejenson/physarum
+- https://fronkonstin.com/2020/08/11/abstractions/
+
 
 ## primitives to be used with the algorithm
 
