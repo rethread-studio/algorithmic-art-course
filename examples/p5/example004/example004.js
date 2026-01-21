@@ -24,14 +24,12 @@ function centerCanvas() {
 }
 
 function draw() {
-    if(count%20==0){
     fill(0,0,0)
     rect(0,0,w*0.5,h)
-    ikeda(0,0,w*0.5,true)}
-    if(count%19==0){
+    ikeda(0,0,w*0.5,true)
     fill(0,0,0)
     rect(w*0.5,0,w*0.5,h)
-    ikeda(w*0.5,0,w*0.5,false)}
+    ikeda(w*0.5,0,w*0.5,false)
     count++
     //noLoop()
 }
