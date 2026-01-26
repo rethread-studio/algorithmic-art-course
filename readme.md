@@ -1,6 +1,6 @@
 # IFT 6256 :art algorithmique et logiciel libre
 
-Ce cours a lieu le lundi et le mercredi, au pavillon André Ainsenstadt. Lundi de 15h30 à 17h30 au pav. Aisenstadt, salle 1411, et le mercredi de 15h30 à 17h30 au pav. Aisenstadt, salle  1207. Les intentions du cours sont exprimées [ici](plan-cours.md)
+Ce cours a lieu le lundi de 15h30 à 17h30, et le mercredi de 15h30 à 17h30 au pavillon Claire-McNicoll salle z-337. Les intentions du cours sont exprimées [ici](plan-cours.md)
 
 Chaque étudiant doit effectuer, présenter, partager, contribuer 5 exercices
 - une oeuvre algorithmique à partir de [genuary 2025](https://genuary.art/prompts#jan9)
@@ -41,13 +41,14 @@ Le format de l'oeuvre présentée pour le vernissage est libre. L'oeuvre peut ê
 
 # Semaine 5 (02, 04 février)
 - [inspiration](https://unframed.lacma.org/2024/11/13/digital-art-kind-performance-qa-casey-reas)
-- un [algorithme](algorithms.md)
+- ✨ Lundi 02 février: cours invité avec Daniel Iregui, fondateur du studio [Iregular](https://iregular.io/studio/). Le cours est en salle 2078 à la [bibliothèque de littérature et sciences humaines](https://bib.umontreal.ca/espaces/#lsh) ✨
+- Mercredi 04 février: un [algorithme](algorithms.md)
 - présentations d'étudiants
 
 # Semaine 6 (09, 11 février)
 - [inspiration](https://www.rightclicksave.com/article/in-search-of-generative-art-history)
-- Lundi 09 février: salle B195 @ la faculté de musique. Cours invité de [Dominic Thibault](https://domthibaultsound.wordpress.com/) sur le traitement algorithmique du son.
-- un [algorithme](algorithms.md)
+- ✨ Lundi 09 février: salle B195 à la [faculté de musique](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=406&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=e909b7ce8d2e083654980794ac5cf712). Cours invité de [Dominic Thibault](https://domthibaultsound.wordpress.com/) sur le traitement algorithmique du son. ✨
+- Mercredi 11 février: un [algorithme](algorithms.md)
 - présentations d'étudiants
 
 # Semaine 7 (16, 18 février)
