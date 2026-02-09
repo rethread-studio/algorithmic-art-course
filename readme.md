@@ -53,6 +53,7 @@ Le format de l'oeuvre présentée pour le vernissage est libre. L'oeuvre peut ê
 
 # Semaine 7 (16, 18 février)
 - [inspiration](https://www.academia.edu/download/120893431/AFT5104_07_Lee.pdf)
+- ✨ Mercredi 18 février: le cours est en salle 3061 au [carrefour des arts et des sciences](https://fas.umontreal.ca/salles/carrefour/reservation-et-caracteristiques-des-salles/) ✨
 - un [algorithme](algorithms.md)
 - data art
 - présentations d'étudiants
