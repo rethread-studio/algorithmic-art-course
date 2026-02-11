@@ -1,8 +1,8 @@
 # LED Tube + T-790 Controller Setup Guide
 
-This document summarizes the **final working setup** for controlling a [24V addressable LED tube](https://www.superlightingled.com/new-dmx512-digital-addressable-rgb-stage-led-tube-light-dc24v-fast-connection-57mm-round-360-degree-led-lighting-164328ft-optional-p-3358.html) using a **[T-790 LED controller](https://www.superlightingled.com/t790k-8-ports-8192-pixels-pc-online-programmable-digital-led-controller-for-addressable-led-strip-p-4483.html)**, a **[Mean Well LRS-350-24 power supply](https://www.superlightingled.com/mean-well-lrs35024-dc24v-350watt-146a-ul-certification-ac110220-volt-switching-power-supply-for-led-strip-lights-lighting-p-227.html)**, and a **Raspberry Pi**.
+This document summarizes the **final working setup** for controlling a 24V addressable LED tube using a **T-790 LED controller**, a **Mean Well LRS-350-24 power supply**, and a **Raspberry Pi**.
 
-The goal is to document **connections**, **test mode**, and **next steps**, without long explanations.
+This version includes the **final direct Ethernet configuration** between Raspberry Pi and Controller.
 
 ---
 
@@ -12,15 +12,14 @@ The goal is to document **connections**, **test mode**, and **next steps**, with
 - **Controller**: T-790 / T-790K LED Controller (AC 100–240V input)
 - **Power Supply**: Mean Well LRS-350-24 (24V DC output)
 - **Controller Output Mode**: `OUT-TTL`
-- **Control Device**: Raspberry Pi (Ethernet)
+- **Control Device**: Raspberry Pi (Direct Ethernet connection)
 
 ---
 
-## Power Connections
+# Power Connections
 
-### Controller Power
-- The controller has an **internal power supply**
-- Power it **directly from wall AC**
+## Controller Power
+The controller has an **internal AC power supply**.
 
 ```
 Wall Socket (AC 100–240V)
@@ -28,11 +27,11 @@ Wall Socket (AC 100–240V)
          └── Controller AC IN
 ```
 
-⚠️ Do **NOT** connect the controller to the 24V PSU.
+⚠️ Do NOT connect the controller to the 24V PSU.
 
 ---
 
-### LED Power
+## LED Power
 The LED tube is powered **only** by the 24V power supply.
 
 ```
@@ -43,11 +42,12 @@ Mean Well LRS-350-24
 
 ---
 
-## Signal Connections (Controller → LED)
+# Signal Connections (Controller → LED)
 
 Use **OUT-TTL** on the controller (NOT DMX).
 
-### OUT-TTL Pinout
+## OUT-TTL Pinout
+
 ```
 Pin 1: GND
 Pin 2: DAT
@@ -55,21 +55,22 @@ Pin 3: (unused)
 Pin 4: CLK
 ```
 
-### LED (4 wires) Connection
+## LED (4 wires) Connection
+
 ```
 LED GND   ─────────▶ Controller OUT-TTL Pin 1 (GND)
 LED DATA  ─────────▶ Controller OUT-TTL Pin 2 (DAT)
 LED CLK   ─────────▶ Controller OUT-TTL Pin 4 (CLK)
 ```
 
-🔗 **Important**:  
-LED GND must be connected to **both**:
+🔗 Important:  
+LED GND must be connected to BOTH:
 - Power supply `-V`
-- Controller `GND` (shared ground)
+- Controller `GND` (shared reference)
 
 ---
 
-## Complete Wiring Overview
+# Complete Wiring Overview
 
 ```
 AC WALL POWER
@@ -88,50 +89,90 @@ Controller OUT-TTL
 
 ---
 
-## Booting Controller into Test Mode
+# Booting Controller into Test Mode
 
 Test mode is used to verify wiring and LED compatibility **without a PC or Raspberry Pi**.
 
+### Method Used
 
 1. Power OFF controller
 2. Hold `SET`
 3. Power ON while holding
 4. Release after screen changes
 
-If LEDs animate in test mode → **hardware setup is correct**.
+If LEDs animate in test mode → hardware setup is correct.
 
 ---
 
-## Controller Configuration Notes
+# Final Network Configuration (Direct Connection)
 
-In test / software configuration:
+The connection is **direct from Raspberry Pi to Controller using Ethernet** (no router).
+
+```
+Raspberry Pi  ───── Ethernet Cable ─────  Controller
+```
+
+## Controller IP Address
+
+```
+192.168.60.2
+```
+
+## Raspberry Pi Static IP Configuration
+
+Edited `/etc/dhcpcd.conf`:
+
+```
+interface eth0
+static ip_address=192.168.60.10/24
+static routers=192.168.60.1
+static domain_name_servers=8.8.8.8
+```
+
+After reboot:
+
+```
+ping 192.168.60.2
+```
+
+Successful replies confirm direct communication.
+
+---
+
+# Controller Configuration Notes
+
 - Output mode: **TTL**
 - IC type: must match LED tube chipset
 - Pixel count: number of addressable pixels in the tube
-- Color order: RGB / GRB / BRG (try until correct)
+- Color order: RGB / GRB / BRG (adjust if colors incorrect)
+- Controller must NOT be in test mode for network control
 
 ---
 
-## Next Step (Software Control)
+# Software Control
 
-After test mode works:
-- Exit test mode
-- Connect controller and Raspberry Pi to the same network
-- Control LEDs via **Art-Net / sACN (E1.31)** from Raspberry Pi
+After confirming ping works:
+
+- Use Art-Net / sACN (E1.31) from Raspberry Pi
+- Universe typically set to 1
+- Each pixel = 3 DMX channels (R, G, B)
 
 ---
 
-## Key Rules (Do Not Skip)
+# Key Rules
 
 - ❌ Do NOT power LEDs from controller
 - ❌ Do NOT feed 24V into controller
 - ❌ Do NOT use DMX output for TTL LEDs
 - ✅ Always share GND between PSU and controller
+- ✅ Raspberry Pi and Controller must be in same subnet
 
 ---
 
-## Status
+# Current Status
 
 ✅ Hardware verified  
 ✅ Test mode working  
-➡️ Ready for Raspberry Pi control
+✅ Direct Ethernet connection established  
+✅ Controller IP identified (192.168.60.2)  
+➡️ Ready for Raspberry Pi animation control
