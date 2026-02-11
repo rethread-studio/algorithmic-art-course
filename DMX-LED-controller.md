@@ -1,6 +1,6 @@
 # LED Tube + T-790 Controller Setup Guide
 
-This document summarizes the **final working setup** for controlling a 24V addressable LED tube using a **T-790 LED controller**, a **Mean Well LRS-350-24 power supply**, and a **Raspberry Pi**.
+This document summarizes the **final working setup** for controlling a [24V addressable LED tube](https://www.superlightingled.com/new-dmx512-digital-addressable-rgb-stage-led-tube-light-dc24v-fast-connection-57mm-round-360-degree-led-lighting-164328ft-optional-p-3358.html) using a **[T-790 LED controller](https://www.superlightingled.com/t790k-8-ports-8192-pixels-pc-online-programmable-digital-led-controller-for-addressable-led-strip-p-4483.html)**, a **[Mean Well LRS-350-24 power supply](https://www.superlightingled.com/mean-well-lrs35024-dc24v-350watt-146a-ul-certification-ac110220-volt-switching-power-supply-for-led-strip-lights-lighting-p-227.html)**, and a **Raspberry Pi**.
 
 This version includes the **final direct Ethernet configuration** between Raspberry Pi and Controller.
 
