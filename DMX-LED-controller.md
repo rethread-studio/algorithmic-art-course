@@ -115,7 +115,7 @@ Raspberry Pi  ───── Ethernet Cable ─────  Controller
 ## Controller IP Address
 
 ```
-192.168.60.2
+192.168.60.69
 ```
 
 ## Raspberry Pi Static IP Configuration
@@ -132,7 +132,7 @@ static domain_name_servers=8.8.8.8
 After reboot:
 
 ```
-ping 192.168.60.2
+ping 192.168.60.69
 ```
 
 Successful replies confirm direct communication.
