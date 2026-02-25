@@ -1,5 +1,7 @@
 # IFT 6256 :art algorithmique et logiciel libre
 
+live!!
+
 Ce cours a lieu le lundi de 15h30 à 17h30, et le mercredi de 15h30 à 17h30 au pavillon Claire-McNicoll salle z-337. Les intentions du cours sont exprimées [ici](plan-cours.md)
 
 Chaque étudiant doit effectuer, présenter, partager, contribuer 5 exercices
