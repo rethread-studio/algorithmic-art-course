@@ -18,6 +18,8 @@
 
 [From sonic Pi to overtone: creative musical experiences with domain-specific and functional languages](https://dl.acm.org/doi/pdf/10.1145/2505341.2505346), 2013, Sam Aaron and Alan F. Blackwell.
 
+[Large-Scale Curation and Presentation of CD-ROM Art](https://phaidra.univie.ac.at/api/object/o:378042/preview?lang=en), 2013, Dragan Espenschied, Klaus Rechert, Dirk von Suchodoletz, Isgandar Valizada and Nick Russler
+
 [Making programming languages to dance to: live coding with tidal](https://dl.acm.org/doi/pdf/10.1145/2633638.2633647), 2014, Alex McLean
 
 [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115?casa_token=mKlFlvzjvw4AAAAA:trOIRMCrtiHwNP2g7-P3njdtSLoG_inf50SXHQzjmTbmlYie0Vxa3Y-FD9Pa6cHmfPB4ghAioRnb), 2014, Deena Engel, Glenn Wharton
