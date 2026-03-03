@@ -6,29 +6,41 @@
 
 [Epigenetic Painting: Software as Genotype](https://archive.aec.at/media/assets/ebbc5373678a5af914de8865fc3e82b2.pdf), 1990, Roman Verostko
 
+[Processing: programming for the media arts](https://link.springer.com/content/pdf/10.1007/s00146-006-0050-9.pdf), 2006, Casey Reas and Ben Fry
+
 [Software engineering issues in interactive installation art](https://www.cs.vu.nl/~eliens/stage/research/web3d/@archive/info/art-se.pdf), 2008, Anna Trifonova, Letizia Jaccheri
+
+[What is generative art?](https://www.tandfonline.com/doi/pdf/10.1080/14626260902867915?casa_token=E_GaPIEKeOYAAAAA:ye6-7AN8v4xpqCC6FIPZc8NPkaaPewDKnJ-6gj-zNKqujwxBpY3K7tLPa8qh5NvbfOP4u26PBMCY), 2009, Margaret A. Boden and Ernest A. Edmonds
 
 [Computer Programming in the Creative Arts](https://link.springer.com/chapter/10.1007/978-3-642-31727-9_9), 2012, Alex McLean, Geraint Wiggin
 
 [Magic Squares and Aesthetic Events](https://ieeexplore.ieee.org/iel7/6656128/6676523/06676588.pdf), 2013,You Fang, Hans Dehlinger, Wang Jian Min, Yao Ming
 
-[Making programming languages to dance to: live coding with tidal](https://dl.acm.org/doi/pdf/10.1145/2633638.2633647), 2014,Alex McLean
+[From sonic Pi to overtone: creative musical experiences with domain-specific and functional languages](https://dl.acm.org/doi/pdf/10.1145/2505341.2505346), 2013, Sam Aaron and Alan F. Blackwell.
+
+[Making programming languages to dance to: live coding with tidal](https://dl.acm.org/doi/pdf/10.1145/2633638.2633647), 2014, Alex McLean
 
 [Reading between the lines: Source code documentation as a conservation strategy for software-based art](https://www.tandfonline.com/doi/pdf/10.1179/2047058413Y.0000000115?casa_token=mKlFlvzjvw4AAAAA:trOIRMCrtiHwNP2g7-P3njdtSLoG_inf50SXHQzjmTbmlYie0Vxa3Y-FD9Pa6cHmfPB4ghAioRnb), 2014, Deena Engel, Glenn Wharton
 
-[Evolving Glitch Art](https://eelcodenheijer.nl/publications/Eelco_den_Heijer-Evolving-Glitch-Art-2013.pdf), 2013,Eelco den Heijer
+[Evolving Glitch Art](https://eelcodenheijer.nl/publications/Eelco_den_Heijer-Evolving-Glitch-Art-2013.pdf), 2013,vEelco den Heijer
 
 [Light Pattern: Writing Code with Photographs](https://history.siggraph.org/wp-content/uploads/2018/04/2015_Temkin_LightPattern.pdf), 2015, Daniel Temkin
+
+[Generative Art Theory](https://golancourses.net/60120/wp-content/uploads/2023/02/galanter_generative.pdf), 2016, Philip Galanter
 
 [Estuary: Browser-based Collaborative Projectional Live Coding of Musical Patterns](https://iclc.toplap.org/2017/cameraReady/ICLC_2017_paper_78.pdf), 2017, David Ogborn, Jamie Beverley, Luis Navarro del Angel, Eldad Tsabary, Alex McLean
 
 [The afterlives of network-based artworks](https://www.tandfonline.com/doi/pdf/10.1080/19455224.2017.1320299?needAccess=true), 2017, Emmanuel Guez, Morgane Stricot, Lionel Broye, Stéphane Bizet
 
-[Generative art for all](https://link.springer.com/content/pdf/10.1186/s13731-017-0072-1.pdf), 2017,Michael Tempel
+[Generative art for all](https://link.springer.com/content/pdf/10.1186/s13731-017-0072-1.pdf), 2017, Michael Tempel
 
-[Open the museum’s gates to pirates: Hacking for the sake of digital art preservation](https://phaidra.univie.ac.at/detail/o:923621), 2018,Morgane Stricot, Daniel Heiss, Matthieu Vlaminck
+[Open the museum’s gates to pirates: Hacking for the sake of digital art preservation](https://phaidra.univie.ac.at/detail/o:923621), 2018, Morgane Stricot, Daniel Heiss, Matthieu Vlaminck
 
-[Chance and Control: Art in the Age of Computers](https://www.jstor.org/stable/27217413?seq=1), 2019,Douglas Dodd
+[256B on the C64 for 8K](https://dl.acm.org/doi/pdf/10.1145/3325480.3329174), 2019, Nick Montfort
+
+[Chance and Control: Art in the Age of Computers](https://www.jstor.org/stable/27217413?seq=1), 2019, Douglas Dodd
+
+[Creative Coding on the web in p5. js: a Library where JavaScript Meets Processing](https://www.diva-portal.org/smash/get/diva2:1319386/FULLTEXT01.pdf), 2019, BSc thesis Sandberg, Emil
 
 [Preservation of software-based art at Tate](https://mediarep.org/bitstream/doc/14111/1/Digital_Art_Looking_Glass_271-287_Preservation_of_Software-based_Art.pdf), 2019,Patrícia Falcão
 
@@ -55,3 +67,5 @@
 [Immersion into the Datascape](https://www.academia.edu/download/120893431/AFT5104_07_Lee.pdf), 2024, Joo Yun Lee
 
 [Myriad People Open Source Software for New Media Arts](https://arxiv.org/pdf/2501.13644), 2025, Benoit Baudry, Erik Natanael Gustafsson, Roni Kaufman, Maria Kling
+
+[TriGraph: A Probabilistic Subgraph-Based Model for Visual Code Completion in Pure Data](https://softwareprocess.es/pubs/islam2025MSR-trigraph.pdf), 2025, Anisha Islam, Abram Hindle
