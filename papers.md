@@ -54,6 +54,8 @@
 
 [Artist Support Networks: Implications for Future Creativity Support Tools](https://www.cond.org/artistsupport.pdf), 2022, John Joon Young Chung, Shiqing He, Eytan Adar
 
+[Seeing Programming Seeing: Exploring the Pedagogical Values of Functional Errors in Creative Coding](https://ualresearchonline.arts.ac.uk/id/eprint/20298/), 2023, Jennifer Sykes, Mick Grierson, Rebecca Fiebrink
+
 [Generative art via grammatical evolution](https://ieeexplore.ieee.org/iel7/10190758/10190788/10190828.pdf), 2023, Erik M. Fredericks, Abigail C. Diller, Jared M. Moore
 
 [Spellburst: A Node-based Interface for Exploratory Creative Coding with Natural Language Prompts](https://arxiv.org/pdf/2308.03921), 2023, Tyler Angert, Miroslav Ivan Suzara, Jenny Han
